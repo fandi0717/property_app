@@ -1,4 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+
+/// TODO : https://31sudirmansuites.com/apa-saja-contoh-investasi-properti/
+/// MACAM - MACAM PROPERTI :
+/// 1. RESIDENTIAL PROPERTY
+/// 2. COMMERCIAL PROPERTY
+/// 3. INDUSTRIAL PROPERTY
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
@@ -6,40 +12,104 @@ import 'package:equatable/equatable.dart';
 import 'transaction_enum.dart';
 
 class Property extends Equatable {
+  /// [id]
+  ///
+  /// each property has a unique id to identify the property itself
+  ///
+  /// `ex : #881726478123`
   final String id;
+
+  /// [name]
+  ///
+  /// each property has a name
+  ///
+  /// `ex : Candra Bhirawa`
   final String name;
+
+  /// [location]
+  ///
+  /// each property is located in one location
+  ///
+  /// `ex : Lotus, Kavling A1, Blok B No. 4`
   final String location;
-  final DateTime date;
+
+  /// [dateTarget]
+  ///
+  /// target payment date
+  ///
+  /// `ex : 25/11/2022, 09:00`
+  final DateTime dateTarget;
+
+  /// [price]
+  ///
+  /// each property has a price
+  ///
+  /// `ex :Rp 985.799.300`
   final double price;
-  final double denda;
+
+  /// [transaction]
+  ///
+  /// `ex`
+  ///  ```dart
+  /// <Transaction double>{
+  ///   Transaction.pemesanan = 100,
+  ///   Transaction.administrasi = 50,
+  ///   Transaction.pembangunan = 0
+  ///   Transaction.serahTerima = 0
+  /// }
+  /// ```
+  ///
   final Map<Transaction, double> transaction;
+
+  /// [jenisProperty]
+  ///
+  /// `see : https://31sudirmansuites.com/apa-saja-contoh-investasi-properti/`
+  /// `ex : "komersil`
+  final String jenisProperty;
+
+  /// [denda]
+  ///
+  /// Optional : jika [dateNow] melebihi tanggal [dateTarget]
+  final double? denda;
+
+  /// [dateNow]
+  ///
+  /// Date Sekarang
+  final DateTime? dateNow;
+
   const Property({
     required this.id,
     required this.name,
     required this.location,
-    required this.date,
+    required this.dateTarget,
     required this.price,
-    required this.denda,
     required this.transaction,
+    required this.jenisProperty,
+    required this.denda,
+    this.dateNow,
   });
 
   Property copyWith({
     String? id,
     String? name,
     String? location,
-    DateTime? date,
+    DateTime? dateTarget,
     double? price,
-    double? denda,
     Map<Transaction, double>? transaction,
+    String? jenisProperty,
+    double? denda,
+    DateTime? dateNow,
   }) {
     return Property(
       id: id ?? this.id,
       name: name ?? this.name,
       location: location ?? this.location,
-      date: date ?? this.date,
+      dateTarget: dateTarget ?? this.dateTarget,
       price: price ?? this.price,
-      denda: denda ?? this.denda,
       transaction: transaction ?? this.transaction,
+      jenisProperty: jenisProperty ?? this.jenisProperty,
+      denda: denda ?? this.denda,
+      dateNow: dateNow ?? this.dateNow,
     );
   }
 
@@ -48,10 +118,12 @@ class Property extends Equatable {
       'id': id,
       'name': name,
       'location': location,
-      'date': date.millisecondsSinceEpoch,
+      'dateTarget': dateTarget.millisecondsSinceEpoch,
       'price': price,
-      'denda': denda,
       'transaction': transaction,
+      'jenisProperty': jenisProperty,
+      'denda': denda,
+      'dateNow': dateNow?.millisecondsSinceEpoch,
     };
   }
 
@@ -60,11 +132,15 @@ class Property extends Equatable {
       id: map['id'] as String,
       name: map['name'] as String,
       location: map['location'] as String,
-      date: DateTime.fromMillisecondsSinceEpoch(map['date'] as int),
+      dateTarget: DateTime.fromMillisecondsSinceEpoch(map['dateTarget'] as int),
       price: map['price'] as double,
-      denda: map['denda'] as double,
       transaction: Map<Transaction, double>.from(
           (map['transaction'] as Map<Transaction, double>)),
+      jenisProperty: map['jenisProperty'] as String,
+      denda: map['denda'] != null ? map['denda'] as double : null,
+      dateNow: map['dateNow'] != null
+          ? DateTime.fromMillisecondsSinceEpoch(map['dateNow'] as int)
+          : null,
     );
   }
 
@@ -77,15 +153,17 @@ class Property extends Equatable {
   bool get stringify => true;
 
   @override
-  List<Object> get props {
+  List<Object?> get props {
     return [
       id,
       name,
       location,
-      date,
+      dateTarget,
       price,
-      denda,
       transaction,
+      jenisProperty,
+      denda,
+      dateNow,
     ];
   }
 }
