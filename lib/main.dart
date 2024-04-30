@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:property_app/app.dart';
 import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
 
-void main() {
+void main() async {
+  await initializeDateFormatting("id", null);
   runApp(const PropertyApp());
 }
 

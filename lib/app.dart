@@ -12,6 +12,7 @@ class RootTreeScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Property App",
       onGenerateRoute: appRouter.onGenerateRoute,
+      theme: ThemeData(primaryColor: const Color.fromARGB(255, 245, 245, 245)),
     );
   }
 }

@@ -1,5 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart' as badges;
+import 'package:property_app/features/home/presentation/widgets/carousel_slider/slider_property_widget.dart';
+
+import '../widgets/head/head_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,37 +12,39 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Container(
-        margin: const EdgeInsets.all(20),
+        color: Theme.of(context).primaryColor,
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
             /// [HEAD]
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  child: const Row(
-                    children: [
-                      CircleAvatar(),
-                      Column(
-                        children: [
-                          Text(
-                            "Temukan\nHunian Impian",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text("Agen Properti Terbaik")
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
+            const HeadWidget(),
 
-                /// [Badge]
-                const badges.Badge(
-                  badgeContent: Text("3"),
-                  child: Icon(Icons.notifications),
-                )
-              ],
-            )
+            /// [CAROUSEL SLIDER]
+            CarouselSlider(
+                items: [
+                  SliderPropertyWidget(
+                    diskon: 20,
+                    name: "American House",
+                    startDate: DateTime(2023, 11, 19),
+                    endDate: DateTime(2023, 12, 15),
+                    backgroundColor: const Color.fromARGB(255, 51, 74, 52),
+                  ),
+                  SliderPropertyWidget(
+                    diskon: 40,
+                    name: "American House",
+                    startDate: DateTime(2024, 1, 20),
+                    endDate: DateTime(2024, 3, 20),
+                    backgroundColor: const Color.fromARGB(255, 154, 202, 62),
+                  )
+                ],
+                options: CarouselOptions(
+                  viewportFraction: 0.9,
+                  // height: 200,
+                  autoPlay: true,
+                  aspectRatio: 5 / 2,
+                  enableInfiniteScroll: false,
+                  // enlargeCenterPage: true
+                )),
           ],
         ),
       )),
