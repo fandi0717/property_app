@@ -85,7 +85,7 @@ class Property extends Equatable {
     required this.price,
     required this.transaction,
     required this.jenisProperty,
-    required this.denda,
+    this.denda,
     this.dateNow,
   });
 
@@ -118,12 +118,12 @@ class Property extends Equatable {
       'id': id,
       'name': name,
       'location': location,
-      'dateTarget': dateTarget.millisecondsSinceEpoch,
+      'date_target': dateTarget.millisecondsSinceEpoch,
       'price': price,
       'transaction': transaction,
-      'jenisProperty': jenisProperty,
+      'jenis_property': jenisProperty,
       'denda': denda,
-      'dateNow': dateNow?.millisecondsSinceEpoch,
+      'date_now': dateNow?.millisecondsSinceEpoch,
     };
   }
 
@@ -132,14 +132,14 @@ class Property extends Equatable {
       id: map['id'] as String,
       name: map['name'] as String,
       location: map['location'] as String,
-      dateTarget: DateTime.fromMillisecondsSinceEpoch(map['dateTarget'] as int),
+      dateTarget: DateTime.parse(map['date_target'] as String),
       price: map['price'] as double,
-      transaction: Map<Transaction, double>.from(
-          (map['transaction'] as Map<Transaction, double>)),
-      jenisProperty: map['jenisProperty'] as String,
+      transaction: (map['transaction'] as Map<String, dynamic>).map(
+          (key, value) => MapEntry(transactionValue[key]!, value as double)),
+      jenisProperty: map['jenis_property'] as String,
       denda: map['denda'] != null ? map['denda'] as double : null,
-      dateNow: map['dateNow'] != null
-          ? DateTime.fromMillisecondsSinceEpoch(map['dateNow'] as int)
+      dateNow: map['date_now'] != null
+          ? DateTime.parse(map['date_now'] as String)
           : null,
     );
   }

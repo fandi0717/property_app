@@ -6,3 +6,16 @@ sealed class HomeEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+final class EksplorPropertyEvent extends HomeEvent {
+  final int index;
+
+  const EksplorPropertyEvent({this.index = 0});
+
+  @override
+  List<Object> get props => [index];
+}
+
+final class Back2EmptyPropertyEvent extends HomeEvent {}
+
+// final class SwitchPropertyEvent extends HomeEvent {}

@@ -1,13 +1,30 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:property_app/features/home/data/repositories/pesananan_repository.dart';
+
+import '../../data/models/property.dart';
 
 part 'home_event.dart';
 part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc() : super(HomeInitial()) {
-    on<HomeEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+  HomeBloc() : super(HomeEmpty()) {
+    final PesananPropertyRepository repository = PesananPropertyRepository();
+
+    on<EksplorPropertyEvent>(
+        (event, emit) => eksplorPropertyFunc(event, emit, repository));
+
+    on<Back2EmptyPropertyEvent>(
+        (event, emit) => back2EmptyProperty(event, emit));
+  }
+
+  eksplorPropertyFunc(EksplorPropertyEvent event, Emitter<HomeState> emit,
+      PesananPropertyRepository repository) {
+    List<Property> results = repository.getAllProperty();
+    emit(PesananTerbaru(propertys: results));
+  }
+
+  back2EmptyProperty(Back2EmptyPropertyEvent event, Emitter<HomeState> emit) {
+    emit(HomeEmpty());
   }
 }
