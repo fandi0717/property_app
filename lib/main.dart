@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:property_app/app.dart';
+import 'package:property_app/core/bottom_navigation_bar/cubit/bottom_navigation_bar_cubit.dart';
 import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
 
+/// TODO : IMPLEMENT TEXTSTYLE : FONTSIZE, FONTFAMILY, FONTWEIGHT, COLOR, ETC
 void main() async {
   await initializeDateFormatting("id", null);
   runApp(const PropertyApp());
@@ -16,6 +18,9 @@ class PropertyApp extends StatelessWidget {
     return MultiBlocProvider(providers: [
       BlocProvider(
         create: (context) => HomeBloc(),
+      ),
+      BlocProvider(
+        create: (context) => BottomNavigationBarCubit(),
       )
     ], child: RootTreeScreen());
   }
