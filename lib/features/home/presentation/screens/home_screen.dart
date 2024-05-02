@@ -1,13 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gap/gap.dart';
+
 import 'package:property_app/core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
 import 'package:property_app/features/home/presentation/widgets/carousel_slider/slider_property_widget.dart';
-import 'package:gap/gap.dart';
 
 import '../widgets/head/head_widget.dart';
 import '../widgets/home_state/home_empty_widget.dart';
+import '../widgets/home_state/property_order_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -64,8 +67,10 @@ class HomeScreen extends StatelessWidget {
                   builder: (context, state) {
                     if (state is HomeEmpty) {
                       return const HomeEmptyWidget();
-                    } else if (state is PesananTerbaru) {}
-                    return const SizedBox.shrink();
+                    } else if (state is PropertyOrder) {}
+                    return PropertyOrderWidget(
+                      propertyOrder: state as PropertyOrder,
+                    );
                   },
                 ),
               )

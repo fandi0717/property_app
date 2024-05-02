@@ -16,15 +16,21 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
     on<Back2EmptyPropertyEvent>(
         (event, emit) => back2EmptyProperty(event, emit));
+
+    on<SwitchPropertyEvent>((event, emit) => switchProperty(event, emit));
   }
 
   eksplorPropertyFunc(EksplorPropertyEvent event, Emitter<HomeState> emit,
       PesananPropertyRepository repository) {
     List<Property> results = repository.getAllProperty();
-    emit(PesananTerbaru(propertys: results));
+    emit(PropertyOrder(propertys: results, index: event.index));
   }
 
   back2EmptyProperty(Back2EmptyPropertyEvent event, Emitter<HomeState> emit) {
     emit(HomeEmpty());
+  }
+
+  switchProperty(SwitchPropertyEvent event, Emitter<HomeState> emit) {
+    emit(PropertyOrder(propertys: event.propertys, index: event.index));
   }
 }

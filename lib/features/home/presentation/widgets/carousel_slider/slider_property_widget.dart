@@ -23,7 +23,7 @@ class SliderPropertyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 7),
+      margin: const EdgeInsets.only(right: 15),
       decoration: BoxDecoration(
           color: backgroundColor, borderRadius: BorderRadius.circular(15)),
       child: Row(

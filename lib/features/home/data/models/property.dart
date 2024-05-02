@@ -33,6 +33,13 @@ class Property extends Equatable {
   /// `ex : Lotus, Kavling A1, Blok B No. 4`
   final String location;
 
+  /// [imgPath]
+  ///
+  /// each property has a image
+  ///
+  /// `ex: assets/images/img.png`
+  final String imgPath;
+
   /// [dateTarget]
   ///
   /// target payment date
@@ -81,6 +88,7 @@ class Property extends Equatable {
     required this.id,
     required this.name,
     required this.location,
+    required this.imgPath,
     required this.dateTarget,
     required this.price,
     required this.transaction,
@@ -93,6 +101,7 @@ class Property extends Equatable {
     String? id,
     String? name,
     String? location,
+    String? imgPath,
     DateTime? dateTarget,
     double? price,
     Map<Transaction, double>? transaction,
@@ -104,6 +113,7 @@ class Property extends Equatable {
       id: id ?? this.id,
       name: name ?? this.name,
       location: location ?? this.location,
+      imgPath: imgPath ?? this.imgPath,
       dateTarget: dateTarget ?? this.dateTarget,
       price: price ?? this.price,
       transaction: transaction ?? this.transaction,
@@ -118,6 +128,7 @@ class Property extends Equatable {
       'id': id,
       'name': name,
       'location': location,
+      'img_path': imgPath,
       'date_target': dateTarget.millisecondsSinceEpoch,
       'price': price,
       'transaction': transaction,
@@ -132,6 +143,7 @@ class Property extends Equatable {
       id: map['id'] as String,
       name: map['name'] as String,
       location: map['location'] as String,
+      imgPath: map['img_path'] as String,
       dateTarget: DateTime.parse(map['date_target'] as String),
       price: map['price'] as double,
       transaction: (map['transaction'] as Map<String, dynamic>).map(
@@ -158,6 +170,7 @@ class Property extends Equatable {
       id,
       name,
       location,
+      imgPath,
       dateTarget,
       price,
       transaction,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
 
 class HomeEmptyWidget extends StatelessWidget {
   const HomeEmptyWidget({
@@ -64,7 +66,9 @@ class HomeEmptyWidget extends StatelessWidget {
           height: 10,
         ),
         ElevatedButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            context.read<HomeBloc>().add(const EksplorPropertyEvent());
+          },
           icon: const Icon(
             Icons.search,
             color: Color.fromARGB(255, 255, 255, 255),

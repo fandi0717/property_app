@@ -18,4 +18,12 @@ final class EksplorPropertyEvent extends HomeEvent {
 
 final class Back2EmptyPropertyEvent extends HomeEvent {}
 
-// final class SwitchPropertyEvent extends HomeEvent {}
+final class SwitchPropertyEvent extends HomeEvent {
+  final List<Property> propertys;
+  final int index;
+
+  const SwitchPropertyEvent({required this.propertys, required this.index});
+
+  @override
+  List<Object> get props => [propertys, index];
+}

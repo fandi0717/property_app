@@ -9,12 +9,13 @@ sealed class HomeState extends Equatable {
 
 final class HomeEmpty extends HomeState {}
 
-final class PesananTerbaru extends HomeState {
+final class PropertyOrder extends HomeState {
   final List<Property> propertys;
   // final Property property;
+  final int index;
 
-  const PesananTerbaru({required this.propertys});
+  const PropertyOrder({required this.propertys, this.index = 0});
 
   @override
-  List<Object> get props => [propertys];
+  List<Object> get props => [propertys, index];
 }
