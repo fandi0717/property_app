@@ -47,6 +47,7 @@ dependencies:
   custom_navigation_bar: ^0.8.2
   timelines: ^0.1.0
   indonesia: ^2.0.0
+  dotted_line: ^3.2.2
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +75,8 @@ flutter:
   assets:
     - assets/images/
     - assets/images/svg/
+    - assets/icons/utils/svg/
+    - assets/icons/navbar/svg/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -38,7 +38,7 @@ class PesananPropertyDataProvider {
     "pembangunan": 0.0,
     "serah_terima": 0.0
   },
-  "date_now": "2024-01-25 09:00:00",
+  "date_now": "2024-01-01 09:00:00",
   "denda": 8550000.0
 }
 """;
