@@ -55,7 +55,7 @@ class PesananPropertyDataProvider {
   "jenis_property": "Komersil",
   "transaction": {
     "pemesanan": 100.0,
-    "administrasi": 50.0,
+    "administrasi": 30.0,
     "pembangunan": 0.0,
     "serah_terima": 0.0
   },
