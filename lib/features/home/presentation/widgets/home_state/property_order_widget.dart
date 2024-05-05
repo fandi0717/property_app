@@ -24,8 +24,6 @@ class PropertyOrderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(
-        "percentage : ${propertyOrder.propertys[propertyOrder.index].transaction}");
     const completeColor = Color(0xff5e6172);
     const inProgressColor = Color(0xff5ec792);
     const todoColor = Color(0xffd1d2d7);
