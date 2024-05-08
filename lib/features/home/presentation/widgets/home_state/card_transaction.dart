@@ -195,9 +195,29 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                     ),
                                   ),
                                   */
-                                    child: SizedBox(
+                                    child: Container(
                                       width: 35,
                                       height: 35,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: widget.transaction ==
+                                                  Transaction.pemesanan
+                                              ? const Color.fromARGB(
+                                                  255, 51, 74, 52)
+                                              : Colors.white,
+                                          boxShadow: widget.percentage == 0
+                                              ? null
+                                              : [
+                                                  BoxShadow(
+                                                      blurRadius: 2.5,
+                                                      spreadRadius: 0,
+                                                      color: const Color
+                                                              .fromARGB(
+                                                              255, 9, 19, 10)
+                                                          .withOpacity(0.16),
+                                                      offset:
+                                                          const Offset(0, 5))
+                                                ]),
                                       child: SimpleCircularProgressBar(
                                         // size: 35,
                                         backStrokeWidth: 3,

@@ -22,6 +22,8 @@ class ContentIconBottomSheet extends StatelessWidget {
           "if [enabled] argument is `true`\nYou must declare [renderBadgeContent] argument is not null");
     }
 
+    /// TODO : wrap [column] with [Container]
+    /// and create box decoration
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -79,8 +81,17 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
         Container(
           width: 35,
           height: 35,
-          decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 51, 74, 52), shape: BoxShape.circle),
+          decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 51, 74, 52),
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                    blurRadius: 2.5,
+                    spreadRadius: 0,
+                    color:
+                        const Color.fromARGB(255, 9, 19, 10).withOpacity(0.16),
+                    offset: const Offset(0, 10))
+              ]),
           child: SimpleCircularProgressBar(
               // size: 35,
               backStrokeWidth: 3,
