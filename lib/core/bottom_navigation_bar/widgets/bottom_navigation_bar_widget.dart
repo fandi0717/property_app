@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:property_app/routes/route_name.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 
@@ -64,141 +66,293 @@ changeBodyUI(int index, BuildContext context) {
 //   );
 // }
 
+/// TODO : IMPLEMENT BOTTOM NAVIGATION BAR SCREEN
 Widget bottomNavigationBarWidget(BuildContext context) {
-  return CustomNavigationBar(
+  return BottomNavigationBar(
+    type: BottomNavigationBarType.fixed,
     // iconSize: 12,
+    // items: [
+    //   CustomNavigationBarItem(
+    //       icon: Column(
+    //     mainAxisSize: MainAxisSize.min,
+    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    //     children: [
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/home.svg',
+    //             // theme: SvgTheme(currentColor: Colors.green),
+    //             // width: 14,
+    //             height: constraints.maxHeight,
+    //             // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
+    //           ),
+    //         ),
+    //       ),
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/indicator.svg',
+
+    //             // width: 10,
+    //             height: constraints.maxHeight,
+    //           ),
+    //         ),
+    //       )
+    //     ],
+    //   )),
+    //   CustomNavigationBarItem(
+    //       icon: Column(
+    //     children: [
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/home.svg',
+    //             // theme: SvgTheme(currentColor: Colors.green),
+    //             // width: 14,
+    //             height: constraints.maxHeight,
+    //             // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
+    //           ),
+    //         ),
+    //       ),
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/indicator.svg',
+
+    //             // width: 10,
+    //             height: constraints.maxHeight,
+    //           ),
+    //         ),
+    //       )
+    //     ],
+    //   )),
+    //   CustomNavigationBarItem(
+    //       icon: Column(
+    //     children: [
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/home.svg',
+    //             // theme: SvgTheme(currentColor: Colors.green),
+    //             // width: 14,
+    //             height: constraints.maxHeight,
+    //             // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
+    //           ),
+    //         ),
+    //       ),
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/indicator.svg',
+
+    //             // width: 10,
+    //             height: constraints.maxHeight,
+    //           ),
+    //         ),
+    //       )
+    //     ],
+    //   )),
+    //   CustomNavigationBarItem(
+    //       icon: Column(
+    //     children: [
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/home.svg',
+    //             // theme: SvgTheme(currentColor: Colors.green),
+    //             // width: 14,
+    //             height: constraints.maxHeight,
+    //             // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
+    //           ),
+    //         ),
+    //       ),
+    //       Flexible(
+    //         child: LayoutBuilder(
+    //           builder: (context, constraints) => SvgPicture.asset(
+    //             'assets/icons/navbar/svg/indicator.svg',
+
+    //             // width: 10,
+    //             height: constraints.maxHeight,
+    //           ),
+    //         ),
+    //       )
+    //     ],
+    //   )),
+    //   CustomNavigationBarItem(
+    //       icon: Column(
+    //     children: [
+    //       Expanded(
+    //         child: SvgPicture.asset(
+    //           'assets/icons/navbar/svg/home.svg',
+    //           // theme: SvgTheme(currentColor: Colors.green),
+    //           width: 24,
+    //           height: 24,
+    //           // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
+    //         ),
+    //       ),
+    //       Expanded(
+    //         child: SvgPicture.asset(
+    //           'assets/icons/navbar/svg/indicator.svg',
+    //           width: 11,
+    //           height: 61,
+    //         ),
+    //       )
+    //     ],
+    //   )),
+    // ],
     items: [
-      CustomNavigationBarItem(
-          icon: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/home.svg',
-                // theme: SvgTheme(currentColor: Colors.green),
-                // width: 14,
-                height: constraints.maxHeight,
-                // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
-              ),
-            ),
-          ),
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/indicator.svg',
-
-                // width: 10,
-                height: constraints.maxHeight,
-              ),
-            ),
-          )
-        ],
-      )),
-      CustomNavigationBarItem(
-          icon: Column(
-        children: [
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/home.svg',
-                // theme: SvgTheme(currentColor: Colors.green),
-                // width: 14,
-                height: constraints.maxHeight,
-                // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
-              ),
-            ),
-          ),
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/indicator.svg',
-
-                // width: 10,
-                height: constraints.maxHeight,
-              ),
-            ),
-          )
-        ],
-      )),
-      CustomNavigationBarItem(
-          icon: Column(
-        children: [
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/home.svg',
-                // theme: SvgTheme(currentColor: Colors.green),
-                // width: 14,
-                height: constraints.maxHeight,
-                // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
-              ),
-            ),
-          ),
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/indicator.svg',
-
-                // width: 10,
-                height: constraints.maxHeight,
-              ),
-            ),
-          )
-        ],
-      )),
-      CustomNavigationBarItem(
-          icon: Column(
-        children: [
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/home.svg',
-                // theme: SvgTheme(currentColor: Colors.green),
-                // width: 14,
-                height: constraints.maxHeight,
-                // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
-              ),
-            ),
-          ),
-          Flexible(
-            child: LayoutBuilder(
-              builder: (context, constraints) => SvgPicture.asset(
-                'assets/icons/navbar/svg/indicator.svg',
-
-                // width: 10,
-                height: constraints.maxHeight,
-              ),
-            ),
-          )
-        ],
-      )),
-      CustomNavigationBarItem(
-          icon: Column(
-        children: [
-          Expanded(
-            child: SvgPicture.asset(
-              'assets/icons/navbar/svg/home.svg',
-              // theme: SvgTheme(currentColor: Colors.green),
-              width: 24,
-              height: 24,
-              // colorFilter: const ColorFilter.mode(Colors.green, BlendMode.srcIn),
-            ),
-          ),
-          Expanded(
-            child: SvgPicture.asset(
+      /// [home]
+      BottomNavigationBarItem(
+        label: '',
+        icon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/nonactive/home.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 155, 155, 155), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
               'assets/icons/navbar/svg/indicator.svg',
-              width: 11,
-              height: 61,
+              colorFilter:
+                  const ColorFilter.mode(Colors.transparent, BlendMode.srcIn),
+            )
+          ],
+        ),
+        activeIcon: Column(
+          children: [
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/active/home.svg',
+              colorFilter: const ColorFilter.mode(
+                  Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn),
             ),
-          )
-        ],
-      )),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+            )
+          ],
+        ),
+      ),
+
+      /// [building]
+      BottomNavigationBarItem(
+        label: '',
+        icon: Column(
+          children: [
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/nonactive/building.svg',
+              colorFilter: const ColorFilter.mode(
+                  Color.fromARGB(255, 155, 155, 155), BlendMode.srcIn),
+            ),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+              colorFilter:
+                  const ColorFilter.mode(Colors.transparent, BlendMode.srcIn),
+            )
+          ],
+        ),
+        activeIcon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/active/building.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+            )
+          ],
+        ),
+      ),
+
+      /// [document]
+      BottomNavigationBarItem(
+        label: '',
+        icon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/nonactive/document.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 155, 155, 155), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+              colorFilter:
+                  const ColorFilter.mode(Colors.transparent, BlendMode.srcIn),
+            )
+          ],
+        ),
+        activeIcon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/active/document.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+            )
+          ],
+        ),
+      ),
+
+      /// [cart]
+      BottomNavigationBarItem(
+        label: '',
+        icon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/nonactive/cart.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 155, 155, 155), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+              colorFilter:
+                  const ColorFilter.mode(Colors.transparent, BlendMode.srcIn),
+            )
+          ],
+        ),
+        activeIcon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/active/cart.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+            )
+          ],
+        ),
+      ),
+
+      /// [account]
+      BottomNavigationBarItem(
+        label: '',
+        icon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/nonactive/account.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 155, 155, 155), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+              colorFilter:
+                  const ColorFilter.mode(Colors.transparent, BlendMode.srcIn),
+            )
+          ],
+        ),
+        activeIcon: Column(
+          children: [
+            SvgPicture.asset('assets/icons/navbar/svg/active/account.svg',
+                colorFilter: const ColorFilter.mode(
+                    Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn)),
+            const Gap(20),
+            SvgPicture.asset(
+              'assets/icons/navbar/svg/indicator.svg',
+            )
+          ],
+        ),
+      ),
     ],
-    selectedColor: const Color.fromARGB(255, 51, 74, 52),
+    // selectedColor: const Color.fromARGB(255, 51, 74, 52),
     currentIndex: context.read<BottomNavigationBarCubit>().state,
-    unSelectedColor: const Color.fromARGB(255, 155, 155, 155),
+    // unSelectedColor: const Color.fromARGB(255, 155, 155, 155),
     onTap: (int index) {
       context.read<BottomNavigationBarCubit>().changeIndex(index);
       changeBodyUI(index, context);
