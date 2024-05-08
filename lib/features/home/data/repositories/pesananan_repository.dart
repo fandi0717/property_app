@@ -1,5 +1,5 @@
-import 'package:property_app/features/home/data/dataproviders/online/pesanan_data_provider.dart';
-import 'package:property_app/features/home/data/models/property.dart';
+import '../dataproviders/online/pesanan_data_provider.dart';
+import '../models/property.dart';
 
 class PesananPropertyRepository {
   List<Property> getAllProperty() {

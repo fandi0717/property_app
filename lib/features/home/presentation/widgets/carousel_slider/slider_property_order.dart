@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:indonesia/indonesia.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../../core/formatting/rupiah.dart';
 import '../../../data/models/property.dart';
 import '../../../logic/bloc/home_bloc.dart';
 
@@ -203,7 +203,6 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               const Gap(5),
                               Expanded(
                                 child: AutoSizeText(
-                                  // propertys[index].price.toInt().toString(),
                                   rupiah(propertys[index].price.toInt()),
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w500,

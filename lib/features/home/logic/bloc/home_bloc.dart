@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:property_app/features/home/data/repositories/pesananan_repository.dart';
+import '../../data/repositories/pesananan_repository.dart';
 
 import '../../data/models/property.dart';
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
+
+import '../../../logic/bloc/home_bloc.dart';
 
 class HomeEmptyWidget extends StatelessWidget {
   const HomeEmptyWidget({
