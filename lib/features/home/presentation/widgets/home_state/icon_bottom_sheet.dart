@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'bottom_sheet.dart';
 
 class ContentIconBottomSheet extends StatelessWidget {
@@ -54,6 +55,72 @@ class ContentIconBottomSheet extends StatelessWidget {
                       color: enabled
                           ? const Color.fromARGB(255, 51, 74, 52)
                           : const Color.fromARGB(255, 153, 164, 153))),
+            ]))
+      ],
+    );
+  }
+}
+
+class ContentPercentageIconBottomSheet extends StatelessWidget {
+  const ContentPercentageIconBottomSheet({
+    super.key,
+    required this.text,
+    required this.percentage,
+  });
+
+  final String text;
+  final int percentage;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 35,
+          height: 35,
+          decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 51, 74, 52), shape: BoxShape.circle),
+          child: SimpleCircularProgressBar(
+              // size: 35,
+              backStrokeWidth: 3,
+              progressStrokeWidth: 3,
+              progressColors: const [Color.fromARGB(255, 255, 92, 92)],
+              backColor: Colors.white,
+              mergeMode: true,
+              onGetText: (double value) {
+                return Text.rich(TextSpan(
+                    text: value.toInt().toString(),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 12,
+                        color: Colors.white),
+                    children: const [
+                      TextSpan(
+                          text: '%',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 3.57,
+                              color: Colors.white))
+                    ]));
+              },
+              valueNotifier: ValueNotifier(percentage.toDouble())),
+        ),
+        const Gap(10),
+        Text.rich(TextSpan(
+            text: text.split('\n')[0],
+            style: const TextStyle(
+                fontWeight: FontWeight.w300,
+                fontSize: 10,
+                color: Color.fromARGB(255, 51, 74, 52)),
+            children: [
+              TextSpan(
+                  text:
+                      '\n${text.split('\n')[1]}${text.split('\n').length == 3 ? '\n${text.split('\n')[2]}' : ""}',
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 10,
+                      color: Color.fromARGB(255, 51, 74, 52))),
             ]))
       ],
     );
