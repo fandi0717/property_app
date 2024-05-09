@@ -34,8 +34,8 @@ class PesananPropertyDataProvider {
   "jenis_property": "Komersil",
   "transaction": {
     "pemesanan": 100.0,
-    "administrasi": 50.0,
-    "pembangunan": 0.0,
+    "administrasi": 100.0,
+    "pembangunan": 40.0,
     "serah_terima": 0.0
   },
   "date_now": "2024-01-01 09:00:00",

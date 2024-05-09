@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:property_app/features/home/presentation/widgets/home_state/timeline_widget.dart';
 import 'card_transaction.dart';
 
 import 'package:property_app/features/home/data/models/transaction_enum.dart';
@@ -24,22 +25,6 @@ class PropertyOrderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const completeColor = Color(0xff5e6172);
-    const inProgressColor = Color(0xff5ec792);
-    const todoColor = Color(0xffd1d2d7);
-
-    int processIndex = 2;
-
-    Color getColor(int index) {
-      if (index == processIndex) {
-        return inProgressColor;
-      } else if (index < processIndex) {
-        return completeColor;
-      } else {
-        return todoColor;
-      }
-    }
-
     return Column(
       children: [
         /// [PESANAN TERBARU ---]
@@ -81,25 +66,39 @@ class PropertyOrderWidget extends StatelessWidget {
                 ),
               ],
             ),
-            IconButton(
-                onPressed: () {
+            GestureDetector(
+                onTap: () {
                   context.read<HomeBloc>().add(Back2EmptyPropertyEvent());
                 },
-                icon: const Icon(Icons.arrow_right_alt))
+                child: SvgPicture.asset(
+                  'assets/icons/utils/svg/arrow_right.svg',
+                  colorFilter: const ColorFilter.mode(
+                      Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn),
+                ))
           ],
         ),
+        const Gap(25),
         Expanded(
             child: SingleChildScrollView(
           child: Column(
             children: [
-              /// TODO :: ADD TIMELINES
-              ///
-              /// [Testing]
-              // const Text('initial'),
-              Text(propertyOrder.propertys[propertyOrder.index].name),
-              // propertyOrder.propertys[propertyOrder.index],
+              AspectRatio(
+                aspectRatio: 378 / 56,
+                child: Container(
+                    // height: MediaQuery.of(context).size.height * 0.2,
+                    // width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 15),
+                    child: ProcessTimelinePage(
+                        transaction: propertyOrder
+                            .propertys[propertyOrder.index].transaction)),
+              ),
 
-              /// [END TESTING]
+              const Gap(25),
               ConstrainedBox(
                 constraints: const BoxConstraints(),
                 child: SliderPropertyOrderWidget(
@@ -364,80 +363,3 @@ class PropertyOrderWidget extends StatelessWidget {
     );
   }
 }
-
-class _BezierPainter extends CustomPainter {
-  const _BezierPainter({
-    required this.color,
-    this.drawStart = true,
-    this.drawEnd = true,
-  });
-
-  final Color color;
-  final bool drawStart;
-  final bool drawEnd;
-
-  Offset _offset(double radius, double angle) {
-    return Offset(
-      radius * cos(angle) + radius,
-      radius * sin(angle) + radius,
-    );
-  }
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..style = PaintingStyle.fill
-      ..color = color;
-
-    final radius = size.width / 2;
-
-    double angle;
-    Offset offset1;
-    Offset offset2;
-
-    Path path;
-
-    if (drawStart) {
-      angle = 3 * pi / 4;
-      offset1 = _offset(radius, angle);
-      offset2 = _offset(radius, -angle);
-      path = Path()
-        ..moveTo(offset1.dx, offset1.dy)
-        ..quadraticBezierTo(0.0, size.height / 2, -radius,
-            radius) // TODO connector start & gradient
-        ..quadraticBezierTo(0.0, size.height / 2, offset2.dx, offset2.dy)
-        ..close();
-
-      canvas.drawPath(path, paint);
-    }
-    if (drawEnd) {
-      angle = -pi / 4;
-      offset1 = _offset(radius, angle);
-      offset2 = _offset(radius, -angle);
-
-      path = Path()
-        ..moveTo(offset1.dx, offset1.dy)
-        ..quadraticBezierTo(size.width, size.height / 2, size.width + radius,
-            radius) // TODO connector end & gradient
-        ..quadraticBezierTo(size.width, size.height / 2, offset2.dx, offset2.dy)
-        ..close();
-
-      canvas.drawPath(path, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(_BezierPainter oldDelegate) {
-    return oldDelegate.color != color ||
-        oldDelegate.drawStart != drawStart ||
-        oldDelegate.drawEnd != drawEnd;
-  }
-}
-
-final _processes = [
-  'Prospect',
-  'Tour',
-  'Offer',
-  'Contract',
-  'Settled',
-];
