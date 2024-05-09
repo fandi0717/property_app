@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 
 class SliderPropertyWidget extends StatelessWidget {
@@ -32,7 +34,7 @@ class SliderPropertyWidget extends StatelessWidget {
           /// [information]
           Expanded(
             child: Container(
-              margin: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 30),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,30 +42,44 @@ class SliderPropertyWidget extends StatelessWidget {
                   RichText(
                       text: TextSpan(
                           text: "${diskon.toInt()}% ",
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              fontFamily: 'Rubik',
+                              color: Colors.white),
                           children: const [
                         TextSpan(
-                            text: "Diskon\n",
-                            style: TextStyle(fontWeight: FontWeight.normal))
+                            text: "Diskon",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 15,
+                                fontFamily: 'Outfit',
+                                color: Colors.white))
                       ])),
-                  Text(
+                  const Gap(7),
+                  AutoSizeText(
                     name,
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white),
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Outfit'),
+                    maxLines: 1,
                   ),
+                  const Gap(4),
                   Row(
                     children: [
-                      const Icon(
-                        Icons.calendar_month,
-                        size: 10,
-                        color: Colors.white,
-                      ),
+                      SvgPicture.asset('assets/icons/utils/svg/calendar.svg'),
                       Expanded(
                         child: AutoSizeText(
                           "\tPeriode ${DateFormat('d MMM yyyy', 'id').format(startDate)} s/d ${DateFormat('d MMM yyyy', 'id').format(endDate)}",
                           maxLines: 1,
                           minFontSize: 1,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Outfit',
+                              fontWeight: FontWeight.w300,
+                              fontSize: 10),
                         ),
                       )
                     ],

@@ -5,7 +5,7 @@ buildBottomSheet4Pemesanan(BuildContext context) {
   showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
+        return SizedBox(
           width: MediaQuery.of(context).size.width,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
@@ -18,19 +18,23 @@ buildBottomSheet4Pemesanan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 51, 74, 52)),
               ),
               const Text(
                 'Daftar Menu tahap pemesanan',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
+                    fontFamily: 'Outfit',
                     fontSize: 12,
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
+              const Gap(20),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
+              const Gap(20),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -60,7 +64,7 @@ buildBottomSheet4Administrasi(BuildContext context) {
   showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
+        return SizedBox(
           width: MediaQuery.of(context).size.width,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
@@ -73,6 +77,7 @@ buildBottomSheet4Administrasi(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 51, 74, 52)),
               ),
               const Text(
@@ -80,12 +85,15 @@ buildBottomSheet4Administrasi(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
+                    fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
+              const Gap(20),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
+              const Gap(20),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -115,7 +123,7 @@ buildBottomSheet4Pembangunan(BuildContext context) {
   showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
+        return SizedBox(
           width: MediaQuery.of(context).size.width,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
@@ -128,6 +136,7 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 51, 74, 52)),
               ),
               const Text(
@@ -135,12 +144,15 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
+                    fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
+              const Gap(20),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
+              const Gap(20),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -170,7 +182,7 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
   showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
+        return SizedBox(
           width: MediaQuery.of(context).size.width,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
@@ -183,19 +195,23 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 51, 74, 52)),
               ),
               const Text(
                 'Daftar menu tahap akad & serah terima',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
+                    fontFamily: 'Outfit',
                     fontSize: 12,
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
+              const Gap(20),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
+              const Gap(20),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -233,7 +249,8 @@ class BottomSheetComponent {
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
-              fontSize: 10.67),
+              fontSize: 10.67,
+              fontFamily: 'Outfit'),
         ),
       ),
     ),
@@ -258,6 +275,7 @@ class BottomSheetComponent {
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
+              fontFamily: 'Outfit',
               fontSize: 10.67),
         ),
       ),
@@ -307,6 +325,7 @@ class BottomSheetComponent {
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
+              fontFamily: 'Outfit',
               fontSize: 10.67),
         ),
       ),
@@ -326,31 +345,3 @@ class BottomSheetComponent {
     ),
   ];
 }
-
-var iconBottomSheetWidget = [
-  const ContentIconBottomSheet(
-    enabled: true,
-    iconPath: 'assets/icons/utils/svg/tahap_akad.svg',
-    text: 'Tahap\nAkad',
-    renderBadgeContent: Center(
-      child: Text(
-        "!",
-        style: TextStyle(
-            color: Colors.white, fontWeight: FontWeight.w500, fontSize: 10.67),
-      ),
-    ),
-  ),
-  const ContentIconBottomSheet(
-      enabled: false,
-      iconPath: 'assets/icons/utils/svg/tahap_serah_terima_bangunan.svg',
-      text: 'Tahap\nSerah Terima\nBangunan'),
-  const ContentIconBottomSheet(
-      enabled: false,
-      iconPath: 'assets/icons/utils/svg/tahap_serah_terima_legalitas.svg',
-      text: 'Tahap\nSerah Terima\nLegalitas'),
-  const ContentIconBottomSheet(
-    enabled: false,
-    iconPath: 'assets/icons/utils/svg/daftar_komplain.svg',
-    text: 'Daftar\nKomplain',
-  ),
-];

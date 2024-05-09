@@ -63,6 +63,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
                               // height: 15.12,
+                              fontFamily: 'Outfit',
                               color: Colors.white),
                         ),
                       ),
@@ -101,7 +102,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Gap(10),
+                    const Gap(15),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,7 +132,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               )
                             ],
                           ),
-                          const Gap(10),
+                          const Gap(7),
                           Row(
                             children: [
                               SvgPicture.asset(
@@ -160,7 +161,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               )
                             ],
                           ),
-                          const Gap(10),
+                          const Gap(7),
 
                           Row(
                             children: [
@@ -189,24 +190,25 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               )
                             ],
                           ),
-                          const Gap(10),
+                          const Gap(7),
 
                           // AutoSizeText.rich(TextSpan(text: 'Rp')),
                           Row(
                             children: [
                               Text(
-                                "Rp",
+                                "Rp ",
                                 // style: TextStyle(
                                 //     fontWeight: FontWeight.w400, fontSize: 12),
                                 style: Theme.of(context).textTheme.labelSmall,
                               ),
-                              const Gap(5),
+                              // const Gap(5),
                               Expanded(
                                 child: AutoSizeText(
                                   rupiah(propertys[index].price.toInt()),
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 14),
+                                      fontSize: 14,
+                                      fontFamily: 'Outfit'),
                                   maxLines: 1,
                                   minFontSize: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -256,6 +258,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                           style: const TextStyle(
                                               fontWeight: FontWeight.w700,
                                               fontSize: 12,
+                                              fontFamily: 'Outfit',
                                               color: Color.fromARGB(
                                                   255, 51, 74, 52)))
                                     ]))
@@ -279,6 +282,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                     style: const TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 10,
+                                        fontFamily: 'Outfit',
                                         color: Colors.white))
                               ]))
                         ],

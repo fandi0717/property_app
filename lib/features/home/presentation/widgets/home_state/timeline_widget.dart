@@ -37,6 +37,7 @@ class ProcessTimelinePage extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 10,
+                fontFamily: 'Outfit',
                 color: transaction.values.toList()[index] == 0
                     ? const Color.fromARGB(255, 171, 171, 171)
                     : const Color.fromARGB(255, 51, 74, 52)

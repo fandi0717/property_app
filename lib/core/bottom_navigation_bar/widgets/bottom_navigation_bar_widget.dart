@@ -14,6 +14,7 @@ Widget bottomNavigationBarWidget(BuildContext context) {
       BottomNavigationBarItem(
         label: '',
         icon: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             SvgPicture.asset('assets/icons/navbar/svg/nonactive/home.svg',
                 colorFilter: const ColorFilter.mode(
@@ -27,6 +28,7 @@ Widget bottomNavigationBarWidget(BuildContext context) {
           ],
         ),
         activeIcon: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             SvgPicture.asset(
               'assets/icons/navbar/svg/active/home.svg',

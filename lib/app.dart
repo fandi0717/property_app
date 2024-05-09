@@ -19,6 +19,7 @@ class RootTreeScreen extends StatelessWidget {
               labelSmall: TextStyle(
                   color: Color.fromARGB(255, 51, 74, 52),
                   fontSize: 12,
+                  fontFamily: 'Outfit',
                   fontWeight: FontWeight.w400))),
     );
   }

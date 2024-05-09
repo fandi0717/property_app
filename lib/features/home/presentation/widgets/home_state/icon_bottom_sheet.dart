@@ -43,6 +43,7 @@ class ContentIconBottomSheet extends StatelessWidget {
             text: text.split('\n')[0],
             style: TextStyle(
                 fontWeight: FontWeight.w300,
+                fontFamily: 'Lexend',
                 fontSize: 10,
                 color: enabled
                     ? const Color.fromARGB(255, 51, 74, 52)
@@ -53,6 +54,7 @@ class ContentIconBottomSheet extends StatelessWidget {
                       '\n${text.split('\n')[1]}${text.split('\n').length == 3 ? '\n${text.split('\n')[2]}' : ""}',
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
+                      fontFamily: 'Lexend',
                       fontSize: 10,
                       color: enabled
                           ? const Color.fromARGB(255, 51, 74, 52)
@@ -105,6 +107,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 12,
+                        fontFamily: 'Rubix',
                         color: Colors.white),
                     children: const [
                       TextSpan(
@@ -112,6 +115,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 3.57,
+                              fontFamily: 'Rubix',
                               color: Colors.white))
                     ]));
               },
@@ -123,6 +127,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
             style: const TextStyle(
                 fontWeight: FontWeight.w300,
                 fontSize: 10,
+                fontFamily: 'Lexend',
                 color: Color.fromARGB(255, 51, 74, 52)),
             children: [
               TextSpan(
@@ -131,6 +136,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                   style: const TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 10,
+                      fontFamily: 'Lexend',
                       color: Color.fromARGB(255, 51, 74, 52))),
             ]))
       ],

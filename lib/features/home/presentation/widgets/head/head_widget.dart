@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:gap/gap.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class HeadWidget extends StatelessWidget {
   const HeadWidget({
@@ -25,11 +26,20 @@ class HeadWidget extends StatelessWidget {
                 children: [
                   Text(
                     "Temukan\nHunian Impian",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                        color: Color.fromARGB(255, 51, 74, 52),
+                        fontFamily: 'Outfit'),
                   ),
+                  Gap(4),
                   Text(
                     "Agen Properti Terbaik",
-                    style: TextStyle(fontWeight: FontWeight.w400),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        fontFamily: 'Outfit',
+                        color: Color.fromARGB(255, 126, 126, 126)),
                   )
                 ],
               )
@@ -37,15 +47,33 @@ class HeadWidget extends StatelessWidget {
           ),
         ),
         badges.Badge(
-          badgeContent: Text(
-            "3",
-            style: TextStyle(color: Colors.white),
+          badgeContent: Center(
+            child: Text(
+              "3",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Outfit',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 10.67),
+            ),
+          ),
+          badgeStyle: badges.BadgeStyle(
+            badgeColor: Color.fromARGB(255, 255, 92, 92),
+            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
           ),
           child: CircleAvatar(
-            backgroundColor: Colors.white,
-            // radius: 25,
-            child: Icon(Icons.notifications),
-          ),
+              backgroundColor: Colors.white,
+              // radius: 20,
+              // child: SvgPicture.asset(
+              //   'assets/icons/utils/svg/notification.svg',
+              //   // width: 20,
+              //   // height: 20,
+              // ),
+              child: Icon(
+                Icons.notifications,
+                size: 20,
+                color: Color.fromARGB(255, 51, 74, 52),
+              )),
         ),
       ],
     );

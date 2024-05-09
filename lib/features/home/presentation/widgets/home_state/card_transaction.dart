@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
@@ -139,6 +140,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w300,
                                 fontSize: 12,
+                                fontFamily: 'Lexend',
                                 color: widget.transaction ==
                                         Transaction.pemesanan
                                     ? Colors.white
@@ -147,10 +149,12 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
-                          child: Text(namaTahap,
+                          child: AutoSizeText(namaTahap,
+                              maxLines: 1,
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
+                                  fontFamily: 'Lexend',
                                   color: widget.transaction ==
                                           Transaction.pemesanan
                                       ? Colors.white
@@ -240,6 +244,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                               text: value.toInt().toString(),
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w600,
+                                                  fontFamily: 'Rubik',
                                                   fontSize: 12,
                                                   color: widget.transaction ==
                                                           Transaction.pemesanan
@@ -252,6 +257,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        fontFamily: 'Rubik',
                                                         fontSize: 5,
                                                         color:
                                                             widget.transaction ==
