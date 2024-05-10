@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:gap/gap.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HeadWidget extends StatelessWidget {
   const HeadWidget({
@@ -81,10 +81,15 @@ class HeadWidget extends StatelessWidget {
               color: Colors.white,
               shape: BoxShape.circle,
             ),
-            child: const Icon(
-              Icons.notifications,
-              size: 20,
-              color: Color.fromARGB(255, 51, 74, 52),
+            // child: const Icon(
+            //   Icons.notifications,
+            //   size: 20,
+            //   color: Color.fromARGB(255, 51, 74, 52),
+            // ),
+            child: SvgPicture.asset(
+              'assets/icons/utils/svg/notification.svg',
+              width: 20,
+              height: 20,
             ),
           ),
         ),

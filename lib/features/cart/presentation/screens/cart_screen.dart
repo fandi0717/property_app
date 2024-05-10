@@ -12,8 +12,7 @@ class CartScreen extends StatelessWidget {
         child: Text("Screen 4",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
       ),
-      // bottomNavigationBar: bottomNavigationBarWidget(context),
-      bottomNavigationBar: ItemNavigationBar(),
+      bottomNavigationBar: BottomNavigationBarWidget(),
     );
   }
 }

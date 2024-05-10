@@ -76,8 +76,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: bottomNavigationBarWidget(context),
-      bottomNavigationBar: ItemNavigationBar(),
+      bottomNavigationBar: BottomNavigationBarWidget(),
     );
   }
 }
