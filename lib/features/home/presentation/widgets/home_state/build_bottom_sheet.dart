@@ -29,12 +29,12 @@ buildBottomSheet4Pemesanan(BuildContext context) {
                     fontSize: 12,
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
-              const Gap(20),
+              const Gap(2),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
-              const Gap(20),
+              const Gap(2),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -88,12 +88,12 @@ buildBottomSheet4Administrasi(BuildContext context) {
                     fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
-              const Gap(20),
+              const Gap(2),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
-              const Gap(20),
+              const Gap(2),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -147,12 +147,12 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                     fontFamily: 'Outfit',
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
-              const Gap(20),
+              const Gap(2),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
-              const Gap(20),
+              const Gap(2),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(
@@ -206,12 +206,12 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
                     fontSize: 12,
                     color: Color.fromARGB(255, 155, 155, 155)),
               ),
-              const Gap(20),
+              const Gap(2),
               const Divider(
                 color: Color.fromARGB(255, 222, 221, 221),
                 // color: Colors.black,
               ),
-              const Gap(20),
+              const Gap(2),
               GridView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(

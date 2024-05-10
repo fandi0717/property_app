@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:device_preview/device_preview.dart';
 
 import 'app.dart';
 import 'core/bottom_navigation_bar/cubit/bottom_navigation_bar_cubit.dart';
@@ -13,7 +15,8 @@ import 'features/home/logic/bloc/home_bloc.dart';
 /// 3. Lexend
 void main() async {
   await initializeDateFormatting("id", null);
-  runApp(const PropertyApp());
+  runApp(DevicePreview(
+      enabled: !kReleaseMode, builder: (context) => const PropertyApp()));
 }
 
 class PropertyApp extends StatelessWidget {

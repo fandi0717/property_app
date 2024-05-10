@@ -47,11 +47,14 @@ class HomeEmptyWidget extends StatelessWidget {
                 fontFamily: 'Outfit'),
           ),
         ),
-        const Gap(30),
-        Image.asset(
-          "assets/images/background_house.png",
-          scale: 2,
+        const Gap(20),
+        Expanded(
+          child: Image.asset(
+            "assets/images/background_house.png",
+            // scale: 1.5,
+          ),
         ),
+        const Gap(10),
         const Text(
           "Pesanan Kosong",
           style: TextStyle(

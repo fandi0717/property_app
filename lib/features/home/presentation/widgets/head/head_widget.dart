@@ -10,10 +10,10 @@ class HeadWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
+        const Expanded(
           child: Row(
             children: [
               CircleAvatar(
@@ -47,7 +47,7 @@ class HeadWidget extends StatelessWidget {
           ),
         ),
         badges.Badge(
-          badgeContent: Center(
+          badgeContent: const Center(
             child: Text(
               "3",
               style: TextStyle(
@@ -57,23 +57,36 @@ class HeadWidget extends StatelessWidget {
                   fontSize: 10.67),
             ),
           ),
-          badgeStyle: badges.BadgeStyle(
+          badgeStyle: const badges.BadgeStyle(
             badgeColor: Color.fromARGB(255, 255, 92, 92),
             padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
           ),
-          child: CircleAvatar(
-              backgroundColor: Colors.white,
-              // radius: 20,
-              // child: SvgPicture.asset(
-              //   'assets/icons/utils/svg/notification.svg',
-              //   // width: 20,
-              //   // height: 20,
-              // ),
-              child: Icon(
-                Icons.notifications,
-                size: 20,
-                color: Color.fromARGB(255, 51, 74, 52),
-              )),
+          // child: CircleAvatar(
+          //     backgroundColor: Colors.white,
+          //     // radius: 20,
+          //     // child: SvgPicture.asset(
+          //     //   'assets/icons/utils/svg/notification.svg',
+          //     //   // width: 20,
+          //     //   // height: 20,
+          //     // ),
+          //     child: Icon(
+          //       Icons.notifications,
+          //       size: 35,
+          //       color: Color.fromARGB(255, 51, 74, 52),
+          //     )),
+          child: Container(
+            width: 35,
+            height: 35,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(
+              Icons.notifications,
+              size: 20,
+              color: Color.fromARGB(255, 51, 74, 52),
+            ),
+          ),
         ),
       ],
     );

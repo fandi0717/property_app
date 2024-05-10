@@ -12,7 +12,8 @@ class AccountScreen extends StatelessWidget {
         child: Text("Screen 5",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
       ),
-      bottomNavigationBar: bottomNavigationBarWidget(context),
+      // bottomNavigationBar: bottomNavigationBarWidget(context),
+      bottomNavigationBar: ItemNavigationBar(),
     );
   }
 }

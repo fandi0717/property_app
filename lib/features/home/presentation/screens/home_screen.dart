@@ -18,67 +18,66 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // extendBody: true,
-      body: SafeArea(
-        child: Container(
-          color: Theme.of(context).primaryColor,
-          // padding: const EdgeInsets.fromLTRB(25, 40, 25, 40),
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              /// [HEAD]
-              const HeadWidget(),
+      body: Container(
+        color: Theme.of(context).primaryColor,
+        // padding: const EdgeInsets.fromLTRB(25, 40, 25, 40),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            /// [HEAD]
+            const HeadWidget(),
 
-              const Gap(30),
+            const Gap(30),
 
-              /// [CAROUSEL SLIDER]
-              CarouselSlider(
-                  items: [
-                    SliderPropertyWidget(
-                      diskon: 20,
-                      name: "American House",
-                      startDate: DateTime(2023, 11, 19),
-                      endDate: DateTime(2023, 12, 15),
-                      backgroundColor: const Color.fromARGB(255, 51, 74, 52),
-                    ),
-                    // const Gap(1),
-                    SliderPropertyWidget(
-                      diskon: 40,
-                      name: "American House",
-                      startDate: DateTime(2024, 1, 20),
-                      endDate: DateTime(2024, 3, 20),
-                      backgroundColor: const Color.fromARGB(255, 154, 202, 62),
-                    )
-                  ],
-                  options: CarouselOptions(
-                    viewportFraction: 0.95,
-                    // height: 200,
-                    autoPlay: true,
-                    aspectRatio: 5 / 2,
-                    enableInfiniteScroll: false,
-                    // enlargeCenterPage: true
-                  )),
+            /// [CAROUSEL SLIDER]
+            CarouselSlider(
+                items: [
+                  SliderPropertyWidget(
+                    diskon: 20,
+                    name: "American House",
+                    startDate: DateTime(2023, 11, 19),
+                    endDate: DateTime(2023, 12, 15),
+                    backgroundColor: const Color.fromARGB(255, 51, 74, 52),
+                  ),
+                  // const Gap(1),
+                  SliderPropertyWidget(
+                    diskon: 40,
+                    name: "American House",
+                    startDate: DateTime(2024, 1, 20),
+                    endDate: DateTime(2024, 3, 20),
+                    backgroundColor: const Color.fromARGB(255, 154, 202, 62),
+                  )
+                ],
+                options: CarouselOptions(
+                  viewportFraction: 0.95,
+                  // height: 200,
+                  autoPlay: true,
+                  aspectRatio: 5 / 2,
+                  enableInfiniteScroll: false,
+                  // enlargeCenterPage: true
+                )),
 
-              const Gap(20),
+            const Gap(20),
 
-              /// [BLOC STATE]
-              Expanded(
-                child: BlocBuilder<HomeBloc, HomeState>(
-                  builder: (context, state) {
-                    if (state is HomeEmpty) {
-                      return const HomeEmptyWidget();
-                    } else if (state is PropertyOrder) {}
-                    return PropertyOrderWidget(
-                      propertyOrder: state as PropertyOrder,
-                    );
-                  },
-                ),
-              )
-            ],
-          ),
+            /// [BLOC STATE]
+            Expanded(
+              child: BlocBuilder<HomeBloc, HomeState>(
+                builder: (context, state) {
+                  if (state is HomeEmpty) {
+                    return const HomeEmptyWidget();
+                  } else if (state is PropertyOrder) {}
+                  return PropertyOrderWidget(
+                    propertyOrder: state as PropertyOrder,
+                  );
+                },
+              ),
+            )
+          ],
         ),
       ),
-      bottomNavigationBar: bottomNavigationBarWidget(context),
+      // bottomNavigationBar: bottomNavigationBarWidget(context),
+      bottomNavigationBar: ItemNavigationBar(),
     );
   }
 }
