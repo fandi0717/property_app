@@ -212,15 +212,12 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                           boxShadow: widget.percentage == 0
                                               ? null
                                               : [
-                                                  BoxShadow(
+                                                  const BoxShadow(
                                                       blurRadius: 2.5,
                                                       spreadRadius: 0,
-                                                      color: const Color
-                                                              .fromARGB(
-                                                              255, 9, 19, 10)
-                                                          .withOpacity(0.16),
-                                                      offset:
-                                                          const Offset(0, 5))
+                                                      color: Color.fromRGBO(
+                                                          9, 19, 10, 0.16),
+                                                      offset: Offset(0, 5))
                                                 ]),
                                       child: SimpleCircularProgressBar(
                                         // size: 35,

@@ -44,17 +44,15 @@ class ContentIconBottomSheet extends StatelessWidget {
         // spacing: 10,
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 // color: const Color.fromARGB(255, 51, 74, 52),
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 4.58,
                       spreadRadius: 0,
-                      color: const Color.fromARGB(255, 234, 230, 230)
-                          .withOpacity(0.73),
-                      // color: Colors.red,
-                      offset: const Offset(0, 6.25))
+                      color: Color.fromRGBO(234, 230, 230, 0.73),
+                      offset: Offset(0, 6.25))
                 ]),
             child: badges.Badge(
               badgeContent: renderBadgeContent,
@@ -139,16 +137,15 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
           Container(
             width: 35,
             height: 35,
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 51, 74, 52),
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 51, 74, 52),
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 2.5,
                       spreadRadius: 0,
-                      color: const Color.fromARGB(255, 9, 19, 10)
-                          .withOpacity(0.16),
-                      offset: const Offset(0, 10))
+                      color: Color.fromRGBO(9, 19, 10, 0.16),
+                      offset: Offset(0, 5))
                 ]),
             child: SimpleCircularProgressBar(
                 // size: 35,
