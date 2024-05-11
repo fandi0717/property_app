@@ -4,9 +4,11 @@ part of 'bottom_sheet.dart';
 buildBottomSheet4Pemesanan(BuildContext context) {
   showModalBottomSheet(
       context: context,
+      backgroundColor: Colors.white,
       builder: (context) {
-        return SizedBox(
+        return Container(
           width: MediaQuery.of(context).size.width,
+          color: Colors.white,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
@@ -35,23 +37,34 @@ buildBottomSheet4Pemesanan(BuildContext context) {
                 // color: Colors.black,
               ),
               const Gap(2),
-              GridView.builder(
-                shrinkWrap: true,
+              // GridView.builder(
+              //   shrinkWrap: true,
+              //   padding: const EdgeInsets.only(
+              //       top: 20, bottom: 20, left: 25, right: 25),
+              //   itemCount: BottomSheetComponent.getPemesanan.length,
+              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 3,
+              //     crossAxisSpacing: 15,
+              //     mainAxisSpacing: 20,
+              //   ),
+              //   itemBuilder: (context, index) {
+              //     return BottomSheetComponent.getPemesanan[index];
+              //   },
+              // )
+              Padding(
                 padding: const EdgeInsets.only(
-                  top: 20,
-                  // bottom: 20,
-                  left: 50,
-                ),
-                itemCount: BottomSheetComponent.getPemesanan.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    top: 20, bottom: 20, left: 25, right: 25),
+                child: DynamicHeightGridView(
+                  // rowCrossAxisAlignment: CrossAxisAlignment.center,
+                  builder: (context, index) {
+                    return BottomSheetComponent.getPemesanan[index];
+                  },
+                  itemCount: BottomSheetComponent.getPemesanan.length,
                   crossAxisCount: 3,
-                  // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
-                  // mainAxisSpacing:
-                  //     MediaQuery.of(context).size.height * 0.2
+                  shrinkWrap: true,
+                  // mainAxisSpacing: 20,
+                  crossAxisSpacing: 15,
                 ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getPemesanan[index];
-                },
               )
             ],
           ),
@@ -63,9 +76,11 @@ buildBottomSheet4Pemesanan(BuildContext context) {
 buildBottomSheet4Administrasi(BuildContext context) {
   showModalBottomSheet(
       context: context,
+      backgroundColor: Colors.white,
       builder: (context) {
-        return SizedBox(
+        return Container(
           width: MediaQuery.of(context).size.width,
+          color: Colors.white,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
@@ -94,23 +109,40 @@ buildBottomSheet4Administrasi(BuildContext context) {
                 // color: Colors.black,
               ),
               const Gap(2),
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                  top: 20,
-                  // bottom: 20,
-                  left: 50,
+              // GridView.builder(
+              //   shrinkWrap: true,
+              //   padding: const EdgeInsets.only(
+              //       top: 20, bottom: 20, left: 25, right: 25),
+              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 3,
+              //     // crossAxisSpacing: 20
+              //     crossAxisSpacing: 15,
+              //     mainAxisSpacing: 20,
+              //     // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
+              //     // mainAxisSpacing:
+              //     //     MediaQuery.of(context).size.height * 0.2
+              //   ),
+              //   itemBuilder: (context, index) {
+              //     return BottomSheetComponent.getAdministrasi[index];
+              //   },
+              //   itemCount: BottomSheetComponent.getAdministrasi.length,
+              // ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 20, bottom: 20, left: 25, right: 25),
+                  child: DynamicHeightGridView(
+                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
+                    builder: (context, index) {
+                      return BottomSheetComponent.getAdministrasi[index];
+                    },
+                    itemCount: BottomSheetComponent.getAdministrasi.length,
+                    crossAxisCount: 3,
+                    shrinkWrap: true,
+                    // mainAxisSpacing: 20,
+                    crossAxisSpacing: 15,
+                  ),
                 ),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
-                  // mainAxisSpacing:
-                  //     MediaQuery.of(context).size.height * 0.2
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getAdministrasi[index];
-                },
-                itemCount: BottomSheetComponent.getAdministrasi.length,
               )
             ],
           ),
@@ -122,10 +154,12 @@ buildBottomSheet4Administrasi(BuildContext context) {
 buildBottomSheet4Pembangunan(BuildContext context) {
   showModalBottomSheet(
       context: context,
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      // barrierColor: Colors.white,
       builder: (context) {
-        return SizedBox(
+        return Container(
           width: MediaQuery.of(context).size.width,
-          // color: const Color.fromARGB(255, 222, 221, 221),
+          color: Colors.white,
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
           child: Column(
@@ -153,23 +187,36 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                 // color: Colors.black,
               ),
               const Gap(2),
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                  top: 20,
-                  // bottom: 20,
-                  left: 50,
+              // GridView.builder(
+              //   shrinkWrap: true,
+              //   padding: const EdgeInsets.only(
+              //       top: 20, bottom: 20, left: 25, right: 25),
+              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 3,
+              //     crossAxisSpacing: 15,
+              //     mainAxisSpacing: 20,
+              //   ),
+              //   itemBuilder: (context, index) {
+              //     return BottomSheetComponent.getPembangunan[index];
+              //   },
+              //   itemCount: BottomSheetComponent.getPembangunan.length,
+              // ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 20, bottom: 20, left: 25, right: 25),
+                  child: DynamicHeightGridView(
+                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
+                    builder: (context, index) {
+                      return BottomSheetComponent.getPembangunan[index];
+                    },
+                    itemCount: BottomSheetComponent.getPembangunan.length,
+                    crossAxisCount: 3,
+                    shrinkWrap: true,
+                    // mainAxisSpacing: 20,
+                    crossAxisSpacing: 15,
+                  ),
                 ),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
-                  // mainAxisSpacing:
-                  //     MediaQuery.of(context).size.height * 0.2
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getPembangunan[index];
-                },
-                itemCount: BottomSheetComponent.getPembangunan.length,
               )
             ],
           ),
@@ -181,9 +228,11 @@ buildBottomSheet4Pembangunan(BuildContext context) {
 buildBottomSheet4AkadSerahTerima(BuildContext context) {
   showModalBottomSheet(
       context: context,
+      backgroundColor: Colors.white,
       builder: (context) {
-        return SizedBox(
+        return Container(
           width: MediaQuery.of(context).size.width,
+          color: Colors.white,
           // color: const Color.fromARGB(255, 222, 221, 221),
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
@@ -212,23 +261,39 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
                 // color: Colors.black,
               ),
               const Gap(2),
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                  top: 20,
-                  // bottom: 20,
-                  left: 50,
+              // GridView.builder(
+              //   shrinkWrap: true,
+              //   padding: const EdgeInsets.only(
+              //       top: 20, bottom: 20, left: 25, right: 25),
+              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 3,
+              //     crossAxisSpacing: 15,
+              //     mainAxisSpacing: 20,
+              //     // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
+              //     // mainAxisSpacing:
+              //     //     MediaQuery.of(context).size.height * 0.2
+              //   ),
+              //   itemBuilder: (context, index) {
+              //     return BottomSheetComponent.getAkadSerahTerima[index];
+              //   },
+              //   itemCount: BottomSheetComponent.getAkadSerahTerima.length,
+              // ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 20, bottom: 20, left: 25, right: 25),
+                  child: DynamicHeightGridView(
+                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
+                    builder: (context, index) {
+                      return BottomSheetComponent.getAkadSerahTerima[index];
+                    },
+                    itemCount: BottomSheetComponent.getAkadSerahTerima.length,
+                    crossAxisCount: 3,
+                    shrinkWrap: true,
+                    mainAxisSpacing: 20,
+                    crossAxisSpacing: 15,
+                  ),
                 ),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
-                  // mainAxisSpacing:
-                  //     MediaQuery.of(context).size.height * 0.2
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getAkadSerahTerima[index];
-                },
-                itemCount: BottomSheetComponent.getAkadSerahTerima.length,
               )
             ],
           ),

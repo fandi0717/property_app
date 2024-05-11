@@ -23,44 +23,75 @@ class ContentIconBottomSheet extends StatelessWidget {
     }
 
     /// TODO : wrap [column] with [Container]
-    /// and create box decoration
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        badges.Badge(
-          badgeContent: renderBadgeContent,
-          showBadge: enabled,
-          child: CircleAvatar(
-            backgroundColor: enabled
-                ? const Color.fromARGB(255, 51, 74, 52)
-                : const Color.fromARGB(255, 153, 164, 153),
-            // radius: 25,
-            child: SvgPicture.asset(iconPath),
-          ),
-        ),
-        const Gap(10),
-        Text.rich(TextSpan(
-            text: text.split('\n')[0],
-            style: TextStyle(
-                fontWeight: FontWeight.w300,
-                fontFamily: 'Lexend',
-                fontSize: 10,
-                color: enabled
+    /// and create box d
+    /// ecoration
+    return Container(
+      // height: 108,
+      padding: const EdgeInsets.all(15),
+      decoration: enabled
+          ? const BoxDecoration(
+              color: Color.fromARGB(255, 248, 248, 248),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(
+                    50.0), // Membuat sudut kiri atas menjadi lingkaran
+                topLeft: Radius.circular(20),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ))
+          : null,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        // spacing: 10,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                // color: const Color.fromARGB(255, 51, 74, 52),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 4.58,
+                      spreadRadius: 0,
+                      color: const Color.fromARGB(255, 234, 230, 230)
+                          .withOpacity(0.73),
+                      // color: Colors.red,
+                      offset: const Offset(0, 6.25))
+                ]),
+            child: badges.Badge(
+              badgeContent: renderBadgeContent,
+              showBadge: enabled,
+              child: CircleAvatar(
+                backgroundColor: enabled
                     ? const Color.fromARGB(255, 51, 74, 52)
-                    : const Color.fromARGB(255, 153, 164, 153)),
-            children: [
-              TextSpan(
-                  text:
-                      '\n${text.split('\n')[1]}${text.split('\n').length == 3 ? '\n${text.split('\n')[2]}' : ""}',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Lexend',
-                      fontSize: 10,
-                      color: enabled
-                          ? const Color.fromARGB(255, 51, 74, 52)
-                          : const Color.fromARGB(255, 153, 164, 153))),
-            ]))
-      ],
+                    : const Color.fromARGB(255, 153, 164, 153),
+                // radius: 25,
+                child: SvgPicture.asset(iconPath),
+              ),
+            ),
+          ),
+          const Gap(10),
+          Text.rich(TextSpan(
+              text: text.split('\n')[0],
+              style: TextStyle(
+                  fontWeight: FontWeight.w300,
+                  fontFamily: 'Lexend',
+                  fontSize: 10,
+                  color: enabled
+                      ? const Color.fromARGB(255, 51, 74, 52)
+                      : const Color.fromARGB(255, 153, 164, 153)),
+              children: [
+                TextSpan(
+                    text:
+                        '\n${text.split('\n')[1]}${text.split('\n').length == 3 ? '\n${text.split('\n')[2]}' : ""}',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Lexend',
+                        fontSize: 10,
+                        color: enabled
+                            ? const Color.fromARGB(255, 51, 74, 52)
+                            : const Color.fromARGB(255, 153, 164, 153))),
+              ]))
+        ],
+      ),
     );
   }
 }
@@ -77,69 +108,126 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: 35,
-          height: 35,
-          decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 51, 74, 52),
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                    blurRadius: 2.5,
-                    spreadRadius: 0,
-                    color:
-                        const Color.fromARGB(255, 9, 19, 10).withOpacity(0.16),
-                    offset: const Offset(0, 10))
-              ]),
-          child: SimpleCircularProgressBar(
-              // size: 35,
-              backStrokeWidth: 3,
-              progressStrokeWidth: 3,
-              progressColors: const [Color.fromARGB(255, 255, 92, 92)],
-              backColor: Colors.white,
-              mergeMode: true,
-              onGetText: (double value) {
-                return Text.rich(TextSpan(
-                    text: value.toInt().toString(),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 12,
-                        fontFamily: 'Rubix',
-                        color: Colors.white),
-                    children: const [
-                      TextSpan(
-                          text: '%',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 3.57,
-                              fontFamily: 'Rubix',
-                              color: Colors.white))
-                    ]));
-              },
-              valueNotifier: ValueNotifier(percentage.toDouble())),
+    // var textSplitEnter = text.split('\n');
+    // var textSplitAnd = text.split('&');
+
+    return Container(
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(255, 248, 248, 248),
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(
+              50.0), // Membuat sudut kiri atas menjadi lingkaran
+          topLeft: Radius.circular(20),
+          bottomLeft: Radius.circular(20),
+          bottomRight: Radius.circular(20),
         ),
-        const Gap(10),
-        Text.rich(TextSpan(
-            text: text.split('\n')[0],
-            style: const TextStyle(
-                fontWeight: FontWeight.w300,
-                fontSize: 10,
-                fontFamily: 'Lexend',
-                color: Color.fromARGB(255, 51, 74, 52)),
-            children: [
-              TextSpan(
-                  text:
-                      '\n${text.split('\n')[1]}${text.split('\n').length == 3 ? '\n${text.split('\n')[2]}' : ""}',
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 10,
-                      fontFamily: 'Lexend',
-                      color: Color.fromARGB(255, 51, 74, 52))),
-            ]))
-      ],
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Colors.black.withOpacity(0.5), // Warna bayangan
+        //     spreadRadius:
+        //         -10.0, // Negatif spread radius untuk membatasi bayangan ke dalam
+        //     blurRadius: 10.0, // Kekaburan bayangan
+        //     offset: const Offset(-10, -10), // Posisi bayangan
+        //   ),
+        // ]
+      ),
+      padding: const EdgeInsets.all(15),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        // spacing: 10,
+        children: [
+          Container(
+            width: 35,
+            height: 35,
+            decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 51, 74, 52),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 2.5,
+                      spreadRadius: 0,
+                      color: const Color.fromARGB(255, 9, 19, 10)
+                          .withOpacity(0.16),
+                      offset: const Offset(0, 10))
+                ]),
+            child: SimpleCircularProgressBar(
+                // size: 35,
+                backStrokeWidth: 3,
+                progressStrokeWidth: 3,
+                progressColors: const [Color.fromARGB(255, 255, 92, 92)],
+                backColor: Colors.white,
+                mergeMode: true,
+                onGetText: (double value) {
+                  return Text.rich(TextSpan(
+                      text: value.toInt().toString(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          fontFamily: 'Rubix',
+                          color: Colors.white),
+                      children: const [
+                        TextSpan(
+                            text: '%',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 3.57,
+                                fontFamily: 'Rubix',
+                                color: Colors.white))
+                      ]));
+                },
+                valueNotifier: ValueNotifier(percentage.toDouble())),
+          ),
+          const Gap(10),
+          // AutoSizeText(
+          //   text.split('\n')[0],
+          //   maxLines: 1,
+          //   minFontSize: 10,
+          //   style: const TextStyle(
+          //       fontFamily: 'Lexend',
+          //       fontWeight: FontWeight.w300,
+          //       color: Color.fromARGB(255, 51, 74, 52)),
+          // ),
+
+          // AutoSizeText.rich(
+          //   TextSpan(
+          //       text: text.split('\n')[0],
+          //       style: const TextStyle(
+          //           fontWeight: FontWeight.w300,
+          //           fontSize: 10,
+          //           fontFamily: 'Lexend',
+          //           color: Color.fromARGB(255, 51, 74, 52)),
+          //       children: [
+          //         TextSpan(
+          //             text: '\n${text.split('\n')[1]}',
+          //             style: const TextStyle(
+          //                 fontWeight: FontWeight.w500,
+          //                 fontSize: 10,
+          //                 fontFamily: 'Lexend',
+          //                 color: Color.fromARGB(255, 51, 74, 52))),
+          //       ]),
+          //   maxLines: 5,
+          //   minFontSize: 10,
+          //   overflow: TextOverflow.ellipsis,
+          // ),
+
+          Text.rich(TextSpan(
+              text: text.split('\n')[0],
+              style: const TextStyle(
+                  fontWeight: FontWeight.w300,
+                  fontSize: 10,
+                  fontFamily: 'Lexend',
+                  color: Color.fromARGB(255, 51, 74, 52)),
+              children: [
+                TextSpan(
+                    text: '\n${text.split('\n')[1]}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10,
+                        fontFamily: 'Lexend',
+                        color: Color.fromARGB(255, 51, 74, 52))),
+              ]))
+        ],
+      ),
     );
   }
 }
