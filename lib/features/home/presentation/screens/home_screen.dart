@@ -20,7 +20,6 @@ class HomeScreen extends StatelessWidget {
       // extendBody: true,
       body: Container(
         color: Theme.of(context).primaryColor,
-        // padding: const EdgeInsets.fromLTRB(25, 40, 25, 40),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,

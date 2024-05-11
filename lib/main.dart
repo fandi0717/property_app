@@ -9,14 +9,12 @@ import 'app.dart';
 import 'core/bottom_navigation_bar/cubit/bottom_navigation_bar_cubit.dart';
 import 'features/home/logic/bloc/home_bloc.dart';
 
-/// TODO : IMPLEMENT TEXTSTYLE : FONTSIZE, FONTFAMILY, FONTWEIGHT, COLOR, ETC
-/// TODO : IMPLEMENT SPLASH SCREEN & ICON APP
-///
+/// [Fonts]
 /// 1. Outfit
 /// 2. Rubik
 /// 3. Lexend
-///
 /// TODO : IMPLEMENT SHADOW OR BACKGROUND SHADOW IN CONTAINER
+
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);

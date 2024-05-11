@@ -48,7 +48,8 @@ class HomeEmptyWidget extends StatelessWidget {
           ),
         ),
         const Gap(20),
-        Expanded(
+        Flexible(
+          flex: 1,
           child: Image.asset(
             "assets/images/background_house.png",
             // scale: 1.5,
