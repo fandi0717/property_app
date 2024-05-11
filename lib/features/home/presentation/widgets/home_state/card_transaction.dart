@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 import '../../../data/models/transaction_enum.dart';
-import 'bottom_sheet.dart';
+import 'bottom_sheet/bottom_sheet.dart';
 
 class CardMenuTransaksi extends StatefulWidget {
   const CardMenuTransaksi(
@@ -84,7 +84,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                             child: ClipRect(
                               child: Align(
                                 alignment: Alignment.centerLeft,
-                                widthFactor: 0.65,
+                                widthFactor: 0.7,
                                 heightFactor: 0.9,
                                 child: AspectRatio(
                                   aspectRatio: 198 / 219,
@@ -120,9 +120,11 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                         color: const Color.fromARGB(
                                             255, 248, 248, 248),
                                         // color: Colors.yellow,
+
                                         shape: BoxShape.rectangle,
-                                        borderRadius:
-                                            BorderRadius.circular(70)),
+                                        borderRadius: BorderRadius.circular(70)
+                                        // shape: BoxShape.circle
+                                        ),
                                   ),
                                 ),
                               ),
@@ -276,23 +278,26 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                     )),
                               ),
 
-                              /// [img home]
-                              // Expanded(
-                              //   child: Transform(
-                              //     transform: Matrix4.rotationY(pi),
-                              //     alignment: Alignment.center,
-                              //     child: AspectRatio(
-                              //       aspectRatio: 177 / 178,
-                              //       child: Image.asset(
-                              //         "assets/images/home_house_model.png",
-                              //         // width: 177,
-                              //         // height: 178,
-                              //         // scale: 10,
-                              //         fit: BoxFit.cover,
-                              //       ),
-                              //     ),
-                              //   ),
-                              // )
+                              /// [img]
+                              /*
+                              Expanded(
+                                child: Transform(
+                                  transform: Matrix4.rotationY(pi),
+                                  alignment: Alignment.center,
+                                  child: AspectRatio(
+                                    aspectRatio: 177 / 178,
+                                    child: Image.asset(
+                                      "assets/images/home_house_model.png",
+                                      // width: 177,
+                                      // height: 178,
+                                      // scale: 10,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              )
+                              */
+
                               Expanded(
                                 child: widget.imgRender,
                               )

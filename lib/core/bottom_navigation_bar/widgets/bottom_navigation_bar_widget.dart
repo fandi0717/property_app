@@ -1,8 +1,8 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 import '../../../routes/route_name.dart';
 import '../cubit/bottom_navigation_bar_cubit.dart';
@@ -32,8 +32,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBottomNavigationBar.builder(
         notchSmoothness: NotchSmoothness.defaultEdge,
-        leftCornerRadius: 32,
-        rightCornerRadius: 32,
+        // leftCornerRadius: 32,
+        // rightCornerRadius: 32,
+        backgroundColor: Colors.white,
         gapLocation: GapLocation.none,
         // height: MediaQuery.of(context).size.height * 0.1,
         // safeAreaValues: SafeAreaValues(bottom: false),

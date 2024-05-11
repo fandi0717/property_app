@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 
-import '../../../../../core/formatting/rupiah.dart';
+import '../../../../../core/formatting/indonesia.dart';
 import '../../../data/models/property.dart';
 import '../../../logic/bloc/home_bloc.dart';
 
@@ -232,38 +232,35 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                     ? Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/icons/utils/svg/dollar.svg',
-                                  colorFilter: const ColorFilter.mode(
-                                      Color.fromARGB(255, 51, 74, 52),
-                                      BlendMode.srcIn),
-                                  width: 14,
-                                  height: 14,
-                                ),
-                                const Gap(5),
-                                Text.rich(TextSpan(
-                                    text: 'Denda Rp ',
-                                    // style: TextStyle(
-                                    //     fontWeight: FontWeight.w400,
-                                    //     fontSize: 12),
-                                    style:
-                                        Theme.of(context).textTheme.labelSmall,
-                                    children: [
-                                      TextSpan(
-                                          text: rupiah(
-                                              propertys[index].denda!.toInt()),
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 12,
-                                              fontFamily: 'Outfit',
-                                              color: Color.fromARGB(
-                                                  255, 51, 74, 52)))
-                                    ]))
-                              ],
-                            ),
+                          Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/utils/svg/dollar.svg',
+                                colorFilter: const ColorFilter.mode(
+                                    Color.fromARGB(255, 51, 74, 52),
+                                    BlendMode.srcIn),
+                                width: 14,
+                                height: 14,
+                              ),
+                              const Gap(5),
+                              Text.rich(TextSpan(
+                                  text: 'Denda Rp ',
+                                  // style: TextStyle(
+                                  //     fontWeight: FontWeight.w400,
+                                  //     fontSize: 12),
+                                  style: Theme.of(context).textTheme.labelSmall,
+                                  children: [
+                                    TextSpan(
+                                        text: rupiah(
+                                            propertys[index].denda!.toInt()),
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 12,
+                                            fontFamily: 'Outfit',
+                                            color: Color.fromARGB(
+                                                255, 51, 74, 52)))
+                                  ]))
+                            ],
                           ),
                           Container(
                               decoration: BoxDecoration(

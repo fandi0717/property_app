@@ -6,12 +6,6 @@ import 'package:timelines/timelines.dart';
 
 import '../../../data/models/transaction_enum.dart';
 
-const kTileHeight = 50.0;
-
-const completeColor = Color(0xff5e6172);
-const inProgressColor = Color(0xff5ec792);
-const todoColor = Color(0xffd1d2d7);
-
 class ProcessTimelinePage extends StatelessWidget {
   const ProcessTimelinePage({
     super.key,

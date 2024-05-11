@@ -78,10 +78,6 @@ class HomeEmptyWidget extends StatelessWidget {
           onPressed: () {
             context.read<HomeBloc>().add(const EksplorPropertyEvent());
           },
-          // icon: const Icon(
-          //   Icons.search,
-          //   color: Color.fromARGB(255, 255, 255, 255),
-          // ),
           icon: SvgPicture.asset('assets/icons/utils/svg/search.svg'),
           label: const Text(
             "Eksplor Property",

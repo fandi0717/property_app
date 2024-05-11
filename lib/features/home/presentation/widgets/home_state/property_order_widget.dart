@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/features/home/presentation/widgets/home_state/timeline_widget.dart';
-import 'card_transaction.dart';
 
 import 'package:property_app/features/home/data/models/transaction_enum.dart';
 import 'package:property_app/features/home/presentation/widgets/carousel_slider/slider_property_order.dart';
+import 'package:property_app/features/home/presentation/widgets/home_state/timeline_widget.dart';
 
 import '../../../logic/bloc/home_bloc.dart';
+import 'card_transaction.dart';
 
 class PropertyOrderWidget extends StatelessWidget {
   PropertyOrderWidget({
@@ -187,13 +187,15 @@ class PropertyOrderWidget extends StatelessWidget {
                                     alignment: Alignment.centerRight,
                                     image: AssetImage(
                                         'assets/images/home_house_model.png'))),
-                            // child: Image.asset(
-                            //   "assets/images/home_house_model.png",
-                            //   // width: 177,
-                            //   // height: 178,
-                            //   // scale: 10,
-                            //   // fit: BoxFit.cover,
-                            // ),
+                            /*
+                            child: Image.asset(
+                              "assets/images/home_house_model.png",
+                              // width: 177,
+                              // height: 178,
+                              // scale: 10,
+                              // fit: BoxFit.cover,
+                            ),
+                            */
                           ),
                         ),
                       ),
@@ -290,13 +292,16 @@ class PropertyOrderWidget extends StatelessWidget {
                                     alignment: Alignment.topCenter,
                                     image: AssetImage(
                                         'assets/images/tahap_akad_serah_terima.png'))),
-                            // child: Image.asset(
-                            //   "assets/images/home_house_model.png",
-                            //   // width: 177,
-                            //   // height: 178,
-                            //   // scale: 10,
-                            //   // fit: BoxFit.cover,
+
+                            /*
+                            child: Image.asset(
+                              "assets/images/home_house_model.png",
+                              // width: 177,
+                              // height: 178,
+                              // scale: 10,
+                              // fit: BoxFit.cover,
                             // ),
+                            */
                           ),
                         ),
                       ),

@@ -22,9 +22,6 @@ class ContentIconBottomSheet extends StatelessWidget {
           "if [enabled] argument is `true`\nYou must declare [renderBadgeContent] argument is not null");
     }
 
-    /// TODO : wrap [column] with [Container]
-    /// and create box d
-    /// ecoration
     return Container(
       // height: 108,
       padding: const EdgeInsets.all(15),
@@ -33,7 +30,7 @@ class ContentIconBottomSheet extends StatelessWidget {
               color: Color.fromARGB(255, 248, 248, 248),
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(
-                    50.0), // Membuat sudut kiri atas menjadi lingkaran
+                    50.0), // Membuat sudut kanan atas menjadi lingkaran
                 topLeft: Radius.circular(20),
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -114,20 +111,23 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
         color: Color.fromARGB(255, 248, 248, 248),
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(
-              50.0), // Membuat sudut kiri atas menjadi lingkaran
+              50.0), // Membuat sudut kanan atas menjadi lingkaran
           topLeft: Radius.circular(20),
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.black.withOpacity(0.5), // Warna bayangan
-        //     spreadRadius:
-        //         -10.0, // Negatif spread radius untuk membatasi bayangan ke dalam
-        //     blurRadius: 10.0, // Kekaburan bayangan
-        //     offset: const Offset(-10, -10), // Posisi bayangan
-        //   ),
-        // ]
+
+        /*
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.5), // Warna bayangan
+            spreadRadius:
+                -10.0, // Negatif spread radius untuk membatasi bayangan ke dalam
+            blurRadius: 10.0, // Kekaburan bayangan
+            offset: const Offset(-10, -10), // Posisi bayangan
+          ),
+        ]
+        */
       ),
       padding: const EdgeInsets.all(15),
       child: Column(
@@ -175,37 +175,30 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                 valueNotifier: ValueNotifier(percentage.toDouble())),
           ),
           const Gap(10),
-          // AutoSizeText(
-          //   text.split('\n')[0],
-          //   maxLines: 1,
-          //   minFontSize: 10,
-          //   style: const TextStyle(
-          //       fontFamily: 'Lexend',
-          //       fontWeight: FontWeight.w300,
-          //       color: Color.fromARGB(255, 51, 74, 52)),
-          // ),
 
-          // AutoSizeText.rich(
-          //   TextSpan(
-          //       text: text.split('\n')[0],
-          //       style: const TextStyle(
-          //           fontWeight: FontWeight.w300,
-          //           fontSize: 10,
-          //           fontFamily: 'Lexend',
-          //           color: Color.fromARGB(255, 51, 74, 52)),
-          //       children: [
-          //         TextSpan(
-          //             text: '\n${text.split('\n')[1]}',
-          //             style: const TextStyle(
-          //                 fontWeight: FontWeight.w500,
-          //                 fontSize: 10,
-          //                 fontFamily: 'Lexend',
-          //                 color: Color.fromARGB(255, 51, 74, 52))),
-          //       ]),
-          //   maxLines: 5,
-          //   minFontSize: 10,
-          //   overflow: TextOverflow.ellipsis,
-          // ),
+          /*
+          AutoSizeText.rich(
+            TextSpan(
+                text: text.split('\n')[0],
+                style: const TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 10,
+                    fontFamily: 'Lexend',
+                    color: Color.fromARGB(255, 51, 74, 52)),
+                children: [
+                  TextSpan(
+                      text: '\n${text.split('\n')[1]}',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 10,
+                          fontFamily: 'Lexend',
+                          color: Color.fromARGB(255, 51, 74, 52))),
+                ]),
+            maxLines: 5,
+            minFontSize: 10,
+            overflow: TextOverflow.ellipsis,
+          ),
+*/
 
           Text.rich(TextSpan(
               text: text.split('\n')[0],

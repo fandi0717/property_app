@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:property_app/core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
-import 'package:property_app/features/home/presentation/widgets/carousel_slider/slider_property_widget.dart';
+import 'package:property_app/features/home/presentation/widgets/carousel_slider/slider_property_ads_widget.dart';
 
 import '../widgets/head/head_widget.dart';
 import '../widgets/home_state/home_empty_widget.dart';
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
             /// [CAROUSEL SLIDER]
             CarouselSlider(
                 items: [
-                  SliderPropertyWidget(
+                  SliderPropertyAdsWidget(
                     diskon: 20,
                     name: "American House",
                     startDate: DateTime(2023, 11, 19),
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                     backgroundColor: const Color.fromARGB(255, 51, 74, 52),
                   ),
                   // const Gap(1),
-                  SliderPropertyWidget(
+                  SliderPropertyAdsWidget(
                     diskon: 40,
                     name: "American House",
                     startDate: DateTime(2024, 1, 20),

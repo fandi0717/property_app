@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
-import 'package:gap/gap.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 
 class HeadWidget extends StatelessWidget {
   const HeadWidget({
@@ -61,19 +61,23 @@ class HeadWidget extends StatelessWidget {
             badgeColor: Color.fromARGB(255, 255, 92, 92),
             padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
           ),
-          // child: CircleAvatar(
-          //     backgroundColor: Colors.white,
-          //     // radius: 20,
-          //     // child: SvgPicture.asset(
-          //     //   'assets/icons/utils/svg/notification.svg',
-          //     //   // width: 20,
-          //     //   // height: 20,
-          //     // ),
-          //     child: Icon(
-          //       Icons.notifications,
-          //       size: 35,
-          //       color: Color.fromARGB(255, 51, 74, 52),
-          //     )),
+
+          /*
+          child: CircleAvatar(
+              backgroundColor: Colors.white,
+              // radius: 20,
+              // child: SvgPicture.asset(
+              //   'assets/icons/utils/svg/notification.svg',
+              //   // width: 20,
+              //   // height: 20,
+              // ),
+              child: Icon(
+                Icons.notifications,
+                size: 35,
+                color: Color.fromARGB(255, 51, 74, 52),
+              )),
+          */
+
           child: Container(
             width: 35,
             height: 35,
@@ -81,15 +85,21 @@ class HeadWidget extends StatelessWidget {
               color: Colors.white,
               shape: BoxShape.circle,
             ),
-            // child: const Icon(
-            //   Icons.notifications,
-            //   size: 20,
-            //   color: Color.fromARGB(255, 51, 74, 52),
-            // ),
-            child: SvgPicture.asset(
-              'assets/icons/utils/svg/notification.svg',
-              width: 20,
-              height: 20,
+
+            /*
+            child: const Icon(
+              Icons.notifications,
+              size: 20,
+              color: Color.fromARGB(255, 51, 74, 52),
+            ),
+            */
+
+            child: Center(
+              child: SvgPicture.asset(
+                'assets/icons/utils/svg/notification.svg',
+                width: 20,
+                height: 20,
+              ),
             ),
           ),
         ),

@@ -1,4 +1,4 @@
-/// Example Simulate GET API From Server
+/// Example Simulate GET API Property From Server
 ///
 class PesananPropertyDataProvider {
   /// [Tidak Denda]

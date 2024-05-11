@@ -5,8 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 
-class SliderPropertyWidget extends StatelessWidget {
-  const SliderPropertyWidget(
+class SliderPropertyAdsWidget extends StatelessWidget {
+  const SliderPropertyAdsWidget(
       {super.key,
       required this.diskon,
       required this.name,

@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-/// TODO : https://31sudirmansuites.com/apa-saja-contoh-investasi-properti/
+// ignore: dangling_library_doc_comments
+/// Contoh Artikel Referensi : https://31sudirmansuites.com/apa-saja-contoh-investasi-properti/
 /// MACAM - MACAM PROPERTI :
 /// 1. RESIDENTIAL PROPERTY
 /// 2. COMMERCIAL PROPERTY

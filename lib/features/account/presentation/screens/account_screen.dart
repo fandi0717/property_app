@@ -10,7 +10,10 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       body: const Center(
         child: Text("Screen 5",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                fontFamily: 'Outfit')),
       ),
       bottomNavigationBar: BottomNavigationBarWidget(),
     );
