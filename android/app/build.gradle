@@ -57,6 +57,7 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
 
+            // new code for change name apk in build/app/outputs/apk/release/
             applicationVariants.all { variant ->
                 variant.outputs.all {
                     def appName = "Moh. Dwi Afandi-TEST_FRONTEND_FLUTTER_ORDO"
@@ -71,6 +72,8 @@ android {
                     outputFileName = newName
                 }
             }
+            // end new code
+
         }
     }
 }
