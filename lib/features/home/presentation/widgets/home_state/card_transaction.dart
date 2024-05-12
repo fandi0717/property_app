@@ -287,7 +287,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                   child: AspectRatio(
                                     aspectRatio: 177 / 178,
                                     child: Image.asset(
-                                      "assets/images/home_house_model.png",
+                                      "assets/images/tahap_pemesanan.png",
                                       // width: 177,
                                       // height: 178,
                                       // scale: 10,

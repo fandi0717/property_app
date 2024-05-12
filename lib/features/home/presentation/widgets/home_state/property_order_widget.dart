@@ -185,10 +185,10 @@ class PropertyOrderWidget extends StatelessWidget {
                                     fit: BoxFit.cover,
                                     alignment: Alignment.centerRight,
                                     image: AssetImage(
-                                        'assets/images/home_house_model.png'))),
+                                        'assets/images/tahap_pemesanan.png'))),
                             /*
                             child: Image.asset(
-                              "assets/images/home_house_model.png",
+                              "assets/images/tahap_pemesanan.png",
                               // width: 177,
                               // height: 178,
                               // scale: 10,
@@ -259,7 +259,7 @@ class PropertyOrderWidget extends StatelessWidget {
                                   image: AssetImage(
                                       'assets/images/tahap_pembangunan.png'))),
                           // child: Image.asset(
-                          //   "assets/images/home_house_model.png",
+                          //   "assets/images/tahap_pemesanan.png",
                           //   // width: 177,
                           //   // height: 178,
                           //   // scale: 10,
@@ -294,7 +294,7 @@ class PropertyOrderWidget extends StatelessWidget {
 
                             /*
                             child: Image.asset(
-                              "assets/images/home_house_model.png",
+                              "assets/images/tahap_pemesanan.png",
                               // width: 177,
                               // height: 178,
                               // scale: 10,
