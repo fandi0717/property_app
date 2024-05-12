@@ -1,16 +1,55 @@
-# property_app
+# Property App
 
-A new Flutter project.
+Selamat datang di repository open source untuk Property App. Aplikasi ini dibangun menggunakan Flutter dan dirancang untuk membantu pengguna dalam mengelola properti.
 
-## Getting Started
+## Disclaimer
 
-This project is a starting point for a Flutter application.
+Projek ini adalah projek test untuk posisi Frontend Mobile Flutter Developer di ORDOAPPS. Ini bukan aplikasi komersial dan tidak dimaksudkan untuk digunakan dalam produksi.
 
-A few resources to get you started if this is your first Flutter project:
+## Persyaratan
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter SDK
+- Dart
+- Android Studio atau VS Code
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Langkah-langkah Setup
+
+Ikuti langkah-langkah berikut untuk setup dan menjalankan projek:
+
+1. **Clone Repositori**
+
+   Pertama, clone repositori ini ke sistem lokal Anda menggunakan perintah berikut:
+
+   ```bash
+   git clone https://github.com/fandi0717/property_app.git
+
+2. **Masuk ke Direktori Projek**
+
+   Setelah cloning selesai, masuk ke direktori projek:
+
+   ```bash
+   cd property_app
+
+3. **Unduh Dependencies**
+
+    Jalankan perintah berikut untuk mengambil semua dependencies yang diperlukan oleh projek:
+
+    ```bash
+   flutter pub get
+
+4. **Jalankan Aplikasi**
+
+    Terakhir, Anda bisa menjalankan aplikasi menggunakan perintah berikut:
+
+    ```bash
+    flutter run
+    ```
+    Pastikan Anda memiliki emulator yang berjalan, atau perangkat mobile yang terhubung ke sistem Anda.
+
+
+**Selamat coding!**
+
+
+
+
+
