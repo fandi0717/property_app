@@ -1,4 +1,4 @@
-package com.example.property_app
+package dev.fandi.property
 
 import io.flutter.embedding.android.FlutterActivity
 

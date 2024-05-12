@@ -13,7 +13,6 @@ import 'features/home/logic/bloc/home_bloc.dart';
 /// 1. Outfit
 /// 2. Rubik
 /// 3. Lexend
-/// TODO : IMPLEMENT SHADOW OR BACKGROUND SHADOW IN CONTAINER
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();

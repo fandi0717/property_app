@@ -18,7 +18,9 @@ class PesananPropertyRepository {
 
       return results;
     } catch (e) {
+      // ignore: avoid_print
       print(e);
+
       return List.empty();
     }
   }
