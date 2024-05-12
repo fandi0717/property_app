@@ -56,6 +56,21 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def appName = "Moh. Dwi Afandi-TEST_FRONTEND_FLUTTER_ORDO"
+                    def buildType = variant.buildType.name
+                    def newName
+                    if (buildType == 'debug'){
+                        newName = "app-${variant.getFlavorName()}-debug.apk"
+                    } else {
+                        // newName = "${appName}${defaultConfig.versionName}_${variant.getFlavorName()}.apk"
+                        newName = "${appName}.apk"
+                    }
+                    outputFileName = newName
+                }
+            }
         }
     }
 }

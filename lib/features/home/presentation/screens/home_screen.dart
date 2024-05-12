@@ -3,10 +3,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
-import 'package:property_app/features/home/logic/bloc/home_bloc.dart';
-import 'package:property_app/features/home/presentation/widgets/carousel_slider/slider_property_ads_widget.dart';
 
+import '../../../../core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
+import '../../logic/bloc/home_bloc.dart';
+import '../widgets/carousel_slider/slider_property_ads_widget.dart';
 import '../widgets/head/head_widget.dart';
 import '../widgets/home_state/home_empty_widget.dart';
 import '../widgets/home_state/property_order_widget.dart';
