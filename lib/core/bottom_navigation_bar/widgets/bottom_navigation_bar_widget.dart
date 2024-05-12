@@ -92,21 +92,38 @@ class BottomNavigationBarWidget extends StatelessWidget {
 changeBodyUI(int index, BuildContext context) {
   switch (index) {
     case 0:
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(RouteName.HOME, (route) => false);
-      break;
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(RouteName.HOME, (route) => false);
+      // Navigator.of(context).popAndPushNamed(RouteName.HOME);
+      // Navigator.of(context).pushNamed(RouteName.HOME);
+      Navigator.of(context).pushReplacementNamed(RouteName.HOME);
     case 1:
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(RouteName.BUILDING, (route) => false);
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(RouteName.BUILDING, (route) => false);
+      // Navigator.of(context).popAndPushNamed(RouteName.BUILDING);
+      // Navigator.of(context).pushNamed(RouteName.BUILDING);
+      Navigator.of(context).pushReplacementNamed(RouteName.BUILDING);
+
     case 2:
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(RouteName.DOCUMENTS, (route) => false);
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(RouteName.DOCUMENTS, (route) => false);
+      // Navigator.of(context).popAndPushNamed(RouteName.DOCUMENTS);
+      // Navigator.of(context).pushNamed(RouteName.DOCUMENTS);
+      Navigator.of(context).pushReplacementNamed(RouteName.DOCUMENTS);
+
     case 3:
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(RouteName.CART, (route) => false);
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(RouteName.CART, (route) => false);
+      // Navigator.of(context).popAndPushNamed(RouteName.CART);
+      // Navigator.of(context).pushNamed(RouteName.CART);
+      Navigator.of(context).pushReplacementNamed(RouteName.CART);
+
     case 4:
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil(RouteName.ACCOUNT, (route) => false);
+      // Navigator.of(context)
+      //     .pushNamedAndRemoveUntil(RouteName.ACCOUNT, (route) => false);
+      // Navigator.of(context).popAndPushNamed(RouteName.ACCOUNT);
+      // Navigator.of(context).pushNamed(RouteName.ACCOUNT);
+      Navigator.of(context).pushReplacementNamed(RouteName.ACCOUNT);
   }
 }
 
