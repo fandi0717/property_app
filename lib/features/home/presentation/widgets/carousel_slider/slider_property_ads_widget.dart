@@ -34,7 +34,10 @@ class SliderPropertyAdsWidget extends StatelessWidget {
           /// [information]
           Expanded(
             child: Container(
-              padding: const EdgeInsets.only(left: 30),
+              padding: const EdgeInsets.only(
+                left: 30,
+              ),
+              // padding: const EdgeInsets.all(30),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,

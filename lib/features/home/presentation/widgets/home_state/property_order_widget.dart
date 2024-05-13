@@ -82,8 +82,10 @@ class PropertyOrderWidget extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
+            /// [TIMELINES]
             Container(
                 height: MediaQuery.of(context).size.height * 0.08,
+
                 // width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -96,6 +98,8 @@ class PropertyOrderWidget extends StatelessWidget {
                         .propertys[propertyOrder.index].transaction)),
 
             const Gap(10),
+
+            /// [SLIDER PROPERTY]
             ConstrainedBox(
               constraints: const BoxConstraints(),
               child: SliderPropertyOrderWidget(

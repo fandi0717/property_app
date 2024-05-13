@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 import '../../../data/models/transaction_enum.dart';
@@ -149,6 +150,9 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                     : const Color.fromARGB(255, 51, 74, 52)),
                           ),
                         ),
+                        widget.transaction == Transaction.pemesanan
+                            ? const Gap(5)
+                            : const Gap(1),
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
                           child: AutoSizeText(namaTahap,

@@ -13,15 +13,26 @@ class HeadWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Expanded(
+        Expanded(
           child: Row(
             children: [
+              /*
               CircleAvatar(
                 radius: 30,
                 backgroundImage: AssetImage("assets/images/profile_avatar.png"),
               ),
-              Gap(10),
-              Column(
+              */
+              Container(
+                width: 60,
+                height: 60,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color.fromRGBO(106, 139, 146, 1),
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/profile_avatar.png"))),
+              ),
+              const Gap(10),
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -47,14 +58,17 @@ class HeadWidget extends StatelessWidget {
           ),
         ),
         badges.Badge(
-          badgeContent: const Center(
-            child: Text(
-              "3",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Outfit',
-                  fontWeight: FontWeight.w500,
-                  fontSize: 10.67),
+          badgeContent: const Padding(
+            padding: EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+            child: Center(
+              child: Text(
+                "3",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Outfit',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 10.67),
+              ),
             ),
           ),
           badgeStyle: const badges.BadgeStyle(

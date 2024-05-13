@@ -31,7 +31,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
           return Container(
             // height: 100,
             decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(15)),
+                color: Colors.white, borderRadius: BorderRadius.circular(12)),
             padding: const EdgeInsets.all(15),
             child: Column(
               children: [

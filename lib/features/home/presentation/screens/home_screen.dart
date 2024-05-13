@@ -20,14 +20,21 @@ class HomeScreen extends StatelessWidget {
       // extendBody: true,
       body: Container(
         color: Theme.of(context).primaryColor,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 40),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             /// [HEAD]
             const HeadWidget(),
 
-            const Gap(30),
+            BlocBuilder<HomeBloc, HomeState>(
+              builder: (context, state) {
+                if (state is HomeEmpty) {
+                  return const Gap(30);
+                }
+                return const Gap(25);
+              },
+            ),
 
             /// [CAROUSEL SLIDER]
             CarouselSlider(
@@ -49,6 +56,7 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
                 options: CarouselOptions(
+                  // viewportFraction: 0.95,
                   viewportFraction: 0.95,
                   // height: 200,
                   autoPlay: true,
@@ -57,7 +65,14 @@ class HomeScreen extends StatelessWidget {
                   // enlargeCenterPage: true
                 )),
 
-            const Gap(20),
+            BlocBuilder<HomeBloc, HomeState>(
+              builder: (context, state) {
+                if (state is HomeEmpty) {
+                  return const Gap(30);
+                }
+                return const Gap(25);
+              },
+            ),
 
             /// [BLOC STATE]
             Expanded(
@@ -65,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                 builder: (context, state) {
                   if (state is HomeEmpty) {
                     return const HomeEmptyWidget();
-                  } else if (state is PropertyOrder) {}
+                  }
                   return PropertyOrderWidget(
                     propertyOrder: state as PropertyOrder,
                   );

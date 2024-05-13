@@ -48,14 +48,14 @@ class HomeEmptyWidget extends StatelessWidget {
           ),
         ),
         const Gap(20),
-        Flexible(
-          flex: 1,
+        Expanded(
+          // flex: 1,
           child: Image.asset(
             "assets/images/background_house.png",
             // scale: 1.5,
           ),
         ),
-        const Gap(10),
+        const Gap(20),
         const Text(
           "Pesanan Kosong",
           style: TextStyle(

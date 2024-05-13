@@ -58,8 +58,8 @@ buildBottomSheet4Pemesanan(BuildContext context) {
               Flexible(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 20, bottom: 20, left: 25, right: 25),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   child: DynamicHeightGridView(
                     // rowCrossAxisAlignment: CrossAxisAlignment.center,
                     builder: (context, index) {
@@ -141,8 +141,8 @@ buildBottomSheet4Administrasi(BuildContext context) {
               Flexible(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 20, bottom: 20, left: 25, right: 25),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   child: DynamicHeightGridView(
                     // rowCrossAxisAlignment: CrossAxisAlignment.center,
                     builder: (context, index) {
@@ -219,8 +219,8 @@ buildBottomSheet4Pembangunan(BuildContext context) {
               Flexible(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 20, bottom: 20, left: 25, right: 25),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   child: DynamicHeightGridView(
                     // rowCrossAxisAlignment: CrossAxisAlignment.center,
                     builder: (context, index) {
@@ -301,8 +301,8 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
               Flexible(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 20, bottom: 20, left: 25, right: 25),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   child: DynamicHeightGridView(
                     // rowCrossAxisAlignment: CrossAxisAlignment.center,
                     builder: (context, index) {
@@ -329,14 +329,17 @@ class BottomSheetComponent {
       enabled: true,
       iconPath: 'assets/icons/utils/svg/booking_fee.svg',
       text: 'Booking\nFee',
-      renderBadgeContent: Center(
-        child: Text(
-          "3",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontSize: 10.67,
-              fontFamily: 'Outfit'),
+      renderBadgeContent: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+        child: Center(
+          child: Text(
+            "3",
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontSize: 10.67,
+                fontFamily: 'Outfit'),
+          ),
         ),
       ),
     ),
@@ -355,14 +358,17 @@ class BottomSheetComponent {
       enabled: true,
       iconPath: 'assets/icons/utils/svg/tahap_sps.svg',
       text: 'Tahap\nSPS',
-      renderBadgeContent: Center(
-        child: Text(
-          "!",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'Outfit',
-              fontSize: 10.67),
+      renderBadgeContent: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+        child: Center(
+          child: Text(
+            "!",
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontFamily: 'Outfit',
+                fontSize: 10.67),
+          ),
         ),
       ),
     ),
@@ -405,14 +411,17 @@ class BottomSheetComponent {
       enabled: true,
       iconPath: 'assets/icons/utils/svg/tahap_akad.svg',
       text: 'Tahap\nAkad',
-      renderBadgeContent: Center(
-        child: Text(
-          "!",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'Outfit',
-              fontSize: 10.67),
+      renderBadgeContent: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+        child: Center(
+          child: Text(
+            "!",
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontFamily: 'Outfit',
+                fontSize: 10.67),
+          ),
         ),
       ),
     ),
