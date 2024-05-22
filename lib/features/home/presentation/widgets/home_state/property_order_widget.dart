@@ -251,7 +251,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     */
                     imgRender: Transform.scale(
                       alignment: Alignment.bottomRight,
-                      scale: 0.8,
+                      scale: 0.9,
                       child: ClipRRect(
                         borderRadius: const BorderRadius.only(
                             bottomRight: Radius.circular(13)),
@@ -350,7 +350,9 @@ class PropertyOrderWidget extends StatelessWidget {
                     ),
                     */
                     imgRender: Transform.scale(
-                      scale: 0.8,
+                      scaleY: 0.7,
+                      scaleX: 0.8,
+                      // scale: .7,
                       alignment: Alignment.bottomLeft,
                       child: Image.asset(
                         'assets/img_test/tahap_akad.png',

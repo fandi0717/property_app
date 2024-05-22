@@ -1,7 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:gap/gap.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 import '../../../data/models/transaction_enum.dart';
@@ -76,7 +74,9 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
               child: Stack(
                 children: [
                   widget.transaction == Transaction.pemesanan
-                      ? Align(
+                      ?
+                      /*
+                      Align(
                           alignment: Alignment.centerRight,
                           child: Container(
                             margin: const EdgeInsets.only(
@@ -105,7 +105,29 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                             ),
                           ),
                         )
-                      : Positioned.fill(
+                        */
+                      ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                              topRight: Radius.circular(13),
+                              bottomRight: Radius.circular(13)),
+                          child: Transform.translate(
+                            offset: const Offset(55, 0),
+                            child: Container(
+                              width: 198,
+                              height: 219,
+                              decoration: const BoxDecoration(
+                                color: Color.fromRGBO(47, 69, 48, 1),
+                                borderRadius: BorderRadius.all(
+                                    Radius.elliptical(130, 174)),
+                                // color: Colors.red,
+                                // shape: BoxShape.circle
+                              ),
+                            ),
+                          ),
+                        )
+                      :
+                      /*
+                      Positioned.fill(
                           child: Align(
                             alignment: Alignment.bottomCenter,
                             child: ClipRect(
@@ -133,6 +155,26 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                             ),
                           ),
                         ),
+                        */
+                      ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                              bottomLeft: Radius.circular(13),
+                              bottomRight: Radius.circular(13)),
+                          child: Transform.translate(
+                            offset: const Offset(0, 60),
+                            child: Container(
+                              width: 296,
+                              height: 296,
+                              decoration: const BoxDecoration(
+                                color: Color.fromRGBO(248, 248, 248, 1),
+                                borderRadius: BorderRadius.all(
+                                    Radius.elliptical(189, 109)),
+                                // color: Colors.red,
+                                // shape: BoxShape.circle
+                              ),
+                            ),
+                          ),
+                        ),
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -151,9 +193,11 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                     : const Color.fromARGB(255, 51, 74, 52)),
                           ),
                         ),
+                        /* [Gap]
                         widget.transaction == Transaction.pemesanan
                             ? const Gap(1)
                             : const Gap(1),
+                        */
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
                           child: AutoSizeText(namaTahap,
@@ -308,9 +352,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                 Expanded(
                                   child: Stack(
                                     alignment: Alignment.bottomRight,
-                                    children: [
-                                      widget.imgRender
-                                    ],
+                                    children: [widget.imgRender],
                                   ),
                                 )
                               ]),
