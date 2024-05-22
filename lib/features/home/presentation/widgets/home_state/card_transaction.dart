@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
@@ -151,7 +152,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                           ),
                         ),
                         widget.transaction == Transaction.pemesanan
-                            ? const Gap(5)
+                            ? const Gap(1)
                             : const Gap(1),
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
@@ -166,146 +167,154 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                       ? Colors.white
                                       : const Color.fromARGB(255, 51, 74, 52))),
                         ),
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              /// [percentage]
-                              Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15, bottom: 15),
-                                    /* 
-                                  child: Container(
-                                    width: 35,
-                                    height: 35,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          width: 3,
-                                          color: const Color.fromARGB(
-                                              255, 255, 92, 92)),
-                                    ),
-                                    child: Center(
-                                      child: Text.rich(TextSpan(
-                                          text: percentage.toInt().toString(),
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 12,
-                                              color: Colors.white),
-                                          children: [
-                                            const TextSpan(
-                                                text: '%',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
-                                                    fontSize: 5,
-                                                    color: Colors.white))
-                                          ])),
-                                    ),
-                                  ),
-                                  */
+                        Expanded(
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                /// [percentage]
+                                Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 15.0, right: 15, bottom: 15),
+                                      /* 
                                     child: Container(
                                       width: 35,
                                       height: 35,
                                       decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: widget.transaction ==
-                                                  Transaction.pemesanan
-                                              ? const Color.fromARGB(
-                                                  255, 51, 74, 52)
-                                              : Colors.white,
-                                          boxShadow: widget.percentage == 0
-                                              ? null
-                                              : [
-                                                  const BoxShadow(
-                                                      blurRadius: 2.5,
-                                                      spreadRadius: 0,
-                                                      color: Color.fromRGBO(
-                                                          9, 19, 10, 0.16),
-                                                      offset: Offset(0, 5))
-                                                ]),
-                                      child: SimpleCircularProgressBar(
-                                        // size: 35,
-                                        backStrokeWidth: 3,
-                                        progressStrokeWidth: 3,
-                                        progressColors: widget.transaction ==
-                                                Transaction.pemesanan
-                                            ? [
-                                                const Color.fromARGB(
-                                                    255, 255, 92, 92)
-                                              ]
-                                            : [
-                                                const Color.fromARGB(
-                                                    255, 51, 74, 52)
-                                              ],
-                                        backColor: const Color.fromARGB(
-                                            255, 226, 233, 226),
-                                        mergeMode: true,
-                                        onGetText: (double value) {
-                                          return Text.rich(TextSpan(
-                                              text: value.toInt().toString(),
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w600,
-                                                  fontFamily: 'Rubik',
-                                                  fontSize: 12,
-                                                  color: widget.transaction ==
-                                                          Transaction.pemesanan
-                                                      ? Colors.white
-                                                      : const Color.fromARGB(
-                                                          255, 51, 74, 52)),
-                                              children: [
-                                                TextSpan(
-                                                    text: '%',
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontFamily: 'Rubik',
-                                                        fontSize: 5,
-                                                        color:
-                                                            widget.transaction ==
-                                                                    Transaction
-                                                                        .pemesanan
-                                                                ? Colors.white
-                                                                : const Color
-                                                                    .fromARGB(
-                                                                    255,
-                                                                    51,
-                                                                    74,
-                                                                    52)))
-                                              ]));
-                                        },
-                                        valueNotifier:
-                                            // ValueNotifier(widget.percentage),
-                                            valueNotifier,
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            width: 3,
+                                            color: const Color.fromARGB(
+                                                255, 255, 92, 92)),
                                       ),
-                                    )),
-                              ),
+                                      child: Center(
+                                        child: Text.rich(TextSpan(
+                                            text: percentage.toInt().toString(),
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 12,
+                                                color: Colors.white),
+                                            children: [
+                                              const TextSpan(
+                                                  text: '%',
+                                                  style: TextStyle(
+                                                      fontWeight: FontWeight.w500,
+                                                      fontSize: 5,
+                                                      color: Colors.white))
+                                            ])),
+                                      ),
+                                    ),
+                                    */
+                                      child: Container(
+                                        width: 35,
+                                        height: 35,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: widget.transaction ==
+                                                    Transaction.pemesanan
+                                                ? const Color.fromARGB(
+                                                    255, 51, 74, 52)
+                                                : Colors.white,
+                                            boxShadow: widget.percentage == 0
+                                                ? null
+                                                : [
+                                                    const BoxShadow(
+                                                        blurRadius: 2.5,
+                                                        spreadRadius: 0,
+                                                        color: Color.fromRGBO(
+                                                            9, 19, 10, 0.16),
+                                                        offset: Offset(0, 5))
+                                                  ]),
+                                        child: SimpleCircularProgressBar(
+                                          // size: 35,
+                                          backStrokeWidth: 3,
+                                          progressStrokeWidth: 3,
+                                          progressColors: widget.transaction ==
+                                                  Transaction.pemesanan
+                                              ? [
+                                                  const Color.fromARGB(
+                                                      255, 255, 92, 92)
+                                                ]
+                                              : [
+                                                  const Color.fromARGB(
+                                                      255, 51, 74, 52)
+                                                ],
+                                          backColor: const Color.fromARGB(
+                                              255, 226, 233, 226),
+                                          mergeMode: true,
+                                          onGetText: (double value) {
+                                            return Text.rich(TextSpan(
+                                                text: value.toInt().toString(),
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: 'Rubik',
+                                                    fontSize: 12,
+                                                    color: widget.transaction ==
+                                                            Transaction
+                                                                .pemesanan
+                                                        ? Colors.white
+                                                        : const Color.fromARGB(
+                                                            255, 51, 74, 52)),
+                                                children: [
+                                                  TextSpan(
+                                                      text: '%',
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontFamily: 'Rubik',
+                                                          fontSize: 5,
+                                                          color: widget
+                                                                      .transaction ==
+                                                                  Transaction
+                                                                      .pemesanan
+                                                              ? Colors.white
+                                                              : const Color
+                                                                  .fromARGB(255,
+                                                                  51, 74, 52)))
+                                                ]));
+                                          },
+                                          valueNotifier:
+                                              // ValueNotifier(widget.percentage),
+                                              valueNotifier,
+                                        ),
+                                      )),
+                                ),
 
-                              /// [img]
-                              /*
-                              Expanded(
-                                child: Transform(
-                                  transform: Matrix4.rotationY(pi),
-                                  alignment: Alignment.center,
-                                  child: AspectRatio(
-                                    aspectRatio: 177 / 178,
-                                    child: Image.asset(
-                                      "assets/images/tahap_pemesanan.png",
-                                      // width: 177,
-                                      // height: 178,
-                                      // scale: 10,
-                                      fit: BoxFit.cover,
+                                /// [img]
+                                /*
+                                Expanded(
+                                  child: Transform(
+                                    transform: Matrix4.rotationY(pi),
+                                    alignment: Alignment.center,
+                                    child: AspectRatio(
+                                      aspectRatio: 177 / 178,
+                                      child: Image.asset(
+                                        "assets/images/tahap_pemesanan.png",
+                                        // width: 177,
+                                        // height: 178,
+                                        // scale: 10,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              )
-                              */
+                                )
+                                */
 
-                              Expanded(
-                                child: widget.imgRender,
-                              )
-                            ])
+                                // Expanded(
+                                //   child: widget.imgRender,
+                                // )
+                                Expanded(
+                                  child: Stack(
+                                    alignment: Alignment.bottomRight,
+                                    children: [
+                                      widget.imgRender
+                                    ],
+                                  ),
+                                )
+                              ]),
+                        )
                       ]),
                 ],
               )),

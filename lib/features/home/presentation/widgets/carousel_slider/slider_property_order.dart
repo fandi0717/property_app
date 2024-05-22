@@ -146,17 +146,21 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               const Gap(5),
                               Expanded(
                                 // width: MediaQuery.of(context).size.width * 0.4,
-                                child: AutoSizeText(
-                                  propertys[index].location,
-                                  // style: const TextStyle(
-                                  //     fontWeight: FontWeight.w400, fontSize: 12
-                                  //     // fontSize: 16
-                                  //     ),
-                                  style: Theme.of(context).textTheme.labelSmall,
+                                child: SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: AutoSizeText(
+                                    propertys[index].location,
+                                    // style: const TextStyle(
+                                    //     fontWeight: FontWeight.w400, fontSize: 12
+                                    //     // fontSize: 16
+                                    //     ),
+                                    style:
+                                        Theme.of(context).textTheme.labelSmall,
 
-                                  maxLines: 2,
-                                  // minFontSize: 1,
-                                  overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                    // minFontSize: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
                               )
                             ],
@@ -196,17 +200,23 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                           Row(
                             children: [
                               Text(
-                                "Rp ",
+                                "Rp",
                                 // style: TextStyle(
                                 //     fontWeight: FontWeight.w400, fontSize: 12),
                                 style: Theme.of(context).textTheme.labelSmall,
                               ),
+                              const Text(" ",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontFamily: 'Outfit',
+                                    fontWeight: FontWeight.w500,
+                                  )),
                               // const Gap(5),
                               Expanded(
                                 child: AutoSizeText(
                                   rupiah(propertys[index].price.toInt()),
                                   style: const TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w700,
                                       fontSize: 14,
                                       fontFamily: 'Outfit'),
                                   maxLines: 1,
@@ -290,7 +300,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
           );
         },
         options: CarouselOptions(
-          aspectRatio: propertys[indexOrder].denda != null ? 16 / 11 : 16 / 10,
+          aspectRatio: propertys[indexOrder].denda != null ? 16 / 11 : 16 / 9,
           // aspectRatio:
           //     propertys[indexOrder].denda != null ? 378 / 185 : 378 / 144,
           // height: propertys[indexOrder].denda != null

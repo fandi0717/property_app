@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:math';
+// import 'dart:math';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -171,6 +171,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     transaction: Transaction.pemesanan,
                     percentage: propertyOrder.propertys[propertyOrder.index]
                         .transaction[Transaction.pemesanan] as double,
+                    /*
                     imgRender: Container(
                       // margin: const EdgeInsets.only(
                       //   bottom: 5,
@@ -189,7 +190,8 @@ class PropertyOrderWidget extends StatelessWidget {
                                     fit: BoxFit.cover,
                                     alignment: Alignment.centerRight,
                                     image: AssetImage(
-                                        'assets/images/tahap_pemesanan.png'))),
+                                        'assets/images/tahap_pemesanan.png')
+                                        )),
                             /*
                             child: Image.asset(
                               "assets/images/tahap_pemesanan.png",
@@ -203,6 +205,15 @@ class PropertyOrderWidget extends StatelessWidget {
                         ),
                       ),
                     ),
+                    */
+
+                    imgRender: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          bottomRight: Radius.circular(13)),
+                      child: Image.asset(
+                        'assets/img_test/tahap_pemesanan.png',
+                      ),
+                    ),
                   ),
                 ),
                 const Gap(15),
@@ -213,6 +224,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     transaction: Transaction.administrasi,
                     percentage: propertyOrder.propertys[propertyOrder.index]
                         .transaction[Transaction.administrasi] as double,
+                    /*
                     imgRender: Transform.translate(
                       // offset: const Offset(15, 0),
                       offset: const Offset(15, 0),
@@ -236,6 +248,18 @@ class PropertyOrderWidget extends StatelessWidget {
                         ),
                       ),
                     ),
+                    */
+                    imgRender: Transform.scale(
+                      alignment: Alignment.bottomRight,
+                      scale: 0.8,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                            bottomRight: Radius.circular(13)),
+                        child: Image.asset(
+                          'assets/img_test/tahap_administrasi.png',
+                        ),
+                      ),
+                    ),
                   ),
                 )
               ],
@@ -251,6 +275,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     transaction: Transaction.pembangunan,
                     percentage: propertyOrder.propertys[propertyOrder.index]
                         .transaction[Transaction.pembangunan] as double,
+                    /*
                     imgRender: Container(
                       padding: const EdgeInsets.only(bottom: 5, right: 5),
                       child: AspectRatio(
@@ -272,6 +297,18 @@ class PropertyOrderWidget extends StatelessWidget {
                         ),
                       ),
                     ),
+                    */
+                    imgRender: Transform.scale(
+                      alignment: Alignment.bottomRight,
+                      scale: .8,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                            bottomRight: Radius.circular(13)),
+                        child: Image.asset(
+                          'assets/img_test/tahap_pembangunan.png',
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 const Gap(15),
@@ -282,6 +319,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     transaction: Transaction.serahTerima,
                     percentage: propertyOrder.propertys[propertyOrder.index]
                         .transaction[Transaction.serahTerima] as double,
+                    /*
                     imgRender: Container(
                       padding: const EdgeInsets.only(bottom: 5),
                       child: Transform.translate(
@@ -294,7 +332,8 @@ class PropertyOrderWidget extends StatelessWidget {
                                     fit: BoxFit.contain,
                                     alignment: Alignment.topCenter,
                                     image: AssetImage(
-                                        'assets/images/tahap_akad_serah_terima.png'))),
+                                        'assets/images/tahap_akad_serah_terima.png'))
+                                        ),
 
                             /*
                             child: Image.asset(
@@ -307,6 +346,15 @@ class PropertyOrderWidget extends StatelessWidget {
                             */
                           ),
                         ),
+                      ),
+                    ),
+                    */
+                    imgRender: Transform.scale(
+                      scale: 0.8,
+                      alignment: Alignment.bottomLeft,
+                      child: Image.asset(
+                        'assets/img_test/tahap_akad.png',
+                        // scale: 0.2,
                       ),
                     ),
                   ),
