@@ -32,7 +32,7 @@ class ContentIconBottomSheet extends StatelessWidget {
                 color: Color.fromARGB(255, 248, 248, 248),
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(
-                      50.0), // Membuat sudut kanan atas menjadi lingkaran
+                      75.0), // Membuat sudut kanan atas menjadi lingkaran
                   topLeft: Radius.circular(20),
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -76,8 +76,7 @@ class ContentIconBottomSheet extends StatelessWidget {
                     color: Color.fromARGB(255, 51, 74, 52)),
                 children: [
                   TextSpan(
-                      text:
-                          '\n${text.split('\n')[1]}${text.split('\n').length == 3 ? '\n${text.split('\n')[2]}' : ""}',
+                      text: '\n${text.split('\n')[1]}',
                       style: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontFamily: 'Lexend',
@@ -111,7 +110,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
         color: Color.fromARGB(255, 248, 248, 248),
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(
-              50.0), // Membuat sudut kanan atas menjadi lingkaran
+              70.0), // Membuat sudut kanan atas menjadi lingkaran
           topLeft: Radius.circular(20),
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),

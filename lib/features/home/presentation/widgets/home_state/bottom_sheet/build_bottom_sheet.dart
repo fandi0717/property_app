@@ -428,11 +428,11 @@ class BottomSheetComponent {
     ContentIconBottomSheet(
         enabled: false,
         iconPath: 'assets/icons/utils/svg/tahap_serah_terima_bangunan.svg',
-        text: 'Tahap\nSerah Terima\nBangunan'),
+        text: 'Tahap\nSerah Terima Bangunan'),
     ContentIconBottomSheet(
         enabled: false,
         iconPath: 'assets/icons/utils/svg/tahap_serah_terima_legalitas.svg',
-        text: 'Tahap\nSerah Terima\nLegalitas'),
+        text: 'Tahap\nSerah Terima Legalitas'),
     ContentIconBottomSheet(
       enabled: false,
       iconPath: 'assets/icons/utils/svg/daftar_komplain.svg',

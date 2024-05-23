@@ -211,7 +211,7 @@ class PropertyOrderWidget extends StatelessWidget {
                       borderRadius: const BorderRadius.only(
                           bottomRight: Radius.circular(13)),
                       child: Image.asset(
-                        'assets/img_test/tahap_pemesanan.png',
+                        'assets/images/tahap_pemesanan.png',
                       ),
                     ),
                   ),
@@ -256,7 +256,7 @@ class PropertyOrderWidget extends StatelessWidget {
                         borderRadius: const BorderRadius.only(
                             bottomRight: Radius.circular(13)),
                         child: Image.asset(
-                          'assets/img_test/tahap_administrasi.png',
+                          'assets/images/tahap_administrasi.png',
                         ),
                       ),
                     ),
@@ -305,7 +305,7 @@ class PropertyOrderWidget extends StatelessWidget {
                         borderRadius: const BorderRadius.only(
                             bottomRight: Radius.circular(13)),
                         child: Image.asset(
-                          'assets/img_test/tahap_pembangunan.png',
+                          'assets/images/tahap_pembangunan.png',
                         ),
                       ),
                     ),
@@ -355,7 +355,7 @@ class PropertyOrderWidget extends StatelessWidget {
                       // scale: .7,
                       alignment: Alignment.bottomLeft,
                       child: Image.asset(
-                        'assets/img_test/tahap_akad.png',
+                        'assets/images/tahap_akad_serah_terima.png',
                         // scale: 0.2,
                       ),
                     ),

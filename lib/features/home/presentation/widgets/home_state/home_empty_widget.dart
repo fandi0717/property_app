@@ -48,13 +48,17 @@ class HomeEmptyWidget extends StatelessWidget {
           ),
         ),
         const Gap(20),
-        Expanded(
-          // flex: 1,
-          child: Image.asset(
-            "assets/images/background_house.png",
-            // scale: 1.5,
-          ),
-        ),
+        // Expanded(
+        //   // flex: 1,
+        //   child: Image.asset(
+        //     "assets/images/background_house.png",
+        //     // scale: 1.5,
+        //   ),
+
+        // ),
+        Flexible(
+            child: Image.asset('assets/images/background_empty.png',
+                scale: MediaQuery.sizeOf(context).height > 850 ? 2 : 1)),
         const Gap(20),
         const Text(
           "Pesanan Kosong",
