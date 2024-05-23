@@ -76,7 +76,7 @@ class HomeEmptyWidget extends StatelessWidget {
           },
           icon: SvgPicture.asset('assets/icons/utils/svg/search.svg'),
           label: const Text(
-            "Eksplor Property",
+            "Eksplor Properti",
             style: TextStyle(
                 color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
@@ -85,7 +85,8 @@ class HomeEmptyWidget extends StatelessWidget {
           ),
           style: const ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(c.R51_G74_B52_O1),
-              padding: MaterialStatePropertyAll(EdgeInsets.all(14))),
+              padding: MaterialStatePropertyAll(
+                  EdgeInsets.symmetric(horizontal: 25, vertical: 15))),
         ),
       ],
     );

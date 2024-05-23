@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../../core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 import '../../../../core/res/color.dart' as c;
@@ -80,11 +81,13 @@ class HomeScreen extends StatelessWidget {
               child: BlocBuilder<HomeBloc, HomeState>(
                 builder: (context, state) {
                   if (state is HomeEmpty) {
-                    return const HomeEmptyWidget();
+                    return const HomeEmptyWidget()
+                        .animate()
+                        .fade(duration: 300.ms, curve: Curves.easeOut);
                   }
                   return PropertyOrderWidget(
                     propertyOrder: state as PropertyOrder,
-                  );
+                  ).animate().fade(duration: 300.ms, curve: Curves.easeOut);
                 },
               ),
             )
