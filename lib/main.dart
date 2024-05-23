@@ -9,6 +9,7 @@ import 'app.dart';
 import 'core/bottom_navigation_bar/cubit/bottom_navigation_bar_cubit.dart';
 import 'features/home/logic/bloc/home_bloc.dart';
 
+/// TODO : GIVE RESOURCE FOLDER FOR COLOR, OR TEXTSTYLE PROPERTY MAYBE ?
 /// [Fonts]
 /// 1. Outfit
 /// 2. Rubik
