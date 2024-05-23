@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:timelines/timelines.dart';
 
+import '../../../../../core/res/color.dart' as c;
+import '../../../../../core/res/font.dart' as f;
 import '../../../data/models/transaction_enum.dart';
 
 class ProcessTimelinePage extends StatelessWidget {
@@ -31,10 +33,10 @@ class ProcessTimelinePage extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 10,
-                fontFamily: 'Outfit',
+                fontFamily: f.Outfit,
                 color: transaction.values.toList()[index] == 0
-                    ? const Color.fromARGB(255, 171, 171, 171)
-                    : const Color.fromARGB(255, 51, 74, 52)
+                    ? c.RGB171_O1
+                    : c.R51_G74_B52_O1
                 // color: getColor(index),
                 ),
           );
@@ -56,12 +58,12 @@ class ProcessTimelinePage extends StatelessWidget {
             );
           }
           return const SolidLineConnector(
-            color: Color.fromARGB(255, 51, 74, 52),
+            color: c.R51_G74_B52_O1,
           );
         },
         lastConnectorBuilder: (context) {
           return const DashedLineConnector(
-            color: Color.fromARGB(255, 171, 171, 171),
+            color: c.RGB171_O1,
             // thickness: 0.5,
           );
         },

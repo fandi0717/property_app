@@ -7,6 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
+import '../../../../../core/res/color.dart' as c;
+import '../../../../../core/res/font.dart' as f;
 import '../../../data/models/transaction_enum.dart';
 import '../../../logic/bloc/home_bloc.dart';
 import '../carousel_slider/slider_property_order.dart';
@@ -38,14 +40,9 @@ class PropertyOrderWidget extends StatelessWidget {
                   "Pesanan Terbaru",
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(
-                        255,
-                        51,
-                        74,
-                        52,
-                      ),
+                      color: c.R51_G74_B52_O1,
                       fontSize: 18,
-                      fontFamily: 'Outfit'),
+                      fontFamily: f.Outfit),
                 ),
               ),
               Align(
@@ -54,14 +51,9 @@ class PropertyOrderWidget extends StatelessWidget {
                   "Daftar pesanan terbaru anda",
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      color: Color.fromARGB(
-                        255,
-                        158,
-                        158,
-                        158,
-                      ),
+                      color: c.RGB155_O1,
                       fontSize: 12,
-                      fontFamily: 'Outfit'),
+                      fontFamily: f.Outfit),
                 ),
               ),
             ],
@@ -72,8 +64,8 @@ class PropertyOrderWidget extends StatelessWidget {
               },
               child: SvgPicture.asset(
                 'assets/icons/utils/svg/arrow_right.svg',
-                colorFilter: const ColorFilter.mode(
-                    Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn),
+                colorFilter:
+                    const ColorFilter.mode(c.R51_G74_B52_O1, BlendMode.srcIn),
               ))
         ],
       ),
@@ -88,7 +80,7 @@ class PropertyOrderWidget extends StatelessWidget {
 
                 // width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: c.RGB255_O1,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 padding:
@@ -119,8 +111,8 @@ class PropertyOrderWidget extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: propertyOrder.index == entry.key
-                            ? const Color.fromARGB(255, 51, 74, 52)
-                            : const Color.fromARGB(255, 222, 221, 221)),
+                            ? c.R51_G74_B52_O1
+                            : c.R222_G221_B221_O1),
                     margin: const EdgeInsets.symmetric(
                         vertical: 8.0, horizontal: 4.0),
                   ),
@@ -139,16 +131,16 @@ class PropertyOrderWidget extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Outfit',
-                        color: Color.fromARGB(255, 51, 74, 52)),
+                        fontFamily: f.Outfit,
+                        color: c.R51_G74_B52_O1),
                   ),
                   Text(
                     "Daftar menu transaksi",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
-                        fontFamily: 'Outfit',
-                        color: Color.fromARGB(255, 155, 155, 155)),
+                        fontFamily: f.Outfit,
+                        color: c.RGB155_O1),
                   )
                 ],
               ),

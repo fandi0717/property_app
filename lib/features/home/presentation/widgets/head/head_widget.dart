@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
+import '../../../../../core/res/color.dart' as c;
+import '../../../../../core/res/font.dart' as f;
+
 class HeadWidget extends StatelessWidget {
   const HeadWidget({
     super.key,
@@ -27,7 +30,7 @@ class HeadWidget extends StatelessWidget {
                 height: 60,
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color.fromRGBO(106, 139, 146, 1),
+                    color: c.R106_G139_B146_O1,
                     image: DecorationImage(
                         image: AssetImage("assets/images/profile_avatar.png"))),
               ),
@@ -40,8 +43,8 @@ class HeadWidget extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
-                        color: Color.fromARGB(255, 51, 74, 52),
-                        fontFamily: 'Outfit'),
+                        color: c.R51_G74_B52_O1,
+                        fontFamily: f.Outfit),
                   ),
                   Gap(4),
                   Text(
@@ -49,8 +52,8 @@ class HeadWidget extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
-                        fontFamily: 'Outfit',
-                        color: Color.fromARGB(255, 126, 126, 126)),
+                        fontFamily: f.Outfit,
+                        color: c.RGB126_O1),
                   )
                 ],
               )
@@ -64,15 +67,15 @@ class HeadWidget extends StatelessWidget {
               child: Text(
                 "3",
                 style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Outfit',
+                    color: c.RGB255_O1,
+                    fontFamily: f.Outfit,
                     fontWeight: FontWeight.w500,
                     fontSize: 10.67),
               ),
             ),
           ),
           badgeStyle: const badges.BadgeStyle(
-            badgeColor: Color.fromARGB(255, 255, 92, 92),
+            badgeColor: c.R255_G92_B92_O1,
             padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
           ),
 
@@ -96,9 +99,14 @@ class HeadWidget extends StatelessWidget {
             width: 35,
             height: 35,
             decoration: const BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
+                color: c.RGB255_O1,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 11,
+                      offset: Offset(0, 5),
+                      color: c.R197_G209_B198_O016)
+                ]),
 
             /*
             child: const Icon(

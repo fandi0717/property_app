@@ -31,6 +31,9 @@ const Color RGB63_O017 = Color.fromRGBO(63, 63, 63, 0.17);
 /// [63,63,63,0.12]
 const Color RGB63_O012 = Color.fromRGBO(63, 63, 63, 0.12);
 
+/// [63,63,63,0.09]
+const Color RGB63_O009 = Color.fromRGBO(63, 63, 63, 0.09);
+
 /// [63,63,63,0.08]
 const Color RGB63_O008 = Color.fromRGBO(63, 63, 63, 0.08);
 
@@ -43,6 +46,9 @@ const Color R255_G92_B92_O1 = Color.fromRGBO(255, 92, 92, 1);
 
 /// [226,233,226,1]
 const Color R226_G233_B226_O1 = Color.fromRGBO(226, 233, 226, 1);
+
+/// [222,221,221,1]
+const Color R222_G221_B221_O1 = Color.fromRGBO(222, 221, 221, 1);
 
 /// [154,202,62,1]
 const Color R154_G202_B62_O1 = Color.fromRGBO(154, 202, 62, 1);

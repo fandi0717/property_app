@@ -4,13 +4,13 @@ part of 'bottom_sheet.dart';
 buildBottomSheet4Pemesanan(BuildContext context) {
   showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.white,
+      backgroundColor: c.RGB255_O1,
       elevation: 0,
       builder: (context) {
         return Container(
           width: MediaQuery.of(context).size.width,
-          color: Colors.white,
-          // color: const Color.fromARGB(255, 222, 221, 221),
+          color: c.RGB255_O1,
+          // color: const c.R222_G221_B221_O1,
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
           child: Column(
@@ -21,20 +21,20 @@ buildBottomSheet4Pemesanan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
-                    fontFamily: 'Outfit',
-                    color: Color.fromARGB(255, 51, 74, 52)),
+                    fontFamily: f.Outfit,
+                    color: c.R51_G74_B52_O1),
               ),
               const Text(
                 'Daftar Menu tahap pemesanan',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontFamily: 'Outfit',
+                    fontFamily: f.Outfit,
                     fontSize: 12,
-                    color: Color.fromARGB(255, 155, 155, 155)),
+                    color: c.RGB155_O1),
               ),
               const Gap(2),
               const Divider(
-                color: Color.fromARGB(255, 222, 221, 221),
+                color: c.R222_G221_B221_O1,
               ),
               const Gap(2),
 
@@ -83,13 +83,13 @@ buildBottomSheet4Pemesanan(BuildContext context) {
 buildBottomSheet4Administrasi(BuildContext context) {
   showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.white,
+      backgroundColor: c.RGB255_O1,
       elevation: 0,
       builder: (context) {
         return Container(
           width: MediaQuery.of(context).size.width,
-          color: Colors.white,
-          // color: const Color.fromARGB(255, 222, 221, 221),
+          color: c.RGB255_O1,
+          // color: const c.R222_G221_B221_O1,
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
           child: Column(
@@ -100,20 +100,20 @@ buildBottomSheet4Administrasi(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
-                    fontFamily: 'Outfit',
-                    color: Color.fromARGB(255, 51, 74, 52)),
+                    fontFamily: f.Outfit,
+                    color: c.R51_G74_B52_O1),
               ),
               const Text(
                 'Daftar menu tahap administrasi',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
-                    fontFamily: 'Outfit',
-                    color: Color.fromARGB(255, 155, 155, 155)),
+                    fontFamily: f.Outfit,
+                    color: c.RGB155_O1),
               ),
               const Gap(2),
               const Divider(
-                color: Color.fromARGB(255, 222, 221, 221),
+                color: c.R222_G221_B221_O1,
               ),
               const Gap(2),
 
@@ -171,7 +171,7 @@ buildBottomSheet4Pembangunan(BuildContext context) {
       builder: (context) {
         return Container(
           width: MediaQuery.of(context).size.width,
-          color: Colors.white,
+          color: c.RGB255_O1,
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
           child: Column(
@@ -182,20 +182,20 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
-                    fontFamily: 'Outfit',
-                    color: Color.fromARGB(255, 51, 74, 52)),
+                    fontFamily: f.Outfit,
+                    color: c.R51_G74_B52_O1),
               ),
               const Text(
                 'Daftar menu tahap pembangunan rumah',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
-                    fontFamily: 'Outfit',
-                    color: Color.fromARGB(255, 155, 155, 155)),
+                    fontFamily: f.Outfit,
+                    color: c.RGB155_O1),
               ),
               const Gap(2),
               const Divider(
-                color: Color.fromARGB(255, 222, 221, 221),
+                color: c.R222_G221_B221_O1,
               ),
               const Gap(2),
 
@@ -244,13 +244,13 @@ buildBottomSheet4Pembangunan(BuildContext context) {
 buildBottomSheet4AkadSerahTerima(BuildContext context) {
   showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.white,
+      backgroundColor: c.RGB255_O1,
       elevation: 0,
       builder: (context) {
         return Container(
           width: MediaQuery.of(context).size.width,
-          color: Colors.white,
-          // color: const Color.fromARGB(255, 222, 221, 221),
+          color: c.RGB255_O1,
+          // color: const c.R222_G221_B221_O1,
           // padding:
           //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
           child: Column(
@@ -261,20 +261,20 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
-                    fontFamily: 'Outfit',
-                    color: Color.fromARGB(255, 51, 74, 52)),
+                    fontFamily: f.Outfit,
+                    color: c.R51_G74_B52_O1),
               ),
               const Text(
                 'Daftar menu tahap akad & serah terima',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontFamily: 'Outfit',
+                    fontFamily: f.Outfit,
                     fontSize: 12,
-                    color: Color.fromARGB(255, 155, 155, 155)),
+                    color: c.RGB155_O1),
               ),
               const Gap(2),
               const Divider(
-                color: Color.fromARGB(255, 222, 221, 221),
+                color: c.R222_G221_B221_O1,
               ),
               const Gap(2),
 
@@ -335,10 +335,10 @@ class BottomSheetComponent {
           child: Text(
             "3",
             style: TextStyle(
-                color: Colors.white,
+                color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
                 fontSize: 10.67,
-                fontFamily: 'Outfit'),
+                fontFamily: f.Outfit),
           ),
         ),
       ),
@@ -364,9 +364,9 @@ class BottomSheetComponent {
           child: Text(
             "!",
             style: TextStyle(
-                color: Colors.white,
+                color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
-                fontFamily: 'Outfit',
+                fontFamily: f.Outfit,
                 fontSize: 10.67),
           ),
         ),
@@ -417,9 +417,9 @@ class BottomSheetComponent {
           child: Text(
             "!",
             style: TextStyle(
-                color: Colors.white,
+                color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
-                fontFamily: 'Outfit',
+                fontFamily: f.Outfit,
                 fontSize: 10.67),
           ),
         ),

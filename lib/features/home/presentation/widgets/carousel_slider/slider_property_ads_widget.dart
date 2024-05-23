@@ -5,6 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../../core/res/color.dart' as c;
+import '../../../../../core/res/font.dart' as f;
+
 class SliderPropertyAdsWidget extends StatelessWidget {
   const SliderPropertyAdsWidget(
       {super.key,
@@ -48,25 +51,25 @@ class SliderPropertyAdsWidget extends StatelessWidget {
                           style: const TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
-                              fontFamily: 'Rubik',
-                              color: Colors.white),
+                              fontFamily: f.Rubix,
+                              color: c.RGB255_O1),
                           children: const [
                         TextSpan(
                             text: "Diskon",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 15,
-                                fontFamily: 'Outfit',
-                                color: Colors.white))
+                                fontFamily: f.Outfit,
+                                color: c.RGB255_O1))
                       ])),
                   const Gap(7),
                   AutoSizeText(
                     name,
                     style: const TextStyle(
                         fontWeight: FontWeight.w500,
-                        color: Colors.white,
                         fontSize: 20,
-                        fontFamily: 'Outfit'),
+                        color: c.RGB255_O1,
+                        fontFamily: f.Outfit),
                     maxLines: 1,
                   ),
                   const Gap(4),
@@ -79,8 +82,8 @@ class SliderPropertyAdsWidget extends StatelessWidget {
                           maxLines: 1,
                           minFontSize: 1,
                           style: const TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Outfit',
+                              color: c.RGB255_O1,
+                              fontFamily: f.Outfit,
                               fontWeight: FontWeight.w300,
                               fontSize: 10),
                         ),

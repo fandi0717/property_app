@@ -2,6 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
+import '../../../../../core/res/color.dart' as c;
+import '../../../../../core/res/font.dart' as f;
 import '../../../data/models/transaction_enum.dart';
 import 'bottom_sheet/bottom_sheet.dart';
 
@@ -66,11 +68,49 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
               // width: MediaQuery.of(context).size.width * 0.4,
               // height: MediaQuery.of(context).size.height * 0.2,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(13),
-                color: widget.transaction == Transaction.pemesanan
-                    ? const Color.fromARGB(255, 51, 74, 52)
-                    : const Color.fromARGB(255, 255, 255, 255),
-              ),
+                  borderRadius: BorderRadius.circular(13),
+                  color: widget.transaction == Transaction.pemesanan
+                      ? c.R51_G74_B52_O1
+                      : c.RGB255_O1,
+                  boxShadow: widget.transaction == Transaction.pemesanan
+                      ? [
+                          const BoxShadow(
+                              offset: Offset(0, 4.12),
+                              blurRadius: 2.47,
+                              color: c.RGB63_O005),
+                          const BoxShadow(
+                              offset: Offset(0, 10.42),
+                              blurRadius: 6.25,
+                              color: c.RGB63_O008),
+                          const BoxShadow(
+                              offset: Offset(0, 21.27),
+                              blurRadius: 12.76,
+                              color: c.RGB63_O009),
+                          const BoxShadow(
+                              offset: Offset(0, 43.8),
+                              blurRadius: 26.28,
+                              color: c.RGB63_O012),
+                          const BoxShadow(
+                              offset: Offset(0, 120),
+                              blurRadius: 72,
+                              color: c.RGB63_O017),
+                        ]
+                      : widget.percentage > 0
+                          ? [
+                              const BoxShadow(
+                                  offset: Offset(0, 14.1),
+                                  blurRadius: 5.32,
+                                  color: c.R170_G167_B167_O006),
+                              const BoxShadow(
+                                  offset: Offset(0, 47.35),
+                                  blurRadius: 17.87,
+                                  color: c.R170_G167_B167_O008),
+                              const BoxShadow(
+                                  offset: Offset(0, 212),
+                                  blurRadius: 80,
+                                  color: c.R170_G167_B167_O014)
+                            ]
+                          : null),
               child: Stack(
                 children: [
                   widget.transaction == Transaction.pemesanan
@@ -116,7 +156,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                               width: 198,
                               height: 219,
                               decoration: const BoxDecoration(
-                                color: Color.fromRGBO(47, 69, 48, 1),
+                                color: c.R47_G69_B48_O1,
                                 borderRadius: BorderRadius.all(
                                     Radius.elliptical(130, 174)),
                                 // color: Colors.red,
@@ -166,7 +206,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                               width: 296,
                               height: 296,
                               decoration: const BoxDecoration(
-                                color: Color.fromRGBO(248, 248, 248, 1),
+                                color: c.RGB248_O1,
                                 borderRadius: BorderRadius.all(
                                     Radius.elliptical(189, 109)),
                                 // color: Colors.red,
@@ -186,11 +226,11 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w300,
                                 fontSize: 12,
-                                fontFamily: 'Lexend',
-                                color: widget.transaction ==
-                                        Transaction.pemesanan
-                                    ? Colors.white
-                                    : const Color.fromARGB(255, 51, 74, 52)),
+                                fontFamily: f.Lexend,
+                                color:
+                                    widget.transaction == Transaction.pemesanan
+                                        ? c.RGB255_O1
+                                        : c.R51_G74_B52_O1),
                           ),
                         ),
                         /* [Gap]
@@ -205,11 +245,11 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
-                                  fontFamily: 'Lexend',
+                                  fontFamily: f.Lexend,
                                   color: widget.transaction ==
                                           Transaction.pemesanan
-                                      ? Colors.white
-                                      : const Color.fromARGB(255, 51, 74, 52))),
+                                      ? c.RGB255_O1
+                                      : c.R51_G74_B52_O1)),
                         ),
                         Expanded(
                           child: Row(
@@ -239,14 +279,14 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                             style: const TextStyle(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 12,
-                                                color: Colors.white),
+                                                color: c.RGB255_O1),
                                             children: [
                                               const TextSpan(
                                                   text: '%',
                                                   style: TextStyle(
                                                       fontWeight: FontWeight.w500,
                                                       fontSize: 5,
-                                                      color: Colors.white))
+                                                      color: c.RGB255_O1))
                                             ])),
                                       ),
                                     ),
@@ -258,17 +298,16 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                             shape: BoxShape.circle,
                                             color: widget.transaction ==
                                                     Transaction.pemesanan
-                                                ? const Color.fromARGB(
-                                                    255, 51, 74, 52)
-                                                : Colors.white,
+                                                ? c.R51_G74_B52_O1
+                                                : c.RGB255_O1,
                                             boxShadow: widget.percentage == 0
                                                 ? null
                                                 : [
                                                     const BoxShadow(
                                                         blurRadius: 2.5,
                                                         spreadRadius: 0,
-                                                        color: Color.fromRGBO(
-                                                            9, 19, 10, 0.16),
+                                                        color:
+                                                            c.R9_G19_B10_O016,
                                                         offset: Offset(0, 5))
                                                   ]),
                                         child: SimpleCircularProgressBar(
@@ -277,14 +316,8 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                           progressStrokeWidth: 3,
                                           progressColors: widget.transaction ==
                                                   Transaction.pemesanan
-                                              ? [
-                                                  const Color.fromARGB(
-                                                      255, 255, 92, 92)
-                                                ]
-                                              : [
-                                                  const Color.fromARGB(
-                                                      255, 51, 74, 52)
-                                                ],
+                                              ? [c.R255_G92_B92_O1]
+                                              : [c.R51_G74_B52_O1],
                                           backColor: const Color.fromARGB(
                                               255, 226, 233, 226),
                                           mergeMode: true,
@@ -293,30 +326,27 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                                 text: value.toInt().toString(),
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w600,
-                                                    fontFamily: 'Rubik',
+                                                    fontFamily: f.Rubix,
                                                     fontSize: 12,
                                                     color: widget.transaction ==
                                                             Transaction
                                                                 .pemesanan
-                                                        ? Colors.white
-                                                        : const Color.fromARGB(
-                                                            255, 51, 74, 52)),
+                                                        ? c.RGB255_O1
+                                                        : c.R51_G74_B52_O1),
                                                 children: [
                                                   TextSpan(
                                                       text: '%',
                                                       style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.w500,
-                                                          fontFamily: 'Rubik',
+                                                          fontFamily: f.Rubix,
                                                           fontSize: 5,
                                                           color: widget
                                                                       .transaction ==
                                                                   Transaction
                                                                       .pemesanan
-                                                              ? Colors.white
-                                                              : const Color
-                                                                  .fromARGB(255,
-                                                                  51, 74, 52)))
+                                                              ? c.RGB255_O1
+                                                              : c.R51_G74_B52_O1))
                                                 ]));
                                           },
                                           valueNotifier:

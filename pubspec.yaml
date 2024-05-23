@@ -83,7 +83,6 @@ flutter:
     - assets/icons/navbar/svg/
     - assets/icons/navbar/svg/active/
     - assets/icons/navbar/svg/nonactive/
-    - assets/img_test/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -5,6 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
+import '../../../../../../core/res/color.dart' as c;
+import '../../../../../../core/res/font.dart' as f;
 import '../../../../data/models/transaction_enum.dart';
 
 part 'build_bottom_sheet.dart';

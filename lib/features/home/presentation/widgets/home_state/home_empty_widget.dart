@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
+import '../../../../../core/res/color.dart' as c;
+import '../../../../../core/res/font.dart' as f;
 import '../../../logic/bloc/home_bloc.dart';
 
 class HomeEmptyWidget extends StatelessWidget {
@@ -21,14 +23,9 @@ class HomeEmptyWidget extends StatelessWidget {
             "Pesanan Terbaru",
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                color: Color.fromARGB(
-                  255,
-                  51,
-                  74,
-                  52,
-                ),
+                color: c.R51_G74_B52_O1,
                 fontSize: 18,
-                fontFamily: 'Outfit'),
+                fontFamily: f.Outfit),
           ),
         ),
         const Align(
@@ -37,14 +34,9 @@ class HomeEmptyWidget extends StatelessWidget {
             "Daftar pesanan terbaru anda",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                color: Color.fromARGB(
-                  255,
-                  158,
-                  158,
-                  158,
-                ),
+                color: c.RGB158_O1,
                 fontSize: 12,
-                fontFamily: 'Outfit'),
+                fontFamily: f.Outfit),
           ),
         ),
         const Gap(20),
@@ -64,18 +56,18 @@ class HomeEmptyWidget extends StatelessWidget {
           "Pesanan Kosong",
           style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: Color.fromARGB(255, 52, 74, 52),
+              color: c.R51_G74_B52_O1,
               fontSize: 16,
-              fontFamily: 'Outfit'),
+              fontFamily: f.Outfit),
         ),
         const Gap(4),
         const Text(
           "Ayo tambahkan pesanan baru",
           style: TextStyle(
               fontWeight: FontWeight.w400,
-              color: Color.fromARGB(255, 155, 155, 155),
+              color: c.RGB155_O1,
               fontSize: 12,
-              fontFamily: 'Outfit'),
+              fontFamily: f.Outfit),
         ),
         const Gap(10),
         ElevatedButton.icon(
@@ -86,14 +78,13 @@ class HomeEmptyWidget extends StatelessWidget {
           label: const Text(
             "Eksplor Property",
             style: TextStyle(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
-                fontFamily: 'Outfit'),
+                fontFamily: f.Outfit),
           ),
           style: const ButtonStyle(
-              backgroundColor:
-                  MaterialStatePropertyAll(Color.fromARGB(255, 51, 74, 52)),
+              backgroundColor: MaterialStatePropertyAll(c.R51_G74_B52_O1),
               padding: MaterialStatePropertyAll(EdgeInsets.all(14))),
         ),
       ],

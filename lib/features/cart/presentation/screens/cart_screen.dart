@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
+import '../../../../core/res/font.dart' as f;
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -13,7 +14,7 @@ class CartScreen extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                fontFamily: 'Outfit')),
+                fontFamily: f.Outfit)),
       ),
       bottomNavigationBar: BottomNavigationBarWidget(),
     );

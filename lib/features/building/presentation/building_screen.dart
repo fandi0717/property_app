@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/res/font.dart' as f;
 import '../../../core/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 
 class BuildingScreen extends StatelessWidget {
@@ -13,7 +14,7 @@ class BuildingScreen extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                fontFamily: 'Outfit')),
+                fontFamily: f.Outfit)),
       ),
       bottomNavigationBar: BottomNavigationBarWidget(),
     );

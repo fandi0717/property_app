@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 import '../../../routes/route_name.dart';
+import '../../res/color.dart' as c;
 import '../cubit/bottom_navigation_bar_cubit.dart';
 
 class BottomNavigationBarWidget extends StatelessWidget {
@@ -34,7 +35,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
         notchSmoothness: NotchSmoothness.defaultEdge,
         // leftCornerRadius: 32,
         // rightCornerRadius: 32,
-        backgroundColor: Colors.white,
+        backgroundColor: c.RGB255_O1,
         gapLocation: GapLocation.none,
         // height: MediaQuery.of(context).size.height * 0.1,
         // safeAreaValues: SafeAreaValues(bottom: false),
@@ -48,7 +49,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                   flex: 3,
                   child: SvgPicture.asset(iconActivePaths[index],
                       colorFilter: const ColorFilter.mode(
-                          Color.fromARGB(255, 51, 74, 52), BlendMode.srcIn)),
+                          c.R51_G74_B52_O1, BlendMode.srcIn)),
                 ),
                 const Flexible(flex: 1, child: Gap(20)),
                 Flexible(
@@ -66,8 +67,8 @@ class BottomNavigationBarWidget extends StatelessWidget {
               Flexible(
                 flex: 3,
                 child: SvgPicture.asset(iconNonactivePaths[index],
-                    colorFilter: const ColorFilter.mode(
-                        Color.fromARGB(255, 155, 155, 155), BlendMode.srcIn)),
+                    colorFilter:
+                        const ColorFilter.mode(c.RGB155_O1, BlendMode.srcIn)),
               ),
               const Flexible(flex: 1, child: Gap(20)),
               Flexible(

@@ -29,7 +29,7 @@ class ContentIconBottomSheet extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         decoration: enabled
             ? const BoxDecoration(
-                color: Color.fromARGB(255, 248, 248, 248),
+                color: c.RGB248_O1,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(
                       75.0), // Membuat sudut kanan atas menjadi lingkaran
@@ -44,13 +44,13 @@ class ContentIconBottomSheet extends StatelessWidget {
           children: [
             Container(
               decoration: const BoxDecoration(
-                  // color: const Color.fromARGB(255, 51, 74, 52),
+                  // color: c.R51_G74_B52_O1,
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 4.58,
                         spreadRadius: 0,
-                        color: Color.fromRGBO(234, 230, 230, 0.73),
+                        color: c.R234_G230_B230_O073,
                         offset: Offset(0, 6.25))
                   ]),
               child: badges.Badge(
@@ -58,9 +58,9 @@ class ContentIconBottomSheet extends StatelessWidget {
                 showBadge: enabled,
                 child: CircleAvatar(
                   // backgroundColor: enabled
-                  //     ? const Color.fromARGB(255, 51, 74, 52)
+                  //     ? c.R51_G74_B52_O1
                   //     : const Color.fromARGB(255, 153, 164, 153),
-                  backgroundColor: const Color.fromARGB(255, 51, 74, 52),
+                  backgroundColor: c.R51_G74_B52_O1,
                   // radius: 25,
                   child: SvgPicture.asset(iconPath),
                 ),
@@ -71,17 +71,17 @@ class ContentIconBottomSheet extends StatelessWidget {
                 text: text.split('\n')[0],
                 style: const TextStyle(
                     fontWeight: FontWeight.w300,
-                    fontFamily: 'Lexend',
+                    fontFamily: f.Lexend,
                     fontSize: 10,
-                    color: Color.fromARGB(255, 51, 74, 52)),
+                    color: c.R51_G74_B52_O1),
                 children: [
                   TextSpan(
                       text: '\n${text.split('\n')[1]}',
                       style: const TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontFamily: 'Lexend',
+                          fontFamily: f.Lexend,
                           fontSize: 10,
-                          color: Color.fromARGB(255, 51, 74, 52))),
+                          color: c.R51_G74_B52_O1)),
                 ]))
           ],
         ),
@@ -107,7 +107,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 248, 248, 248),
+        color: c.RGB248_O1,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(
               70.0), // Membuat sudut kanan atas menjadi lingkaran
@@ -137,21 +137,21 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
             width: 35,
             height: 35,
             decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 51, 74, 52),
+                color: c.R51_G74_B52_O1,
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 2.5,
                       spreadRadius: 0,
-                      color: Color.fromRGBO(9, 19, 10, 0.16),
+                      color: c.R9_G19_B10_O016,
                       offset: Offset(0, 5))
                 ]),
             child: SimpleCircularProgressBar(
                 // size: 35,
                 backStrokeWidth: 3,
                 progressStrokeWidth: 3,
-                progressColors: const [Color.fromARGB(255, 255, 92, 92)],
-                backColor: Colors.white,
+                progressColors: const [c.R255_G92_B92_O1],
+                backColor: c.RGB255_O1,
                 mergeMode: true,
                 onGetText: (double value) {
                   return Text.rich(TextSpan(
@@ -159,16 +159,16 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 12,
-                          fontFamily: 'Rubix',
-                          color: Colors.white),
+                          fontFamily: f.Rubix,
+                          color: c.RGB255_O1),
                       children: const [
                         TextSpan(
                             text: '%',
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 3.57,
-                                fontFamily: 'Rubix',
-                                color: Colors.white))
+                                fontFamily: f.Rubix,
+                                color: c.RGB255_O1))
                       ]));
                 },
                 valueNotifier: ValueNotifier(percentage.toDouble())),
@@ -182,16 +182,16 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                 style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     fontSize: 10,
-                    fontFamily: 'Lexend',
-                    color: Color.fromARGB(255, 51, 74, 52)),
+                    fontFamily: f.Lexend,
+                    color: c.R51_G74_B52_O1),
                 children: [
                   TextSpan(
                       text: '\n${text.split('\n')[1]}',
                       style: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 10,
-                          fontFamily: 'Lexend',
-                          color: Color.fromARGB(255, 51, 74, 52))),
+                          fontFamily: f.Lexend,
+                          color: c.R51_G74_B52_O1)),
                 ]),
             maxLines: 5,
             minFontSize: 10,
@@ -204,16 +204,16 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
               style: const TextStyle(
                   fontWeight: FontWeight.w300,
                   fontSize: 10,
-                  fontFamily: 'Lexend',
-                  color: Color.fromARGB(255, 51, 74, 52)),
+                  fontFamily: f.Lexend,
+                  color: c.R51_G74_B52_O1),
               children: [
                 TextSpan(
                     text: '\n${text.split('\n')[1]}',
                     style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 10,
-                        fontFamily: 'Lexend',
-                        color: Color.fromARGB(255, 51, 74, 52))),
+                        fontFamily: f.Lexend,
+                        color: c.R51_G74_B52_O1)),
               ]))
         ],
       ),
