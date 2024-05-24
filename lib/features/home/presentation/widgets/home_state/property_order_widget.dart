@@ -92,13 +92,10 @@ class PropertyOrderWidget extends StatelessWidget {
             const Gap(10),
 
             /// [SLIDER PROPERTY]
-            ConstrainedBox(
-              constraints: const BoxConstraints(),
-              child: SliderPropertyOrderWidget(
-                propertys: propertyOrder.propertys,
-                indexOrder: propertyOrder.index,
-                controller: _controller,
-              ),
+            SliderPropertyOrderWidget(
+              propertys: propertyOrder.propertys,
+              indexOrder: propertyOrder.index,
+              controller: _controller,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

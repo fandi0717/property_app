@@ -305,12 +305,15 @@ class SliderPropertyOrderWidget extends StatelessWidget {
           );
         },
         options: CarouselOptions(
-          aspectRatio: propertys[indexOrder].denda != null ? 16 / 11 : 16 / 9,
+          aspectRatio:
+              propertys[indexOrder].denda != null ? 17 / 11 : 16 / 9, // default
+          // aspectRatio: propertys[indexOrder].denda != null ? 17 / 10 : 17 / 9,
           // aspectRatio:
           //     propertys[indexOrder].denda != null ? 378 / 185 : 378 / 144,
           // height: propertys[indexOrder].denda != null
           // ? MediaQuery.of(context).size.height * 0.35
           // : MediaQuery.of(context).size.height * 0.3,
+          initialPage: indexOrder,
           autoPlay: false,
           enableInfiniteScroll: false,
           enlargeCenterPage: false,
