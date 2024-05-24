@@ -32,7 +32,7 @@ class ContentIconBottomSheet extends StatelessWidget {
                 color: c.RGB248_O1,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(
-                      75.0), // Membuat sudut kanan atas menjadi lingkaran
+                      50.0), // Membuat sudut kanan atas menjadi lingkaran
                   topLeft: Radius.circular(20),
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -110,7 +110,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
         color: c.RGB248_O1,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(
-              70.0), // Membuat sudut kanan atas menjadi lingkaran
+              50.0), // Membuat sudut kanan atas menjadi lingkaran
           topLeft: Radius.circular(20),
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),

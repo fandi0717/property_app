@@ -37,6 +37,7 @@ class HeadWidget extends StatelessWidget {
               const Gap(10),
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                     "Temukan\nHunian Impian",

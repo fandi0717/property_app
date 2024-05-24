@@ -50,7 +50,8 @@ class HomeEmptyWidget extends StatelessWidget {
         // ),
         Flexible(
             child: Image.asset('assets/images/background_empty.png',
-                scale: MediaQuery.sizeOf(context).height > 850 ? 2 : 1)),
+                // scale: MediaQuery.sizeOf(context).height > 850 ? 2 : 1
+                )),
         const Gap(20),
         const Text(
           "Pesanan Kosong",
