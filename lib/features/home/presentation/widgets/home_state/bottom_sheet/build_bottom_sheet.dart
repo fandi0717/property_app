@@ -21,6 +21,7 @@ buildBottomSheet4Pemesanan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    height: 22.68 / 18,
                     fontFamily: f.Outfit,
                     color: c.R51_G74_B52_O1),
               ),
@@ -29,6 +30,7 @@ buildBottomSheet4Pemesanan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontFamily: f.Outfit,
+                    height: 15.12 / 12,
                     fontSize: 12,
                     color: c.RGB155_O1),
               ),
@@ -100,6 +102,7 @@ buildBottomSheet4Administrasi(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    height: 22.68 / 18,
                     fontFamily: f.Outfit,
                     color: c.R51_G74_B52_O1),
               ),
@@ -108,6 +111,7 @@ buildBottomSheet4Administrasi(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
+                    height: 15.12 / 12,
                     fontFamily: f.Outfit,
                     color: c.RGB155_O1),
               ),
@@ -182,6 +186,7 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    height: 22.68 / 18,
                     fontFamily: f.Outfit,
                     color: c.R51_G74_B52_O1),
               ),
@@ -190,6 +195,7 @@ buildBottomSheet4Pembangunan(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
+                    height: 15.12 / 12,
                     fontFamily: f.Outfit,
                     color: c.RGB155_O1),
               ),
@@ -261,6 +267,7 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
+                    height: 22.68 / 18,
                     fontFamily: f.Outfit,
                     color: c.R51_G74_B52_O1),
               ),
@@ -270,6 +277,7 @@ buildBottomSheet4AkadSerahTerima(BuildContext context) {
                     fontWeight: FontWeight.w400,
                     fontFamily: f.Outfit,
                     fontSize: 12,
+                    height: 15.12 / 12,
                     color: c.RGB155_O1),
               ),
               const Gap(2),
@@ -338,6 +346,7 @@ class BottomSheetComponent {
                 color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
                 fontSize: 10.67,
+                height: 13.44 / 10.67,
                 fontFamily: f.Outfit),
           ),
         ),
@@ -367,7 +376,8 @@ class BottomSheetComponent {
                 color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
                 fontFamily: f.Outfit,
-                fontSize: 10.67),
+                fontSize: 10.67,
+                height: 13.44 / 10.67),
           ),
         ),
       ),
@@ -420,7 +430,8 @@ class BottomSheetComponent {
                 color: c.RGB255_O1,
                 fontWeight: FontWeight.w500,
                 fontFamily: f.Outfit,
-                fontSize: 10.67),
+                fontSize: 10.67,
+                height: 13.44 / 10.67),
           ),
         ),
       ),

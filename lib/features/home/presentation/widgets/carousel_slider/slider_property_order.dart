@@ -46,6 +46,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 12,
+                          height: 15.12 / 12,
                           fontFamily: f.Outfit,
                           color: c.R51_G74_B52_O1),
                     ),
@@ -54,7 +55,8 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                         color: c.R154_G202_B62_O1,
                       ),
-                      padding: const EdgeInsets.fromLTRB(8, 2, 8, 2),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 2),
                       // height: MediaQuery.of(context).size.height * 0.2,
                       // width: MediaQuery.of(context).size.width * 0.3,
                       child: Center(
@@ -63,7 +65,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                           style: const TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
-                              // height: 15.12,
+                              height: 15.12 / 12,
                               fontFamily: f.Outfit,
                               color: c.RGB255_O1),
                         ),
@@ -124,6 +126,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12,
+                                      height: 15.12 / 12,
                                       fontFamily: f.Outfit,
                                       color: c.R51_G74_B52_O1),
                                   maxLines: 1,
@@ -154,6 +157,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                     style: const TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 12,
+                                        height: 15.12 / 12,
                                         fontFamily: f.Outfit,
                                         color: c.R51_G74_B52_O1),
 
@@ -166,7 +170,6 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                             ],
                           ),
                           const Gap(7),
-
                           Row(
                             children: [
                               SvgPicture.asset(
@@ -181,15 +184,12 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                 child: AutoSizeText(
                                   DateFormat('dd/MM/yyyy, HH:mm')
                                       .format(propertys[index].dateTarget),
-                                  // style: const TextStyle(
-                                  //     fontWeight: FontWeight.w400,
-                                  //     fontSize: 12),
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12,
+                                      height: 15.12 / 12,
                                       fontFamily: f.Outfit,
                                       color: c.R51_G74_B52_O1),
-
                                   maxLines: 1,
                                   minFontSize: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -198,8 +198,43 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                             ],
                           ),
                           const Gap(7),
+                          AutoSizeText.rich(
+                            TextSpan(
+                                text: 'Rp',
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 12,
+                                    fontFamily: f.Outfit,
+                                    color: c.R51_G74_B52_O1,
+                                    height: 15.12 / 12),
+                                children: [
+                                  const TextSpan(
+                                      text: ' ',
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontFamily: f.Outfit,
+                                          fontWeight: FontWeight.w500,
+                                          color: c.R51_G74_B52_O1,
+                                          height: 17.64 / 14)),
+                                  TextSpan(
+                                    text:
+                                        rupiah(propertys[index].price.toInt()),
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 14,
+                                        height: 17.64 / 14,
+                                        fontFamily: f.Outfit,
+                                        color: c.R51_G74_B52_O1),
+                                  )
+                                ]),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            minFontSize: 1,
+                            textAlign: TextAlign.right,
+                          ),
 
-                          // AutoSizeText.rich(TextSpan(text: 'Rp')),
+                          // [Alternatif]
+                          /* 
                           Row(
                             children: [
                               const Text(
@@ -208,14 +243,16 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                     fontWeight: FontWeight.w400,
                                     fontSize: 12,
                                     fontFamily: f.Outfit,
-                                    color: c.R51_G74_B52_O1),
+                                    color: c.R51_G74_B52_O1,
+                                    height: 15.12 / 12),
                               ),
                               const Text(" ",
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontFamily: f.Outfit,
                                       fontWeight: FontWeight.w500,
-                                      color: c.R51_G74_B52_O1)),
+                                      color: c.R51_G74_B52_O1,
+                                      height: 17.64 / 14)),
                               // const Gap(5),
                               Expanded(
                                 child: AutoSizeText(
@@ -223,6 +260,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 14,
+                                      height: 17.64 / 14,
                                       fontFamily: f.Outfit,
                                       color: c.R51_G74_B52_O1),
                                   maxLines: 1,
@@ -232,6 +270,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                               )
                             ],
                           ),
+                          */
                         ],
                       ),
                     )
@@ -263,6 +302,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                   style: const TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12,
+                                      height: 15.12 / 12,
                                       fontFamily: f.Outfit,
                                       color: c.R51_G74_B52_O1),
                                   children: [
@@ -272,6 +312,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                         style: const TextStyle(
                                             fontWeight: FontWeight.w700,
                                             fontSize: 12,
+                                            height: 15.12 / 12,
                                             fontFamily: f.Outfit,
                                             color: c.R51_G74_B52_O1))
                                   ]))
@@ -294,6 +335,7 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                                     style: const TextStyle(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 10,
+                                        height: 12.6 / 10,
                                         fontFamily: f.Outfit,
                                         color: c.RGB255_O1))
                               ]))

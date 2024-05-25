@@ -45,7 +45,8 @@ class HeadWidget extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
                               color: c.R51_G74_B52_O1,
-                              fontFamily: f.Outfit),
+                              fontFamily: f.Outfit,
+                              height: 20 / 18),
                           children: [
                         TextSpan(
                           text: 'Hunian Impian',
@@ -53,7 +54,8 @@ class HeadWidget extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
                               color: c.R51_G74_B52_O1,
-                              fontFamily: f.Outfit),
+                              fontFamily: f.Outfit,
+                              height: 20 / 18),
                         )
                       ])),
                   const Gap(4),
@@ -63,7 +65,8 @@ class HeadWidget extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
                         fontFamily: f.Outfit,
-                        color: c.RGB126_O1),
+                        color: c.RGB126_O1,
+                        height: 15.12 / 12),
                   )
                 ],
               )
@@ -80,7 +83,8 @@ class HeadWidget extends StatelessWidget {
                     color: c.RGB255_O1,
                     fontFamily: f.Outfit,
                     fontWeight: FontWeight.w500,
-                    fontSize: 10.67),
+                    fontSize: 10.67,
+                    height: 13.44 / 10.67),
               ),
             ),
           ),

@@ -41,6 +41,7 @@ class PropertyOrderWidget extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
                       color: c.R51_G74_B52_O1,
+                      height: 22.68 / 18,
                       fontSize: 18,
                       fontFamily: f.Outfit),
                 ),
@@ -52,6 +53,7 @@ class PropertyOrderWidget extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
                       color: c.RGB155_O1,
+                      height: 15.12 / 12,
                       fontSize: 12,
                       fontFamily: f.Outfit),
                 ),
@@ -127,6 +129,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     'Menu',
                     style: TextStyle(
                         fontSize: 18,
+                        height: 22.68 / 18,
                         fontWeight: FontWeight.w500,
                         fontFamily: f.Outfit,
                         color: c.R51_G74_B52_O1),
@@ -136,6 +139,7 @@ class PropertyOrderWidget extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
+                        height: 15.12 / 12,
                         fontFamily: f.Outfit,
                         color: c.RGB155_O1),
                   )

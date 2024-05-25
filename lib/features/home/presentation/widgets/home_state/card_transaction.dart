@@ -226,6 +226,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w300,
                                 fontSize: 12,
+                                height: 15 / 12,
                                 fontFamily: f.Lexend,
                                 color:
                                     widget.transaction == Transaction.pemesanan
@@ -246,6 +247,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
+                                  height: 17.5 / 14,
                                   fontFamily: f.Lexend,
                                   color: widget.transaction ==
                                           Transaction.pemesanan
@@ -331,6 +333,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                                     fontWeight: FontWeight.w600,
                                                     fontFamily: f.Rubix,
                                                     fontSize: 12,
+                                                    height: 14.22 / 12,
                                                     color: widget.transaction ==
                                                             Transaction
                                                                 .pemesanan
@@ -344,6 +347,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                                               FontWeight.w500,
                                                           fontFamily: f.Rubix,
                                                           fontSize: 5,
+                                                          height: 5.93 / 5,
                                                           color: widget
                                                                       .transaction ==
                                                                   Transaction

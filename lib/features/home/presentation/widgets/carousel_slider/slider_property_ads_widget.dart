@@ -47,27 +47,39 @@ class SliderPropertyAdsWidget extends StatelessWidget {
                 children: [
                   RichText(
                       text: TextSpan(
-                          text: "${diskon.toInt()}% ",
+                          text: "${diskon.toInt()}%",
                           style: const TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
                               fontFamily: f.Rubix,
+                              height: 21.33 / 18,
                               color: c.RGB255_O1),
                           children: const [
                         TextSpan(
-                            text: "Diskon",
+                            text: ' ',
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 15,
+                                height: 18.9 / 15,
+                                fontFamily: f.Outfit,
+                                color: c.RGB255_O1)),
+                        TextSpan(
+                            text: "Diskon",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                                height: 18.9 / 15,
                                 fontFamily: f.Outfit,
                                 color: c.RGB255_O1))
                       ])),
                   const Gap(7),
                   AutoSizeText(
                     name,
+                    minFontSize: 1,
                     style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
+                        height: 25.2 / 20,
                         color: c.RGB255_O1,
                         fontFamily: f.Outfit),
                     maxLines: 1,
@@ -76,6 +88,7 @@ class SliderPropertyAdsWidget extends StatelessWidget {
                   Row(
                     children: [
                       SvgPicture.asset('assets/icons/utils/svg/calendar.svg'),
+                      const Gap(5),
                       Expanded(
                         child: AutoSizeText(
                           "\tPeriode ${DateFormat('d MMM yyyy', 'id').format(startDate)} s/d ${DateFormat('d MMM yyyy', 'id').format(endDate)}",
@@ -85,7 +98,8 @@ class SliderPropertyAdsWidget extends StatelessWidget {
                               color: c.RGB255_O1,
                               fontFamily: f.Outfit,
                               fontWeight: FontWeight.w300,
-                              fontSize: 10),
+                              fontSize: 10,
+                              height: 12.6 / 10),
                         ),
                       )
                     ],

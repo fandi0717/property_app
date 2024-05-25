@@ -73,6 +73,7 @@ class ContentIconBottomSheet extends StatelessWidget {
                     fontWeight: FontWeight.w300,
                     fontFamily: f.Lexend,
                     fontSize: 10,
+                    height: 12.5 / 10,
                     color: c.R51_G74_B52_O1),
                 children: [
                   TextSpan(
@@ -81,6 +82,7 @@ class ContentIconBottomSheet extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           fontFamily: f.Lexend,
                           fontSize: 10,
+                          height: 12.5 / 10,
                           color: c.R51_G74_B52_O1)),
                 ]))
           ],
@@ -159,6 +161,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 12,
+                          height: 14.22 / 12,
                           fontFamily: f.Rubix,
                           color: c.RGB255_O1),
                       children: const [
@@ -167,6 +170,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 3.57,
+                                height: 4.23 / 3.57,
                                 fontFamily: f.Rubix,
                                 color: c.RGB255_O1))
                       ]));
@@ -204,6 +208,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
               style: const TextStyle(
                   fontWeight: FontWeight.w300,
                   fontSize: 10,
+                  height: 12.5 / 10,
                   fontFamily: f.Lexend,
                   color: c.R51_G74_B52_O1),
               children: [
@@ -212,6 +217,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 10,
+                        height: 12.5 / 10,
                         fontFamily: f.Lexend,
                         color: c.R51_G74_B52_O1)),
               ]))

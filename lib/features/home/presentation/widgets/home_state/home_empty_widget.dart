@@ -25,6 +25,7 @@ class HomeEmptyWidget extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: c.R51_G74_B52_O1,
                 fontSize: 18,
+                height: 22.68 / 18,
                 fontFamily: f.Outfit),
           ),
         ),
@@ -36,6 +37,7 @@ class HomeEmptyWidget extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 color: c.RGB158_O1,
                 fontSize: 12,
+                height: 15.12 / 12,
                 fontFamily: f.Outfit),
           ),
         ),
@@ -49,9 +51,10 @@ class HomeEmptyWidget extends StatelessWidget {
 
         // ),
         Flexible(
-            child: Image.asset('assets/images/background_empty.png',
-                // scale: MediaQuery.sizeOf(context).height > 850 ? 2 : 1
-                )),
+            child: Image.asset(
+          'assets/images/background_empty.png',
+          // scale: MediaQuery.sizeOf(context).height > 850 ? 2 : 1
+        )),
         const Gap(20),
         const Text(
           "Pesanan Kosong",
@@ -59,6 +62,7 @@ class HomeEmptyWidget extends StatelessWidget {
               fontWeight: FontWeight.w600,
               color: c.R51_G74_B52_O1,
               fontSize: 16,
+              height: 20.16 / 16,
               fontFamily: f.Outfit),
         ),
         const Gap(4),
@@ -68,6 +72,7 @@ class HomeEmptyWidget extends StatelessWidget {
               fontWeight: FontWeight.w400,
               color: c.RGB155_O1,
               fontSize: 12,
+              height: 15.12 / 12,
               fontFamily: f.Outfit),
         ),
         const Gap(10),
@@ -80,6 +85,7 @@ class HomeEmptyWidget extends StatelessWidget {
             "Eksplor Properti",
             style: TextStyle(
                 color: c.RGB255_O1,
+                height: 20.16 / 16,
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
                 fontFamily: f.Outfit),
