@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       // extendBody: true,
       body: Container(
-        color: Theme.of(context).primaryColor,
+        color: c.RGB245_O1,
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 40),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -35,20 +35,29 @@ class HeadWidget extends StatelessWidget {
                         image: AssetImage("assets/images/profile_avatar.png"))),
               ),
               const Gap(10),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    "Temukan\nHunian Impian",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                        color: c.R51_G74_B52_O1,
-                        fontFamily: f.Outfit),
-                  ),
-                  Gap(4),
-                  Text(
+                  RichText(
+                      text: const TextSpan(
+                          text: 'Temukan\n',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              color: c.R51_G74_B52_O1,
+                              fontFamily: f.Outfit),
+                          children: [
+                        TextSpan(
+                          text: 'Hunian Impian',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              color: c.R51_G74_B52_O1,
+                              fontFamily: f.Outfit),
+                        )
+                      ])),
+                  const Gap(4),
+                  const Text(
                     "Agen Properti Terbaik",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,

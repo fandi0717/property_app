@@ -241,6 +241,7 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
                           child: AutoSizeText(namaTahap,
+                              minFontSize: 1,
                               maxLines: 1,
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
@@ -318,8 +319,10 @@ class _CardMenuTransaksiState extends State<CardMenuTransaksi> {
                                                   Transaction.pemesanan
                                               ? [c.R255_G92_B92_O1]
                                               : [c.R51_G74_B52_O1],
-                                          backColor: const Color.fromARGB(
-                                              255, 226, 233, 226),
+                                          backColor: widget.transaction ==
+                                                  Transaction.pemesanan
+                                              ? c.RGB255_O1
+                                              : c.R226_G233_B226_O1,
                                           mergeMode: true,
                                           onGetText: (double value) {
                                             return Text.rich(TextSpan(

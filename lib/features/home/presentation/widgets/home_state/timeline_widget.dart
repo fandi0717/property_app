@@ -53,7 +53,7 @@ class ProcessTimelinePage extends StatelessWidget {
         connectorBuilder: (context, index, type) {
           if (transaction.values.toList()[index - 1] < 100) {
             return const DashedLineConnector(
-              color: Color.fromARGB(255, 171, 171, 171),
+              color: c.RGB171_O1,
               // thickness: 0.5,
             );
           }
