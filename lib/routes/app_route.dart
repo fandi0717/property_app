@@ -13,7 +13,6 @@ class AppRouter {
       case RouteName.HOME:
         return MaterialPageRoute(
             builder: (context) => const HomeScreen(), settings: routeSettings);
-
       case RouteName.BUILDING:
         return MaterialPageRoute(
             builder: (context) => const BuildingScreen(),

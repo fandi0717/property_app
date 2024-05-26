@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -9,11 +9,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'app.dart';
 import 'core/bottom_navigation_bar/cubit/bottom_navigation_bar_cubit.dart';
 import 'features/home/logic/bloc/home_bloc.dart';
-
-/// [Fonts]
-/// 1. Outfit
-/// 2. Rubik
-/// 3. Lexend
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
