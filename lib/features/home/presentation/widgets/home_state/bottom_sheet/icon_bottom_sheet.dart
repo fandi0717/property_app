@@ -22,6 +22,8 @@ class ContentIconBottomSheet extends StatelessWidget {
           "if [enabled] argument is `true`\nYou must declare [renderBadgeContent] argument is not null");
     }
 
+    List<String> texts = text.split('\n');
+
     return Opacity(
       opacity: enabled ? 1 : 0.5,
       child: Container(
@@ -68,7 +70,7 @@ class ContentIconBottomSheet extends StatelessWidget {
             ),
             const Gap(10),
             Text.rich(TextSpan(
-                text: text.split('\n')[0],
+                text: texts[0],
                 style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     fontFamily: f.Lexend,
@@ -77,14 +79,14 @@ class ContentIconBottomSheet extends StatelessWidget {
                     color: c.R51_G74_B52_O1),
                 children: [
                   TextSpan(
-                      text: '\n${text.split('\n')[1]}',
+                      text: '\n${texts[1]}',
                       style: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontFamily: f.Lexend,
                           fontSize: 10,
                           height: 12.5 / 10,
                           color: c.R51_G74_B52_O1)),
-                ]))
+                ])),
           ],
         ),
       ),
@@ -104,8 +106,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var textSplitEnter = text.split('\n');
-    // var textSplitAnd = text.split('&');
+    List<String> texts = text.split('\n');
 
     return Container(
       decoration: const BoxDecoration(
@@ -182,7 +183,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
           /*
           AutoSizeText.rich(
             TextSpan(
-                text: text.split('\n')[0],
+                text: texts[0],
                 style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     fontSize: 10,
@@ -190,7 +191,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                     color: c.R51_G74_B52_O1),
                 children: [
                   TextSpan(
-                      text: '\n${text.split('\n')[1]}',
+                      text: '\n${texts[1]}',
                       style: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 10,
@@ -204,7 +205,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
 */
 
           Text.rich(TextSpan(
-              text: text.split('\n')[0],
+              text: texts[0],
               style: const TextStyle(
                   fontWeight: FontWeight.w300,
                   fontSize: 10,
@@ -213,7 +214,7 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
                   color: c.R51_G74_B52_O1),
               children: [
                 TextSpan(
-                    text: '\n${text.split('\n')[1]}',
+                    text: '\n${texts[1]}',
                     style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 10,

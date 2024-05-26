@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
 import 'package:timelines/timelines.dart';
 
 import '../../../../../core/res/color.dart' as c;
@@ -29,23 +28,18 @@ class ProcessTimelinePage extends StatelessWidget {
           return MediaQuery.of(context).size.width / (transaction.length + 1);
         },
         contentsBuilder: (context, index) {
-          return Column(
-            children: [
-              Gap(4),
-              Text(
-                _processes[index],
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 10,
-                    height: 12.6 / 10,
-                    fontFamily: f.Outfit,
-                    color: transaction.values.toList()[index] == 0
-                        ? c.RGB171_O1
-                        : c.R51_G74_B52_O1
-                    // color: getColor(index),
-                    ),
-              ),
-            ],
+          return Text(
+            _processes[index],
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 10,
+                height: 12.6 / 10,
+                fontFamily: f.Outfit,
+                color: transaction.values.toList()[index] == 0
+                    ? c.RGB171_O1
+                    : c.R51_G74_B52_O1
+                // color: getColor(index),
+                ),
           );
         },
         indicatorBuilder: (context, index) {

@@ -11,6 +11,7 @@ import '../../../../data/models/transaction_enum.dart';
 
 part 'build_bottom_sheet.dart';
 part 'icon_bottom_sheet.dart';
+part 'render_bottom_sheet.dart';
 
 void showBottomSheetWidget(BuildContext context, Transaction transaction) {
   switch (transaction) {

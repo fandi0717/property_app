@@ -2,333 +2,35 @@
 part of 'bottom_sheet.dart';
 
 buildBottomSheet4Pemesanan(BuildContext context) {
-  showModalBottomSheet(
+  return renderBottomSheet(
       context: context,
-      backgroundColor: c.RGB255_O1,
-      elevation: 0,
-      builder: (context) {
-        return Container(
-          width: MediaQuery.of(context).size.width,
-          color: c.RGB255_O1,
-          // color: const c.R222_G221_B221_O1,
-          // padding:
-          //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'Tahap Pemesanan',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18,
-                    height: 22.68 / 18,
-                    fontFamily: f.Outfit,
-                    color: c.R51_G74_B52_O1),
-              ),
-              const Text(
-                'Daftar Menu tahap pemesanan',
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontFamily: f.Outfit,
-                    height: 15.12 / 12,
-                    fontSize: 12,
-                    color: c.RGB155_O1),
-              ),
-              const Gap(2),
-              const Divider(
-                color: c.R222_G221_B221_O1,
-              ),
-              const Gap(2),
-
-              /*
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                    top: 20, bottom: 20, left: 25, right: 25),
-                itemCount: BottomSheetComponent.getPemesanan.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 20,
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getPemesanan[index];
-                },
-              )
-              */
-
-              Flexible(
-                flex: 1,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                  child: DynamicHeightGridView(
-                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
-                    builder: (context, index) {
-                      return BottomSheetComponent.getPemesanan[index];
-                    },
-                    itemCount: BottomSheetComponent.getPemesanan.length,
-                    crossAxisCount: 3,
-                    shrinkWrap: true,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 15,
-                  ),
-                ),
-              )
-            ],
-          ),
-        );
-      },
-      showDragHandle: true);
+      title: 'Tahap Pemesanan',
+      subtitle: 'Daftar menu tahap pemesanan',
+      contents: BottomSheetComponent.getPemesanan);
 }
 
 buildBottomSheet4Administrasi(BuildContext context) {
-  showModalBottomSheet(
+  return renderBottomSheet(
       context: context,
-      backgroundColor: c.RGB255_O1,
-      elevation: 0,
-      builder: (context) {
-        return Container(
-          width: MediaQuery.of(context).size.width,
-          color: c.RGB255_O1,
-          // color: const c.R222_G221_B221_O1,
-          // padding:
-          //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'Tahap Administrasi',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18,
-                    height: 22.68 / 18,
-                    fontFamily: f.Outfit,
-                    color: c.R51_G74_B52_O1),
-              ),
-              const Text(
-                'Daftar menu tahap administrasi',
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 12,
-                    height: 15.12 / 12,
-                    fontFamily: f.Outfit,
-                    color: c.RGB155_O1),
-              ),
-              const Gap(2),
-              const Divider(
-                color: c.R222_G221_B221_O1,
-              ),
-              const Gap(2),
-
-              /*
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                    top: 20, bottom: 20, left: 25, right: 25),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  // crossAxisSpacing: 20
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 20,
-                  // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
-                  // mainAxisSpacing:
-                  //     MediaQuery.of(context).size.height * 0.2
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getAdministrasi[index];
-                },
-                itemCount: BottomSheetComponent.getAdministrasi.length,
-              ),
-*/
-
-              Flexible(
-                flex: 1,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                  child: DynamicHeightGridView(
-                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
-                    builder: (context, index) {
-                      return BottomSheetComponent.getAdministrasi[index];
-                    },
-                    itemCount: BottomSheetComponent.getAdministrasi.length,
-                    crossAxisCount: 3,
-                    shrinkWrap: true,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 15,
-                  ),
-                ),
-              )
-            ],
-          ),
-        );
-      },
-      showDragHandle: true);
+      title: 'Tahap Administrasi',
+      subtitle: 'Daftar menu tahap administrasi',
+      contents: BottomSheetComponent.getAdministrasi);
 }
 
 buildBottomSheet4Pembangunan(BuildContext context) {
-  showModalBottomSheet(
+  return renderBottomSheet(
       context: context,
-      backgroundColor: c.RGB255_O1,
-      elevation: 0,
-      builder: (context) {
-        return Container(
-          width: MediaQuery.of(context).size.width,
-          color: c.RGB255_O1,
-          // padding:
-          //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'Tahap Pembangunan',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18,
-                    height: 22.68 / 18,
-                    fontFamily: f.Outfit,
-                    color: c.R51_G74_B52_O1),
-              ),
-              const Text(
-                'Daftar menu tahap pembangunan rumah',
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 12,
-                    height: 15.12 / 12,
-                    fontFamily: f.Outfit,
-                    color: c.RGB155_O1),
-              ),
-              const Gap(2),
-              const Divider(
-                color: c.R222_G221_B221_O1,
-              ),
-              const Gap(2),
-
-              /*
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                    top: 20, bottom: 20, left: 25, right: 25),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 20,
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getPembangunan[index];
-                },
-                itemCount: BottomSheetComponent.getPembangunan.length,
-              ),
-              */
-
-              Flexible(
-                flex: 1,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                  child: DynamicHeightGridView(
-                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
-                    builder: (context, index) {
-                      return BottomSheetComponent.getPembangunan[index];
-                    },
-                    itemCount: BottomSheetComponent.getPembangunan.length,
-                    crossAxisCount: 3,
-                    shrinkWrap: true,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 15,
-                  ),
-                ),
-              )
-            ],
-          ),
-        );
-      },
-      showDragHandle: true);
+      title: 'Tahap Pembangunan',
+      subtitle: 'Daftar menu tahap pembangunan rumah',
+      contents: BottomSheetComponent.getPembangunan);
 }
 
 buildBottomSheet4AkadSerahTerima(BuildContext context) {
-  showModalBottomSheet(
+  return renderBottomSheet(
       context: context,
-      backgroundColor: c.RGB255_O1,
-      elevation: 0,
-      builder: (context) {
-        return Container(
-          width: MediaQuery.of(context).size.width,
-          color: c.RGB255_O1,
-          // color: const c.R222_G221_B221_O1,
-          // padding:
-          //     const EdgeInsets.only(top: 20, right: 10, bottom: 15, left: 10),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'Tahap Akad & Serah Terima',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18,
-                    height: 22.68 / 18,
-                    fontFamily: f.Outfit,
-                    color: c.R51_G74_B52_O1),
-              ),
-              const Text(
-                'Daftar menu tahap akad & serah terima',
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontFamily: f.Outfit,
-                    fontSize: 12,
-                    height: 15.12 / 12,
-                    color: c.RGB155_O1),
-              ),
-              const Gap(2),
-              const Divider(
-                color: c.R222_G221_B221_O1,
-              ),
-              const Gap(2),
-
-              /*
-              GridView.builder(
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(
-                    top: 20, bottom: 20, left: 25, right: 25),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 20,
-                  // crossAxisSpacing: MediaQuery.of(context).size.width * 0.3,
-                  // mainAxisSpacing:
-                  //     MediaQuery.of(context).size.height * 0.2
-                ),
-                itemBuilder: (context, index) {
-                  return BottomSheetComponent.getAkadSerahTerima[index];
-                },
-                itemCount: BottomSheetComponent.getAkadSerahTerima.length,
-              ),
-              */
-
-              Flexible(
-                flex: 1,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                  child: DynamicHeightGridView(
-                    // rowCrossAxisAlignment: CrossAxisAlignment.center,
-                    builder: (context, index) {
-                      return BottomSheetComponent.getAkadSerahTerima[index];
-                    },
-                    itemCount: BottomSheetComponent.getAkadSerahTerima.length,
-                    crossAxisCount: 3,
-                    shrinkWrap: true,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 15,
-                  ),
-                ),
-              )
-            ],
-          ),
-        );
-      },
-      showDragHandle: true);
+      title: 'Tahap Akad & Serah Terima',
+      subtitle: 'Daftar menu tahap akad & serah terima',
+      contents: BottomSheetComponent.getAkadSerahTerima);
 }
 
 class BottomSheetComponent {
