@@ -77,7 +77,12 @@ class PropertyOrderWidget extends StatelessWidget {
           children: [
             /// [TIMELINES]
             Container(
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.sizeOf(context).height < 750
+                    ? MediaQuery.sizeOf(context).height * 0.08
+                    : MediaQuery.sizeOf(context).height < 850
+                        ? MediaQuery.sizeOf(context).height * 0.07
+                        : MediaQuery.sizeOf(context).height * 0.06,
+                // height: constraints.minHeight,
 
                 // width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(

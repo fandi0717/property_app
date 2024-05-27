@@ -30,14 +30,16 @@ class ContentIconBottomSheet extends StatelessWidget {
         // height: 108,
         padding: const EdgeInsets.all(15),
         decoration: enabled
-            ? const BoxDecoration(
+            ? BoxDecoration(
                 color: c.RGB248_O1,
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(
-                      50.0), // Membuat sudut kanan atas menjadi lingkaran
-                  topLeft: Radius.circular(20),
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+                  topRight: MediaQuery.sizeOf(context).height < 850
+                      ? const Radius.circular(50.0)
+                      : const Radius.circular(
+                          80), // Membuat sudut kanan atas menjadi lingkaran
+                  topLeft: const Radius.circular(20),
+                  bottomLeft: const Radius.circular(20),
+                  bottomRight: const Radius.circular(20),
                 ))
             : null,
         child: Column(
@@ -109,14 +111,16 @@ class ContentPercentageIconBottomSheet extends StatelessWidget {
     List<String> texts = text.split('\n');
 
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: c.RGB248_O1,
         borderRadius: BorderRadius.only(
-          topRight: Radius.circular(
-              50.0), // Membuat sudut kanan atas menjadi lingkaran
-          topLeft: Radius.circular(20),
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
+          topRight: MediaQuery.sizeOf(context).height < 850
+              ? const Radius.circular(50.0)
+              : const Radius.circular(
+                  80), // Membuat sudut kanan atas menjadi lingkaran
+          topLeft: const Radius.circular(20),
+          bottomLeft: const Radius.circular(20),
+          bottomRight: const Radius.circular(20),
         ),
 
         /*

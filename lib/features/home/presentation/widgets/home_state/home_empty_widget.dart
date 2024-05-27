@@ -50,11 +50,29 @@ class HomeEmptyWidget extends StatelessWidget {
         //   ),
 
         // ),
+        // Flexible(
+        //     child: Image.asset('assets/images/background_empty.png',
+        //         scale: MediaQuery.sizeOf(context).height > 840 ? 2 : 1)),
+
         Flexible(
-            child: Image.asset(
-          'assets/images/background_empty.png',
-          // scale: MediaQuery.sizeOf(context).height > 850 ? 2 : 1
-        )),
+          child: Builder(
+            builder: (context) {
+              if (MediaQuery.sizeOf(context).height > 840 &&
+                  MediaQuery.sizeOf(context).height < 1080) {
+                return Image.asset(
+                  'assets/images/background_empty.png',
+                  scale: 2,
+                );
+              }
+
+              return Image.asset(
+                'assets/images/background_empty.png',
+                scale: 1,
+              );
+            },
+          ),
+        ),
+
         const Gap(20),
         const Text(
           "Pesanan Kosong",

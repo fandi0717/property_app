@@ -19,7 +19,6 @@ class ProcessTimelinePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Timeline.tileBuilder(
-      // physics: const NeverScrollableScrollPhysics(),
       theme: TimelineThemeData(
           direction: Axis.horizontal, nodePosition: 0, indicatorPosition: 0),
       builder: TimelineTileBuilder.connected(

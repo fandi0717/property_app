@@ -276,85 +276,94 @@ class SliderPropertyOrderWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                const Gap(10),
+
                 propertys[index].denda != null
-                    ? const DottedLine(
-                        dashColor: c.RGB171_O1,
-                      )
-                    : const SizedBox.shrink(),
-                const Gap(10),
-                propertys[index].denda != null
-                    ? Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    ? Column(
                         children: [
+                          const Gap(10),
+                          const DottedLine(
+                            dashColor: c.RGB171_O1,
+                          ),
+                          const Gap(10),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              SvgPicture.asset(
-                                'assets/icons/utils/svg/dollar.svg',
-                                colorFilter: const ColorFilter.mode(
-                                    c.R51_G74_B52_O1, BlendMode.srcIn),
-                                width: 14,
-                                height: 14,
+                              Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    'assets/icons/utils/svg/dollar.svg',
+                                    colorFilter: const ColorFilter.mode(
+                                        c.R51_G74_B52_O1, BlendMode.srcIn),
+                                    width: 14,
+                                    height: 14,
+                                  ),
+                                  const Gap(5),
+                                  Text.rich(TextSpan(
+                                      text: 'Denda Rp ',
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          height: 15.12 / 12,
+                                          fontFamily: f.Outfit,
+                                          color: c.R51_G74_B52_O1),
+                                      children: [
+                                        TextSpan(
+                                            text: rupiah(propertys[index]
+                                                .denda!
+                                                .toInt()),
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 12,
+                                                height: 15.12 / 12,
+                                                fontFamily: f.Outfit,
+                                                color: c.R51_G74_B52_O1))
+                                      ]))
+                                ],
                               ),
-                              const Gap(5),
-                              Text.rich(TextSpan(
-                                  text: 'Denda Rp ',
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 12,
-                                      height: 15.12 / 12,
-                                      fontFamily: f.Outfit,
+                              Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(25),
                                       color: c.R51_G74_B52_O1),
-                                  children: [
-                                    TextSpan(
-                                        text: rupiah(
-                                            propertys[index].denda!.toInt()),
+                                  padding: const EdgeInsets.only(
+                                      top: 4, right: 9, bottom: 4, left: 7),
+                                  child: Row(children: [
+                                    SvgPicture.asset(
+                                        'assets/icons/utils/svg/warning.svg',
+                                        width: 10,
+                                        height: 10),
+                                    const Gap(3),
+                                    Text(
+                                        'Terlambat ${propertys[index].dateNow!.difference(propertys[index].dateTarget).inDays} Hari',
                                         style: const TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 12,
-                                            height: 15.12 / 12,
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 10,
+                                            height: 12.6 / 10,
                                             fontFamily: f.Outfit,
-                                            color: c.R51_G74_B52_O1))
+                                            color: c.RGB255_O1))
                                   ]))
                             ],
-                          ),
-                          Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  color: c.R51_G74_B52_O1),
-                              padding: const EdgeInsets.only(
-                                  top: 4, right: 9, bottom: 4, left: 7),
-                              child: Row(children: [
-                                SvgPicture.asset(
-                                    'assets/icons/utils/svg/warning.svg',
-                                    width: 10,
-                                    height: 10),
-                                const Gap(3),
-                                Text(
-                                    'Terlambat ${propertys[index].dateNow!.difference(propertys[index].dateTarget).inDays} Hari',
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 10,
-                                        height: 12.6 / 10,
-                                        fontFamily: f.Outfit,
-                                        color: c.RGB255_O1))
-                              ]))
+                          )
                         ],
                       )
-                    : const SizedBox.shrink()
+                    : const SizedBox(width: 0, height: 0)
               ],
             ),
           );
         },
         options: CarouselOptions(
-          aspectRatio:
-              propertys[indexOrder].denda != null ? 17 / 11 : 16 / 9, // default
+          aspectRatio: MediaQuery.sizeOf(context).height < 850
+              ? propertys[indexOrder].denda != null
+                  ? 14 / 9 // 17 / 11
+                  : 18 / 9
+              : propertys[indexOrder].denda != null
+                  ? 15 / 9 // 19 /11
+                  : 19 / 9,
           // aspectRatio: propertys[indexOrder].denda != null ? 17 / 10 : 17 / 9,
           // aspectRatio:
           //     propertys[indexOrder].denda != null ? 378 / 185 : 378 / 144,
           // height: propertys[indexOrder].denda != null
-          // ? MediaQuery.of(context).size.height * 0.35
-          // : MediaQuery.of(context).size.height * 0.3,
+          //     ? MediaQuery.of(context).size.height * 0.3
+          //     : MediaQuery.of(context).size.height * 0.215,
           initialPage: indexOrder,
           autoPlay: false,
           enableInfiniteScroll: false,
