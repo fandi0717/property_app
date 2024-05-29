@@ -109,8 +109,8 @@ class HomeEmptyWidget extends StatelessWidget {
                 fontFamily: f.Outfit),
           ),
           style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(c.R51_G74_B52_O1),
-              padding: MaterialStatePropertyAll(
+              backgroundColor: WidgetStatePropertyAll(c.R51_G74_B52_O1),
+              padding: WidgetStatePropertyAll(
                   EdgeInsets.symmetric(horizontal: 25, vertical: 15))),
         ),
       ],
