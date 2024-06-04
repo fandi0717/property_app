@@ -84,8 +84,10 @@ class BottomNavigationBarWidget extends StatelessWidget {
         },
         activeIndex: context.read<BottomNavigationBarCubit>().state,
         onTap: (int index) {
-          context.read<BottomNavigationBarCubit>().changeIndex(index);
-          changeBodyUI(index, context);
+          if (index != context.read<BottomNavigationBarCubit>().state) {
+            context.read<BottomNavigationBarCubit>().changeIndex(index);
+            changeBodyUI(index, context);
+          }
         });
   }
 }

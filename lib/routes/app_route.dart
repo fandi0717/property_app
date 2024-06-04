@@ -8,53 +8,47 @@ import '../features/home/presentation/screens/home_screen.dart';
 import 'route_name.dart';
 
 class AppRouter {
-  String lastRoute = "";
   Route? onGenerateRoute(RouteSettings routeSettings) {
-    switch (routeSettings.name) {
-      case RouteName.HOME:
-        if (lastRoute != RouteName.HOME) {
-          lastRoute = RouteName.HOME;
-          return MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
-              settings: routeSettings);
-        }
-        break;
+    return PageRouteBuilder(
+      settings: routeSettings,
+      pageBuilder: (context, animation, secondaryAnimation) {
+        switch (routeSettings.name) {
+          case RouteName.HOME:
+            return const HomeScreen();
 
-      case RouteName.BUILDING:
-        if (lastRoute != RouteName.BUILDING) {
-          lastRoute = RouteName.BUILDING;
-          return MaterialPageRoute(
-              builder: (context) => const BuildingScreen(),
-              settings: routeSettings);
-        }
-        break;
+          case RouteName.BUILDING:
+            return const BuildingScreen();
 
-      case RouteName.DOCUMENTS:
-        if (lastRoute != RouteName.DOCUMENTS) {
-          lastRoute = RouteName.DOCUMENTS;
-          return MaterialPageRoute(
-              builder: (context) => const DocumentScreen(),
-              settings: routeSettings);
-        }
-        break;
+          case RouteName.DOCUMENTS:
+            return const DocumentScreen();
 
-      case RouteName.CART:
-        if (lastRoute != RouteName.CART) {
-          lastRoute = RouteName.CART;
-          return MaterialPageRoute(
-              builder: (context) => const CartScreen(),
-              settings: routeSettings);
+          case RouteName.CART:
+            return const CartScreen();
+
+          case RouteName.ACCOUNT:
+            return const AccountScreen();
+
+          default:
+            return Container();
         }
-        break;
-      case RouteName.ACCOUNT:
-        if (lastRoute != RouteName.ACCOUNT) {
-          lastRoute = RouteName.ACCOUNT;
-          return MaterialPageRoute(
-              builder: (context) => const AccountScreen(),
-              settings: routeSettings);
-        }
-        break;
-    }
-    return null;
+      },
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      /* [OPTIONAL] TRANSITION
+        Anda bisa mengubah transisi di sini
+        var begin = const Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.elasticIn;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+        */
+        return child;
+      },
+    );
   }
 }
